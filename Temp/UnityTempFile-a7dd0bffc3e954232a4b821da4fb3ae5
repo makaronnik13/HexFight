@@ -99,6 +99,8 @@
 -define:UNITY_EDITOR_OSX
 -define:ENABLE_NATIVE_ARRAY_CHECKS
 -define:UNITY_TEAM_LICENSE
+'Assets/GridSystem/Cell.cs'
+'Assets/GridSystem/GridManager.cs'
 'Assets/Models/RK.Team Assets/Modular Road Block/PostProcessing/Runtime/Attributes/GetSetAttribute.cs'
 'Assets/Models/RK.Team Assets/Modular Road Block/PostProcessing/Runtime/Attributes/MinAttribute.cs'
 'Assets/Models/RK.Team Assets/Modular Road Block/PostProcessing/Runtime/Attributes/TrackballAttribute.cs'
@@ -141,8 +143,6 @@
 'Assets/Models/RK.Team Assets/Modular Road Block/PostProcessing/Runtime/Utils/RenderTextureFactory.cs'
 'Assets/Models/RK.Team Assets/Modular Road Block/Scripts/MouseOrbitImproved.cs'
 'Assets/Models/RK.Team Assets/Modular Road Block/Scripts/RoadBlockGenerator.cs'
-'Assets/MovieProjector Demo/Demo_Assets/CameraControl_Basic.cs'
-'Assets/MovieProjector Demo/videoProjectorPack/videoProjector_Control.cs'
 -r:'/Applications/Unity/Unity.app/Contents/Mono/lib/mono/unity/System.Runtime.Serialization.dll'
 -r:'/Applications/Unity/Unity.app/Contents/Mono/lib/mono/unity/System.Xml.Linq.dll'
 -r:'/Applications/Unity/Unity.app/Contents/Mono/lib/mono/unity/UnityScript.dll'

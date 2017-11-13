@@ -51,6 +51,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\GridSystem\Cell.cs" />
+     <Compile Include="Assets\GridSystem\GridManager.cs" />
      <Compile Include="Assets\Models\RK.Team Assets\Modular Road Block\PostProcessing\Runtime\Attributes\GetSetAttribute.cs" />
      <Compile Include="Assets\Models\RK.Team Assets\Modular Road Block\PostProcessing\Runtime\Attributes\MinAttribute.cs" />
      <Compile Include="Assets\Models\RK.Team Assets\Modular Road Block\PostProcessing\Runtime\Attributes\TrackballAttribute.cs" />

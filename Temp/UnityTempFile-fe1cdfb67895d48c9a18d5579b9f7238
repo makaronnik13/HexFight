@@ -99,6 +99,7 @@
 -define:UNITY_EDITOR_OSX
 -define:ENABLE_NATIVE_ARRAY_CHECKS
 -define:UNITY_TEAM_LICENSE
+'Assets/GridSystem/GridManager.cs'
 'Assets/Models/RK.Team Assets/Modular Road Block/PostProcessing/Runtime/Attributes/GetSetAttribute.cs'
 'Assets/Models/RK.Team Assets/Modular Road Block/PostProcessing/Runtime/Attributes/MinAttribute.cs'
 'Assets/Models/RK.Team Assets/Modular Road Block/PostProcessing/Runtime/Attributes/TrackballAttribute.cs'
