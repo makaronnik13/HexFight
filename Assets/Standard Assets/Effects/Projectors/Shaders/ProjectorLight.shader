@@ -52,13 +52,13 @@ Shader "Projector/Light" {
 			fixed4 frag (v2f i) : SV_Target
 			{
 				i.uvShadow = TRANSFORM_TEX (i.uvShadow, _ShadowTex);
-				//fixed4 texS = tex2Dproj (_ShadowTex, UNITY_PROJ_COORD(i.uvShadow));
 				fixed4 texS = tex2D (_ShadowTex, i.uvShadow).rgba;
-				texS.rgb *= _Color.rgb;
-				texS.a = 1.0-texS.a;
-	
+				//texS.rgba = float4(_Color.rgb, texS.a);
+
+				
+
 				fixed4 texF = tex2Dproj (_FalloffTex, UNITY_PROJ_COORD(i.uvFalloff));
-				fixed4 res = texS * texF.a;
+				fixed4 res = texS * texF.a*_Color.a*texS.a;
 
 				UNITY_APPLY_FOG_COLOR(i.fogCoord, res, fixed4(0,0,0,0));
 				return res*_Power;

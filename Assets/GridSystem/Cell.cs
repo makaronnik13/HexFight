@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class Cell : MonoBehaviour {
 
+    public Vector2 coord;
+    public bool enable = true;
+
 	// Use this for initialization
 	void Start () {
 		
