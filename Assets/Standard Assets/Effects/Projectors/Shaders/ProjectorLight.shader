@@ -52,7 +52,7 @@ Shader "Projector/Light" {
 			fixed4 frag (v2f i) : SV_Target
 			{
 				i.uvShadow = TRANSFORM_TEX (i.uvShadow, _ShadowTex);
-				fixed4 texS = tex2D (_ShadowTex, i.uvShadow).rgba;
+				fixed4 texS = tex2D (_ShadowTex, i.uvShadow).rgba*_Color;
 				//texS.rgba = float4(_Color.rgb, texS.a);
 
 				

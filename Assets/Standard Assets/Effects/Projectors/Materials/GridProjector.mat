@@ -35,18 +35,18 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: a22f799b6e0bc014d86f71943ad9c575, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _ShadowTex:
-        m_Texture: {fileID: 2800000, guid: 2d2de9747fb37a449bdff3703adc0357, type: 3}
+        m_Texture: {fileID: 2800000, guid: a22f799b6e0bc014d86f71943ad9c575, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
     - _Power: 5.32
     m_Colors:
     - BumpMapScale: {r: 1, g: 1, b: 1, a: 1}
-    - _Color: {r: 0.4638841, g: 0.8088235, b: 0.7660035, a: 1}
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _ProjectorClip_0: {r: -0.015438232, g: -0.025866693, b: 0.14460614, a: 0.29360974}
     - _ProjectorClip_1: {r: 0.0047582523, g: 0.14523815, b: 0.026487738, a: 0.0030641258}
     - _ProjectorClip_2: {r: -0.015438232, g: -0.025866693, b: 0.14460614, a: 0.29360974}
