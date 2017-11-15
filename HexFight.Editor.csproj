@@ -133,6 +133,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Editor\SingleUnityLayerProperyDrawer.cs" />
     <Compile Include="Assets\Models\RK.Team Assets\Modular Road Block\PostProcessing\Editor\Attributes\PostProcessingModelEditorAttribute.cs" />
     <Compile Include="Assets\Models\RK.Team Assets\Modular Road Block\PostProcessing\Editor\Models\AmbientOcclusionModelEditor.cs" />
     <Compile Include="Assets\Models\RK.Team Assets\Modular Road Block\PostProcessing\Editor\Models\AntialiasingModelEditor.cs" />

@@ -81,10 +81,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\CellVisual.cs" />
     <Compile Include="Assets\GridSystem\Cell.cs" />
+    <Compile Include="Assets\GridSystem\CellsHighlighter.cs" />
+    <Compile Include="Assets\GridSystem\CellVisual.cs" />
     <Compile Include="Assets\GridSystem\GridManager.cs" />
-    <Compile Include="Assets\HexField.cs" />
+    <Compile Include="Assets\GridSystem\HexField.cs" />
+    <Compile Include="Assets\GridSystem\HexPathFinder.cs" />
     <Compile Include="Assets\Models\RK.Team Assets\Modular Road Block\PostProcessing\Runtime\Attributes\GetSetAttribute.cs" />
     <Compile Include="Assets\Models\RK.Team Assets\Modular Road Block\PostProcessing\Runtime\Attributes\MinAttribute.cs" />
     <Compile Include="Assets\Models\RK.Team Assets\Modular Road Block\PostProcessing\Runtime\Attributes\TrackballAttribute.cs" />
@@ -127,7 +129,10 @@
     <Compile Include="Assets\Models\RK.Team Assets\Modular Road Block\PostProcessing\Runtime\Utils\RenderTextureFactory.cs" />
     <Compile Include="Assets\Models\RK.Team Assets\Modular Road Block\Scripts\MouseOrbitImproved.cs" />
     <Compile Include="Assets\Models\RK.Team Assets\Modular Road Block\Scripts\RoadBlockGenerator.cs" />
-    <Compile Include="Assets\SpriteCutter.cs" />
+    <Compile Include="Assets\Tools\Raycaster.cs" />
+    <Compile Include="Assets\Tools\Singleton.cs" />
+    <Compile Include="Assets\Tools\SingleUnityLayer.cs" />
+    <Compile Include="Assets\Tools\SpriteCutter.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\GridSystem\projector.shader" />

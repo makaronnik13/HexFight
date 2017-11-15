@@ -82,21 +82,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ddab88694f664f178db315c795e959b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  index: 0
   binaryS: 
   baseBorderTextures:
-  - {fileID: 2800000, guid: a22f799b6e0bc014d86f71943ad9c575, type: 3}
-  - {fileID: 2800000, guid: 90e41f5d98aa4c94b9295cec49db18a1, type: 3}
-  - {fileID: 2800000, guid: e07805222b390f2439459a741a822e3a, type: 3}
-  - {fileID: 2800000, guid: af00b72436831564d882d709f67852ba, type: 3}
-  - {fileID: 2800000, guid: f4ac51e258e31ed428ced2fcd9cdf02e, type: 3}
-  - {fileID: 2800000, guid: eb222c59aacd3f44cab03cf5df372ec8, type: 3}
-  - {fileID: 2800000, guid: f9f2154363ffc0845a488dcf34f4253f, type: 3}
-  - {fileID: 2800000, guid: 22b004148eb058e42b1b7633b46994c0, type: 3}
-  - {fileID: 2800000, guid: e8bb9bd02be2a2740b32c7aafdd77d46, type: 3}
-  - {fileID: 2800000, guid: b38de1ae9c11f8343be7807ec92c1227, type: 3}
-  - {fileID: 2800000, guid: 1201d55d1819200448ee03a4d03c8ebb, type: 3}
-  - {fileID: 2800000, guid: e2dacd0241c59814391e01bbbb4d32e7, type: 3}
   - {fileID: 2800000, guid: 8098990910e5a4ab0b573eca56f34b41, type: 3}
+  - {fileID: 2800000, guid: e2dacd0241c59814391e01bbbb4d32e7, type: 3}
+  - {fileID: 2800000, guid: 1201d55d1819200448ee03a4d03c8ebb, type: 3}
+  - {fileID: 2800000, guid: b38de1ae9c11f8343be7807ec92c1227, type: 3}
+  - {fileID: 2800000, guid: e8bb9bd02be2a2740b32c7aafdd77d46, type: 3}
+  - {fileID: 2800000, guid: 22b004148eb058e42b1b7633b46994c0, type: 3}
+  - {fileID: 2800000, guid: f9f2154363ffc0845a488dcf34f4253f, type: 3}
+  - {fileID: 2800000, guid: eb222c59aacd3f44cab03cf5df372ec8, type: 3}
+  - {fileID: 2800000, guid: 53cee8b85f9e06d489ef85ca2561b288, type: 3}
+  - {fileID: 2800000, guid: f4ac51e258e31ed428ced2fcd9cdf02e, type: 3}
+  - {fileID: 2800000, guid: af00b72436831564d882d709f67852ba, type: 3}
+  - {fileID: 2800000, guid: e07805222b390f2439459a741a822e3a, type: 3}
+  - {fileID: 2800000, guid: 90e41f5d98aa4c94b9295cec49db18a1, type: 3}
+  - {fileID: 2800000, guid: a22f799b6e0bc014d86f71943ad9c575, type: 3}
   coord: {x: 0, y: 0}
   enable: 1
 --- !u!114 &114283418959654708
@@ -110,20 +112,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff819a4ca1bb64549b844926e20547fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  borderTextures:
-  - {fileID: 2800000, guid: a22f799b6e0bc014d86f71943ad9c575, type: 3}
-  - {fileID: 2800000, guid: 90e41f5d98aa4c94b9295cec49db18a1, type: 3}
-  - {fileID: 2800000, guid: e07805222b390f2439459a741a822e3a, type: 3}
-  - {fileID: 2800000, guid: af00b72436831564d882d709f67852ba, type: 3}
-  - {fileID: 2800000, guid: f4ac51e258e31ed428ced2fcd9cdf02e, type: 3}
-  - {fileID: 2800000, guid: eb222c59aacd3f44cab03cf5df372ec8, type: 3}
-  - {fileID: 2800000, guid: f9f2154363ffc0845a488dcf34f4253f, type: 3}
-  - {fileID: 2800000, guid: 22b004148eb058e42b1b7633b46994c0, type: 3}
-  - {fileID: 2800000, guid: e8bb9bd02be2a2740b32c7aafdd77d46, type: 3}
-  - {fileID: 2800000, guid: b38de1ae9c11f8343be7807ec92c1227, type: 3}
-  - {fileID: 2800000, guid: 1201d55d1819200448ee03a4d03c8ebb, type: 3}
-  - {fileID: 2800000, guid: e2dacd0241c59814391e01bbbb4d32e7, type: 3}
-  - {fileID: 2800000, guid: 8098990910e5a4ab0b573eca56f34b41, type: 3}
 --- !u!119 &119426448974337004
 Projector:
   m_ObjectHideFlags: 1

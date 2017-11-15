@@ -133,7 +133,7 @@ Light:
   m_Enabled: 1
   serializedVersion: 8
   m_Type: 1
-  m_Color: {r: 0.4709126, g: 0.9427246, b: 0.9852941, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Intensity: 0.48
   m_Range: 10
   m_SpotAngle: 30
@@ -287,6 +287,8 @@ GameObject:
   m_Component:
   - component: {fileID: 689805465}
   - component: {fileID: 689805464}
+  - component: {fileID: 689805467}
+  - component: {fileID: 689805466}
   m_Layer: 0
   m_Name: HexField
   m_TagString: Untagged
@@ -305,8 +307,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fbf067ae1602ff544bf0435c252cc4c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  height: 5
-  width: 5
+  height: 7
+  width: 7
   cellPrefab: {fileID: 1632068008091128, guid: 8e8950d42a6890249b7301c32f2bc031, type: 2}
   lastScale: 1
 --- !u!4 &689805465
@@ -322,6 +324,31 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &689805466
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 689805463}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 36f50ca046299fe43b4ee83f7591fcf6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &689805467
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 689805463}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab1efeefaac4f8447929f8d3e7e1b743, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  avalibleColor: {r: 0, g: 1, b: 0, a: 1}
+  wrongColor: {r: 1, g: 0, b: 0, a: 1}
+  specialColor: {r: 1, g: 0, b: 1, a: 1}
 --- !u!1 &1453944256
 GameObject:
   m_ObjectHideFlags: 0
@@ -400,11 +427,13 @@ GameObject:
   m_PrefabInternal: {fileID: 0}
   serializedVersion: 5
   m_Component:
-  - component: {fileID: 1961122096}
+  - component: {fileID: 1961122098}
   - component: {fileID: 1961122095}
   - component: {fileID: 1961122094}
   - component: {fileID: 1961122093}
   - component: {fileID: 1961122092}
+  - component: {fileID: 1961122097}
+  - component: {fileID: 1961122096}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -451,7 +480,7 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 60
+  field of view: 40.2
   orthographic: 0
   orthographic size: 5
   m_Depth: -1
@@ -469,16 +498,56 @@ Camera:
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
   m_StereoMirrorMode: 0
---- !u!4 &1961122096
-Transform:
+--- !u!114 &1961122096
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1961122091}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: -10}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54f0da69852c4ff4d826fbf398bc19ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  raycastRate: 0.1
+  enableRaycast: 1
+  layer:
+    m_LayerIndex: 9
+--- !u!223 &1961122097
+Canvas:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1961122091}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_RenderMode: 2
+  m_Camera: {fileID: 0}
+  m_PlaneDistance: 100
+  m_PixelPerfect: 0
+  m_ReceivesEvents: 1
+  m_OverrideSorting: 0
+  m_OverridePixelPerfect: 0
+  m_SortingBucketNormalizedSize: 0
+  m_AdditionalShaderChannelsFlag: 0
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+  m_TargetDisplay: 0
+--- !u!224 &1961122098
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1961122091}
+  m_LocalRotation: {x: 0.51306397, y: -0, z: -0, w: 0.85835046}
+  m_LocalPosition: {x: 0, y: 0, z: 14.17}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 61.736004, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 24.09, y: 18.72}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}

@@ -6,9 +6,11 @@ using System;
 
 public class Cell : MonoBehaviour {
 
-	public string binaryS;
+	public int index;
 
-	public Texture2D[] baseBorderTextures;
+    public bool[] binaryS;
+
+    public Texture2D[] baseBorderTextures;
     public Vector2 coord;
     public bool enable = true;
 	private CellVisual visual;
@@ -25,17 +27,9 @@ public class Cell : MonoBehaviour {
 		}
 	}
 
-	[ContextMenu ("show cell test")]
-	public void TestShowCell()
+	public void ShowCellBorders(bool[] binaryS, Color c)
 	{
-		Visual.ShowBorder (new bool[]{
-			binaryS[0] == '1',
-			binaryS[1] == '1',
-			binaryS[2] == '1',
-			binaryS[3] == '1',
-			binaryS[4] == '1',
-			binaryS[5] == '1'
-		}, Color.green);
+		Visual.ShowBorder (binaryS, c);
 	}
 		
 }
