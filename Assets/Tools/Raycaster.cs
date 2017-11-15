@@ -2,51 +2,55 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.Linq;
 
 public class Raycaster : Singleton<Raycaster> {
 
-    public float raycastRate = 0.5f;
-    public bool enableRaycast = true;
+	public LayerRaycaster[] raycasters;
 
-    public SingleUnityLayer layer;
-    private float lastRate;
-    private bool lastEnable;
+	public void AddListener(Action<Vector3, GameObject> action, Action missAction, int layerId)
+	{
+		LayerRaycaster lr = raycasters.ToList ().Find (r => r.layer.LayerIndex == layerId);
+		if (lr == null) {
+			LayerRaycaster newRaycaster = gameObject.AddComponent<LayerRaycaster> ();
+			newRaycaster.Init (0.2f, true, layerId); 
 
-    public Action<Vector3, GameObject> OnRaycastHit;
+			Array.Resize (ref raycasters, raycasters.Count() + 1);
+
+			raycasters [raycasters.Count() - 1] = newRaycaster;
+
+			newRaycaster.OnRaycastHit += action;
+			newRaycaster.OnRaycastMiss += missAction;
+		} else {
+			lr.OnRaycastHit += action;
+			lr.OnRaycastMiss += missAction;
+		}
+	}
 
 	// Use this for initialization
 	void Start () {
-        lastRate = raycastRate;
-        lastEnable = enableRaycast;
-        if (enableRaycast)
-        {
-            InvokeRepeating("Raycast", 0, raycastRate);
-        }
+		foreach(LayerRaycaster lr in raycasters)
+		{
+			lr.lastRate = lr.raycastRate;
+			lr.lastEnable = lr.enableRaycast;
+			if (lr.enableRaycast)
+			{
+				lr.StartRaycast ();
+			}
+		}
 	}
 	
 	// Update is called once per frame
 	void Update () {
-        if (raycastRate!=lastRate || lastEnable != enableRaycast)
-        {
-            lastRate = raycastRate;
-            lastEnable = enableRaycast;
-            CancelInvoke("Raycast");
-            InvokeRepeating("Raycast", 0, raycastRate);
-        }
+		foreach(LayerRaycaster lr in raycasters)
+		{
+			if (lr.raycastRate!=lr.lastRate || lr.lastEnable != lr.enableRaycast)
+			{
+				lr.lastRate = lr.raycastRate;
+				lr.lastEnable = lr.enableRaycast;
+				lr.StopRaycast ();
+				lr.StartRaycast ();
+			}	
+		}
 	}
-
-    private void Raycast()
-    {
-        if (OnRaycastHit!=null)
-        {
-            RaycastHit hit;
-            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-
-            if (Physics.Raycast(ray, out hit, 10000, layer.Mask))
-            {
-                OnRaycastHit.Invoke(hit.point, hit.collider.gameObject);
-            }
-        }
-        
-    }
 }

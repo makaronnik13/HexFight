@@ -5,6 +5,8 @@ using UnityEngine;
 
 public class HexField : MonoBehaviour {
 
+	private int raycastLayer = 9;
+
     public float height = 10;
     public float width = 10;
 
@@ -56,7 +58,7 @@ public class HexField : MonoBehaviour {
         {
             for (int j = Mathf.CeilToInt(-(height) / 2); j < Mathf.FloorToInt((height) / 2); j++)
             {
-                if (UnityEngine.Random.Range(0,10)>3)
+                if (UnityEngine.Random.Range(0,10)>=0)
                 {
                     positions.Add(new Vector2(i,j));
                 }
@@ -68,10 +70,12 @@ public class HexField : MonoBehaviour {
 	void Start()
 	{
 		lastScale = transform.localScale.x;
-        Raycaster.Instance.OnRaycastHit += RaycatHit;
+		Raycaster.Instance.AddListener ((Vector3 point, GameObject rayHitObject)=>{
+			Raycast(point, rayHitObject);
+		}, ()=>{}, raycastLayer);
 	}
 
-    private void RaycatHit(Vector3 point, GameObject hitObject)
+    private void Raycast(Vector3 point, GameObject hitObject)
     {
         Cell newAimedCell = null;
 

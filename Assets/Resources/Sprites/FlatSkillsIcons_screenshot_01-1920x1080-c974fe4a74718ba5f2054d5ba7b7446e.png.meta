@@ -1,0 +1,2332 @@
+fileFormatVersion: 2
+guid: 0f73e43954a384daeac6221a596c1ef2
+timeCreated: 1510780973
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: FlatSkillsIcons_screenshot_01-1920x1080-c974fe4a74718ba5f2054d5ba7b7446e_0
+    21300002: FlatSkillsIcons_screenshot_01-1920x1080-c974fe4a74718ba5f2054d5ba7b7446e_1
+    21300004: FlatSkillsIcons_screenshot_01-1920x1080-c974fe4a74718ba5f2054d5ba7b7446e_2
+    21300006: FlatSkillsIcons_screenshot_01-1920x1080-c974fe4a74718ba5f2054d5ba7b7446e_3
+    21300008: FlatSkillsIcons_screenshot_01-1920x1080-c974fe4a74718ba5f2054d5ba7b7446e_4
+    21300010: FlatSkillsIcons_screenshot_01-1920x1080-c974fe4a74718ba5f2054d5ba7b7446e_5
+    21300012: FlatSkillsIcons_screenshot_01-1920x1080-c974fe4a74718ba5f2054d5ba7b7446e_6
+    21300014: FlatSkillsIcons_screenshot_01-1920x1080-c974fe4a74718ba5f2054d5ba7b7446e_7
+    21300016: FlatSkillsIcons_screenshot_01-1920x1080-c974fe4a74718ba5f2054d5ba7b7446e_8
+    21300018: FlatSkillsIcons_screenshot_01-1920x1080-c974fe4a74718ba5f2054d5ba7b7446e_9
+    21300020: FlatSkillsIcons_screenshot_01-1920x1080-c974fe4a74718ba5f2054d5ba7b7446e_10
+    21300022: FlatSkillsIcons_screenshot_01-1920x1080-c974fe4a74718ba5f2054d5ba7b7446e_11
+    21300024: FlatSkillsIcons_screenshot_01-1920x1080-c974fe4a74718ba5f2054d5ba7b7446e_12
+    21300026: FlatSkillsIcons_screenshot_01-1920x1080-c974fe4a74718ba5f2054d5ba7b7446e_13
+    21300028: FlatSkillsIcons_screenshot_01-1920x1080-c974fe4a74718ba5f2054d5ba7b7446e_14
+    21300030: FlatSkillsIcons_screenshot_01-1920x1080-c974fe4a74718ba5f2054d5ba7b7446e_15
+    21300032: FlatSkillsIcons_screenshot_01-1920x1080-c974fe4a74718ba5f2054d5ba7b7446e_16
+    21300034: FlatSkillsIcons_screenshot_01-1920x1080-c974fe4a74718ba5f2054d5ba7b7446e_17
+    21300036: FlatSkillsIcons_screenshot_01-1920x1080-c974fe4a74718ba5f2054d5ba7b7446e_18
+    21300038: FlatSkillsIcons_screenshot_01-1920x1080-c974fe4a74718ba5f2054d5ba7b7446e_19
+    21300040: FlatSkillsIcons_screenshot_01-1920x1080-c974fe4a74718ba5f2054d5ba7b7446e_20
+    21300042: FlatSkillsIcons_screenshot_01-1920x1080-c974fe4a74718ba5f2054d5ba7b7446e_21
+    21300044: FlatSkillsIcons_screenshot_01-1920x1080-c974fe4a74718ba5f2054d5ba7b7446e_22
+    21300046: FlatSkillsIcons_screenshot_01-1920x1080-c974fe4a74718ba5f2054d5ba7b7446e_23
+    21300048: FlatSkillsIcons_screenshot_01-1920x1080-c974fe4a74718ba5f2054d5ba7b7446e_24
+    21300050: FlatSkillsIcons_screenshot_01-1920x1080-c974fe4a74718ba5f2054d5ba7b7446e_25
+    21300052: FlatSkillsIcons_screenshot_01-1920x1080-c974fe4a74718ba5f2054d5ba7b7446e_26
+    21300054: FlatSkillsIcons_screenshot_01-1920x1080-c974fe4a74718ba5f2054d5ba7b7446e_27
+    21300056: FlatSkillsIcons_screenshot_01-1920x1080-c974fe4a74718ba5f2054d5ba7b7446e_28
+    21300058: FlatSkillsIcons_screenshot_01-1920x1080-c974fe4a74718ba5f2054d5ba7b7446e_29
+    21300060: FlatSkillsIcons_screenshot_01-1920x1080-c974fe4a74718ba5f2054d5ba7b7446e_30
+    21300062: FlatSkillsIcons_screenshot_01-1920x1080-c974fe4a74718ba5f2054d5ba7b7446e_31
+    21300064: FlatSkillsIcons_screenshot_01-1920x1080-c974fe4a74718ba5f2054d5ba7b7446e_32
+    21300066: FlatSkillsIcons_screenshot_01-1920x1080-c974fe4a74718ba5f2054d5ba7b7446e_33
+    21300068: FlatSkillsIcons_screenshot_01-1920x1080-c974fe4a74718ba5f2054d5ba7b7446e_34
+    21300070: FlatSkillsIcons_screenshot_01-1920x1080-c974fe4a74718ba5f2054d5ba7b7446e_35
+    21300072: FlatSkillsIcons_screenshot_01-1920x1080-c974fe4a74718ba5f2054d5ba7b7446e_36
+    21300074: FlatSkillsIcons_screenshot_01-1920x1080-c974fe4a74718ba5f2054d5ba7b7446e_37
+    21300076: FlatSkillsIcons_screenshot_01-1920x1080-c974fe4a74718ba5f2054d5ba7b7446e_38
+    21300078: FlatSkillsIcons_screenshot_01-1920x1080-c974fe4a74718ba5f2054d5ba7b7446e_39
+    21300080: FlatSkillsIcons_screenshot_01-1920x1080-c974fe4a74718ba5f2054d5ba7b7446e_40
+    21300082: FlatSkillsIcons_screenshot_01-1920x1080-c974fe4a74718ba5f2054d5ba7b7446e_41
+    21300084: FlatSkillsIcons_screenshot_01-1920x1080-c974fe4a74718ba5f2054d5ba7b7446e_42
+    21300086: FlatSkillsIcons_screenshot_01-1920x1080-c974fe4a74718ba5f2054d5ba7b7446e_43
+    21300088: FlatSkillsIcons_screenshot_01-1920x1080-c974fe4a74718ba5f2054d5ba7b7446e_44
+    21300090: FlatSkillsIcons_screenshot_01-1920x1080-c974fe4a74718ba5f2054d5ba7b7446e_45
+    21300092: FlatSkillsIcons_screenshot_01-1920x1080-c974fe4a74718ba5f2054d5ba7b7446e_46
+    21300094: FlatSkillsIcons_screenshot_01-1920x1080-c974fe4a74718ba5f2054d5ba7b7446e_47
+    21300096: FlatSkillsIcons_screenshot_01-1920x1080-c974fe4a74718ba5f2054d5ba7b7446e_48
+    21300098: FlatSkillsIcons_screenshot_01-1920x1080-c974fe4a74718ba5f2054d5ba7b7446e_49
+    21300100: FlatSkillsIcons_screenshot_01-1920x1080-c974fe4a74718ba5f2054d5ba7b7446e_50
+    21300102: FlatSkillsIcons_screenshot_01-1920x1080-c974fe4a74718ba5f2054d5ba7b7446e_51
+    21300104: FlatSkillsIcons_screenshot_01-1920x1080-c974fe4a74718ba5f2054d5ba7b7446e_52
+    21300106: FlatSkillsIcons_screenshot_01-1920x1080-c974fe4a74718ba5f2054d5ba7b7446e_53
+    21300108: FlatSkillsIcons_screenshot_01-1920x1080-c974fe4a74718ba5f2054d5ba7b7446e_54
+    21300110: FlatSkillsIcons_screenshot_01-1920x1080-c974fe4a74718ba5f2054d5ba7b7446e_55
+    21300112: FlatSkillsIcons_screenshot_01-1920x1080-c974fe4a74718ba5f2054d5ba7b7446e_56
+    21300114: FlatSkillsIcons_screenshot_01-1920x1080-c974fe4a74718ba5f2054d5ba7b7446e_57
+    21300116: FlatSkillsIcons_screenshot_01-1920x1080-c974fe4a74718ba5f2054d5ba7b7446e_58
+    21300118: FlatSkillsIcons_screenshot_01-1920x1080-c974fe4a74718ba5f2054d5ba7b7446e_59
+    21300120: FlatSkillsIcons_screenshot_01-1920x1080-c974fe4a74718ba5f2054d5ba7b7446e_60
+    21300122: FlatSkillsIcons_screenshot_01-1920x1080-c974fe4a74718ba5f2054d5ba7b7446e_61
+    21300124: FlatSkillsIcons_screenshot_01-1920x1080-c974fe4a74718ba5f2054d5ba7b7446e_62
+    21300126: FlatSkillsIcons_screenshot_01-1920x1080-c974fe4a74718ba5f2054d5ba7b7446e_63
+    21300128: FlatSkillsIcons_screenshot_01-1920x1080-c974fe4a74718ba5f2054d5ba7b7446e_64
+    21300130: FlatSkillsIcons_screenshot_01-1920x1080-c974fe4a74718ba5f2054d5ba7b7446e_65
+    21300132: FlatSkillsIcons_screenshot_01-1920x1080-c974fe4a74718ba5f2054d5ba7b7446e_66
+    21300134: FlatSkillsIcons_screenshot_01-1920x1080-c974fe4a74718ba5f2054d5ba7b7446e_67
+    21300136: FlatSkillsIcons_screenshot_01-1920x1080-c974fe4a74718ba5f2054d5ba7b7446e_68
+    21300138: FlatSkillsIcons_screenshot_01-1920x1080-c974fe4a74718ba5f2054d5ba7b7446e_69
+    21300140: FlatSkillsIcons_screenshot_01-1920x1080-c974fe4a74718ba5f2054d5ba7b7446e_70
+    21300142: FlatSkillsIcons_screenshot_01-1920x1080-c974fe4a74718ba5f2054d5ba7b7446e_71
+    21300144: FlatSkillsIcons_screenshot_01-1920x1080-c974fe4a74718ba5f2054d5ba7b7446e_72
+    21300146: FlatSkillsIcons_screenshot_01-1920x1080-c974fe4a74718ba5f2054d5ba7b7446e_73
+    21300148: FlatSkillsIcons_screenshot_01-1920x1080-c974fe4a74718ba5f2054d5ba7b7446e_74
+    21300150: FlatSkillsIcons_screenshot_01-1920x1080-c974fe4a74718ba5f2054d5ba7b7446e_75
+    21300152: FlatSkillsIcons_screenshot_01-1920x1080-c974fe4a74718ba5f2054d5ba7b7446e_76
+    21300154: FlatSkillsIcons_screenshot_01-1920x1080-c974fe4a74718ba5f2054d5ba7b7446e_77
+    21300156: FlatSkillsIcons_screenshot_01-1920x1080-c974fe4a74718ba5f2054d5ba7b7446e_78
+    21300158: FlatSkillsIcons_screenshot_01-1920x1080-c974fe4a74718ba5f2054d5ba7b7446e_79
+    21300160: FlatSkillsIcons_screenshot_01-1920x1080-c974fe4a74718ba5f2054d5ba7b7446e_80
+    21300162: FlatSkillsIcons_screenshot_01-1920x1080-c974fe4a74718ba5f2054d5ba7b7446e_81
+    21300164: FlatSkillsIcons_screenshot_01-1920x1080-c974fe4a74718ba5f2054d5ba7b7446e_82
+    21300166: FlatSkillsIcons_screenshot_01-1920x1080-c974fe4a74718ba5f2054d5ba7b7446e_83
+    21300168: FlatSkillsIcons_screenshot_01-1920x1080-c974fe4a74718ba5f2054d5ba7b7446e_84
+    21300170: FlatSkillsIcons_screenshot_01-1920x1080-c974fe4a74718ba5f2054d5ba7b7446e_85
+    21300172: FlatSkillsIcons_screenshot_01-1920x1080-c974fe4a74718ba5f2054d5ba7b7446e_86
+    21300174: FlatSkillsIcons_screenshot_01-1920x1080-c974fe4a74718ba5f2054d5ba7b7446e_87
+    21300176: FlatSkillsIcons_screenshot_01-1920x1080-c974fe4a74718ba5f2054d5ba7b7446e_88
+    21300178: FlatSkillsIcons_screenshot_01-1920x1080-c974fe4a74718ba5f2054d5ba7b7446e_89
+    21300180: FlatSkillsIcons_screenshot_01-1920x1080-c974fe4a74718ba5f2054d5ba7b7446e_90
+    21300182: FlatSkillsIcons_screenshot_01-1920x1080-c974fe4a74718ba5f2054d5ba7b7446e_91
+    21300184: FlatSkillsIcons_screenshot_01-1920x1080-c974fe4a74718ba5f2054d5ba7b7446e_92
+    21300186: FlatSkillsIcons_screenshot_01-1920x1080-c974fe4a74718ba5f2054d5ba7b7446e_93
+    21300188: FlatSkillsIcons_screenshot_01-1920x1080-c974fe4a74718ba5f2054d5ba7b7446e_94
+    21300190: FlatSkillsIcons_screenshot_01-1920x1080-c974fe4a74718ba5f2054d5ba7b7446e_95
+    21300192: FlatSkillsIcons_screenshot_01-1920x1080-c974fe4a74718ba5f2054d5ba7b7446e_96
+    21300194: FlatSkillsIcons_screenshot_01-1920x1080-c974fe4a74718ba5f2054d5ba7b7446e_97
+    21300196: FlatSkillsIcons_screenshot_01-1920x1080-c974fe4a74718ba5f2054d5ba7b7446e_98
+    21300198: FlatSkillsIcons_screenshot_01-1920x1080-c974fe4a74718ba5f2054d5ba7b7446e_99
+    21300200: FlatSkillsIcons_screenshot_01-1920x1080-c974fe4a74718ba5f2054d5ba7b7446e_100
+    21300202: FlatSkillsIcons_screenshot_01-1920x1080-c974fe4a74718ba5f2054d5ba7b7446e_101
+    21300204: FlatSkillsIcons_screenshot_01-1920x1080-c974fe4a74718ba5f2054d5ba7b7446e_102
+    21300206: FlatSkillsIcons_screenshot_01-1920x1080-c974fe4a74718ba5f2054d5ba7b7446e_103
+    21300208: FlatSkillsIcons_screenshot_01-1920x1080-c974fe4a74718ba5f2054d5ba7b7446e_104
+    21300210: FlatSkillsIcons_screenshot_01-1920x1080-c974fe4a74718ba5f2054d5ba7b7446e_105
+    21300212: FlatSkillsIcons_screenshot_01-1920x1080-c974fe4a74718ba5f2054d5ba7b7446e_106
+    21300214: FlatSkillsIcons_screenshot_01-1920x1080-c974fe4a74718ba5f2054d5ba7b7446e_107
+    21300216: FlatSkillsIcons_screenshot_01-1920x1080-c974fe4a74718ba5f2054d5ba7b7446e_108
+    21300218: FlatSkillsIcons_screenshot_01-1920x1080-c974fe4a74718ba5f2054d5ba7b7446e_109
+    21300220: FlatSkillsIcons_screenshot_01-1920x1080-c974fe4a74718ba5f2054d5ba7b7446e_110
+    21300222: FlatSkillsIcons_screenshot_01-1920x1080-c974fe4a74718ba5f2054d5ba7b7446e_111
+    21300224: FlatSkillsIcons_screenshot_01-1920x1080-c974fe4a74718ba5f2054d5ba7b7446e_112
+    21300226: FlatSkillsIcons_screenshot_01-1920x1080-c974fe4a74718ba5f2054d5ba7b7446e_113
+    21300228: FlatSkillsIcons_screenshot_01-1920x1080-c974fe4a74718ba5f2054d5ba7b7446e_114
+    21300230: FlatSkillsIcons_screenshot_01-1920x1080-c974fe4a74718ba5f2054d5ba7b7446e_115
+    21300232: FlatSkillsIcons_screenshot_01-1920x1080-c974fe4a74718ba5f2054d5ba7b7446e_116
+    21300234: FlatSkillsIcons_screenshot_01-1920x1080-c974fe4a74718ba5f2054d5ba7b7446e_117
+    21300236: FlatSkillsIcons_screenshot_01-1920x1080-c974fe4a74718ba5f2054d5ba7b7446e_118
+    21300238: FlatSkillsIcons_screenshot_01-1920x1080-c974fe4a74718ba5f2054d5ba7b7446e_119
+    21300240: FlatSkillsIcons_screenshot_01-1920x1080-c974fe4a74718ba5f2054d5ba7b7446e_120
+    21300242: FlatSkillsIcons_screenshot_01-1920x1080-c974fe4a74718ba5f2054d5ba7b7446e_121
+    21300244: FlatSkillsIcons_screenshot_01-1920x1080-c974fe4a74718ba5f2054d5ba7b7446e_122
+    21300246: FlatSkillsIcons_screenshot_01-1920x1080-c974fe4a74718ba5f2054d5ba7b7446e_123
+    21300248: FlatSkillsIcons_screenshot_01-1920x1080-c974fe4a74718ba5f2054d5ba7b7446e_124
+    21300250: FlatSkillsIcons_screenshot_01-1920x1080-c974fe4a74718ba5f2054d5ba7b7446e_125
+    21300252: FlatSkillsIcons_screenshot_01-1920x1080-c974fe4a74718ba5f2054d5ba7b7446e_126
+    21300254: FlatSkillsIcons_screenshot_01-1920x1080-c974fe4a74718ba5f2054d5ba7b7446e_127
+    21300256: FlatSkillsIcons_screenshot_01-1920x1080-c974fe4a74718ba5f2054d5ba7b7446e_128
+    21300258: FlatSkillsIcons_screenshot_01-1920x1080-c974fe4a74718ba5f2054d5ba7b7446e_129
+    21300260: FlatSkillsIcons_screenshot_01-1920x1080-c974fe4a74718ba5f2054d5ba7b7446e_130
+    21300262: FlatSkillsIcons_screenshot_01-1920x1080-c974fe4a74718ba5f2054d5ba7b7446e_131
+    21300264: FlatSkillsIcons_screenshot_01-1920x1080-c974fe4a74718ba5f2054d5ba7b7446e_132
+    21300266: FlatSkillsIcons_screenshot_01-1920x1080-c974fe4a74718ba5f2054d5ba7b7446e_133
+    21300268: FlatSkillsIcons_screenshot_01-1920x1080-c974fe4a74718ba5f2054d5ba7b7446e_134
+    21300270: FlatSkillsIcons_screenshot_01-1920x1080-c974fe4a74718ba5f2054d5ba7b7446e_135
+    21300272: FlatSkillsIcons_screenshot_01-1920x1080-c974fe4a74718ba5f2054d5ba7b7446e_136
+    21300274: FlatSkillsIcons_screenshot_01-1920x1080-c974fe4a74718ba5f2054d5ba7b7446e_137
+    21300276: FlatSkillsIcons_screenshot_01-1920x1080-c974fe4a74718ba5f2054d5ba7b7446e_138
+    21300278: FlatSkillsIcons_screenshot_01-1920x1080-c974fe4a74718ba5f2054d5ba7b7446e_139
+    21300280: FlatSkillsIcons_screenshot_01-1920x1080-c974fe4a74718ba5f2054d5ba7b7446e_140
+    21300282: FlatSkillsIcons_screenshot_01-1920x1080-c974fe4a74718ba5f2054d5ba7b7446e_141
+    21300284: FlatSkillsIcons_screenshot_01-1920x1080-c974fe4a74718ba5f2054d5ba7b7446e_142
+    21300286: FlatSkillsIcons_screenshot_01-1920x1080-c974fe4a74718ba5f2054d5ba7b7446e_143
+    21300288: FlatSkillsIcons_screenshot_01-1920x1080-c974fe4a74718ba5f2054d5ba7b7446e_144
+    21300290: FlatSkillsIcons_screenshot_01-1920x1080-c974fe4a74718ba5f2054d5ba7b7446e_145
+    21300292: FlatSkillsIcons_screenshot_01-1920x1080-c974fe4a74718ba5f2054d5ba7b7446e_146
+    21300294: FlatSkillsIcons_screenshot_01-1920x1080-c974fe4a74718ba5f2054d5ba7b7446e_147
+    21300296: FlatSkillsIcons_screenshot_01-1920x1080-c974fe4a74718ba5f2054d5ba7b7446e_148
+    21300298: FlatSkillsIcons_screenshot_01-1920x1080-c974fe4a74718ba5f2054d5ba7b7446e_149
+  serializedVersion: 4
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -1
+    wrapU: 1
+    wrapV: -1
+    wrapW: -1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: Standalone
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: FlatSkillsIcons_screenshot_01-1920x1080-c974fe4a74718ba5f2054d5ba7b7446e_0
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 920
+        width: 75
+        height: 75
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FlatSkillsIcons_screenshot_01-1920x1080-c974fe4a74718ba5f2054d5ba7b7446e_1
+      rect:
+        serializedVersion: 2
+        x: 107
+        y: 920
+        width: 75
+        height: 75
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FlatSkillsIcons_screenshot_01-1920x1080-c974fe4a74718ba5f2054d5ba7b7446e_2
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 920
+        width: 75
+        height: 75
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FlatSkillsIcons_screenshot_01-1920x1080-c974fe4a74718ba5f2054d5ba7b7446e_3
+      rect:
+        serializedVersion: 2
+        x: 313
+        y: 920
+        width: 75
+        height: 75
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FlatSkillsIcons_screenshot_01-1920x1080-c974fe4a74718ba5f2054d5ba7b7446e_4
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 920
+        width: 75
+        height: 75
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FlatSkillsIcons_screenshot_01-1920x1080-c974fe4a74718ba5f2054d5ba7b7446e_5
+      rect:
+        serializedVersion: 2
+        x: 519
+        y: 920
+        width: 75
+        height: 75
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FlatSkillsIcons_screenshot_01-1920x1080-c974fe4a74718ba5f2054d5ba7b7446e_6
+      rect:
+        serializedVersion: 2
+        x: 622
+        y: 920
+        width: 75
+        height: 75
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FlatSkillsIcons_screenshot_01-1920x1080-c974fe4a74718ba5f2054d5ba7b7446e_7
+      rect:
+        serializedVersion: 2
+        x: 725
+        y: 920
+        width: 75
+        height: 75
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FlatSkillsIcons_screenshot_01-1920x1080-c974fe4a74718ba5f2054d5ba7b7446e_8
+      rect:
+        serializedVersion: 2
+        x: 828
+        y: 920
+        width: 75
+        height: 75
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FlatSkillsIcons_screenshot_01-1920x1080-c974fe4a74718ba5f2054d5ba7b7446e_9
+      rect:
+        serializedVersion: 2
+        x: 931
+        y: 920
+        width: 75
+        height: 75
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FlatSkillsIcons_screenshot_01-1920x1080-c974fe4a74718ba5f2054d5ba7b7446e_10
+      rect:
+        serializedVersion: 2
+        x: 1034
+        y: 920
+        width: 75
+        height: 75
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FlatSkillsIcons_screenshot_01-1920x1080-c974fe4a74718ba5f2054d5ba7b7446e_11
+      rect:
+        serializedVersion: 2
+        x: 1137
+        y: 920
+        width: 75
+        height: 75
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FlatSkillsIcons_screenshot_01-1920x1080-c974fe4a74718ba5f2054d5ba7b7446e_12
+      rect:
+        serializedVersion: 2
+        x: 1240
+        y: 920
+        width: 75
+        height: 75
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FlatSkillsIcons_screenshot_01-1920x1080-c974fe4a74718ba5f2054d5ba7b7446e_13
+      rect:
+        serializedVersion: 2
+        x: 1343
+        y: 920
+        width: 75
+        height: 75
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FlatSkillsIcons_screenshot_01-1920x1080-c974fe4a74718ba5f2054d5ba7b7446e_14
+      rect:
+        serializedVersion: 2
+        x: 1446
+        y: 920
+        width: 75
+        height: 75
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FlatSkillsIcons_screenshot_01-1920x1080-c974fe4a74718ba5f2054d5ba7b7446e_15
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 818
+        width: 75
+        height: 75
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FlatSkillsIcons_screenshot_01-1920x1080-c974fe4a74718ba5f2054d5ba7b7446e_16
+      rect:
+        serializedVersion: 2
+        x: 107
+        y: 818
+        width: 75
+        height: 75
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FlatSkillsIcons_screenshot_01-1920x1080-c974fe4a74718ba5f2054d5ba7b7446e_17
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 818
+        width: 75
+        height: 75
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FlatSkillsIcons_screenshot_01-1920x1080-c974fe4a74718ba5f2054d5ba7b7446e_18
+      rect:
+        serializedVersion: 2
+        x: 313
+        y: 818
+        width: 75
+        height: 75
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FlatSkillsIcons_screenshot_01-1920x1080-c974fe4a74718ba5f2054d5ba7b7446e_19
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 818
+        width: 75
+        height: 75
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FlatSkillsIcons_screenshot_01-1920x1080-c974fe4a74718ba5f2054d5ba7b7446e_20
+      rect:
+        serializedVersion: 2
+        x: 519
+        y: 818
+        width: 75
+        height: 75
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FlatSkillsIcons_screenshot_01-1920x1080-c974fe4a74718ba5f2054d5ba7b7446e_21
+      rect:
+        serializedVersion: 2
+        x: 622
+        y: 818
+        width: 75
+        height: 75
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FlatSkillsIcons_screenshot_01-1920x1080-c974fe4a74718ba5f2054d5ba7b7446e_22
+      rect:
+        serializedVersion: 2
+        x: 725
+        y: 818
+        width: 75
+        height: 75
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FlatSkillsIcons_screenshot_01-1920x1080-c974fe4a74718ba5f2054d5ba7b7446e_23
+      rect:
+        serializedVersion: 2
+        x: 828
+        y: 818
+        width: 75
+        height: 75
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FlatSkillsIcons_screenshot_01-1920x1080-c974fe4a74718ba5f2054d5ba7b7446e_24
+      rect:
+        serializedVersion: 2
+        x: 931
+        y: 818
+        width: 75
+        height: 75
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FlatSkillsIcons_screenshot_01-1920x1080-c974fe4a74718ba5f2054d5ba7b7446e_25
+      rect:
+        serializedVersion: 2
+        x: 1034
+        y: 818
+        width: 75
+        height: 75
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FlatSkillsIcons_screenshot_01-1920x1080-c974fe4a74718ba5f2054d5ba7b7446e_26
+      rect:
+        serializedVersion: 2
+        x: 1137
+        y: 818
+        width: 75
+        height: 75
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FlatSkillsIcons_screenshot_01-1920x1080-c974fe4a74718ba5f2054d5ba7b7446e_27
+      rect:
+        serializedVersion: 2
+        x: 1240
+        y: 818
+        width: 75
+        height: 75
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FlatSkillsIcons_screenshot_01-1920x1080-c974fe4a74718ba5f2054d5ba7b7446e_28
+      rect:
+        serializedVersion: 2
+        x: 1343
+        y: 818
+        width: 75
+        height: 75
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FlatSkillsIcons_screenshot_01-1920x1080-c974fe4a74718ba5f2054d5ba7b7446e_29
+      rect:
+        serializedVersion: 2
+        x: 1446
+        y: 818
+        width: 75
+        height: 75
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FlatSkillsIcons_screenshot_01-1920x1080-c974fe4a74718ba5f2054d5ba7b7446e_30
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 716
+        width: 75
+        height: 75
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FlatSkillsIcons_screenshot_01-1920x1080-c974fe4a74718ba5f2054d5ba7b7446e_31
+      rect:
+        serializedVersion: 2
+        x: 107
+        y: 716
+        width: 75
+        height: 75
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FlatSkillsIcons_screenshot_01-1920x1080-c974fe4a74718ba5f2054d5ba7b7446e_32
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 716
+        width: 75
+        height: 75
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FlatSkillsIcons_screenshot_01-1920x1080-c974fe4a74718ba5f2054d5ba7b7446e_33
+      rect:
+        serializedVersion: 2
+        x: 313
+        y: 716
+        width: 75
+        height: 75
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FlatSkillsIcons_screenshot_01-1920x1080-c974fe4a74718ba5f2054d5ba7b7446e_34
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 716
+        width: 75
+        height: 75
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FlatSkillsIcons_screenshot_01-1920x1080-c974fe4a74718ba5f2054d5ba7b7446e_35
+      rect:
+        serializedVersion: 2
+        x: 519
+        y: 716
+        width: 75
+        height: 75
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FlatSkillsIcons_screenshot_01-1920x1080-c974fe4a74718ba5f2054d5ba7b7446e_36
+      rect:
+        serializedVersion: 2
+        x: 622
+        y: 716
+        width: 75
+        height: 75
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FlatSkillsIcons_screenshot_01-1920x1080-c974fe4a74718ba5f2054d5ba7b7446e_37
+      rect:
+        serializedVersion: 2
+        x: 725
+        y: 716
+        width: 75
+        height: 75
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FlatSkillsIcons_screenshot_01-1920x1080-c974fe4a74718ba5f2054d5ba7b7446e_38
+      rect:
+        serializedVersion: 2
+        x: 828
+        y: 716
+        width: 75
+        height: 75
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FlatSkillsIcons_screenshot_01-1920x1080-c974fe4a74718ba5f2054d5ba7b7446e_39
+      rect:
+        serializedVersion: 2
+        x: 931
+        y: 716
+        width: 75
+        height: 75
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FlatSkillsIcons_screenshot_01-1920x1080-c974fe4a74718ba5f2054d5ba7b7446e_40
+      rect:
+        serializedVersion: 2
+        x: 1034
+        y: 716
+        width: 75
+        height: 75
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FlatSkillsIcons_screenshot_01-1920x1080-c974fe4a74718ba5f2054d5ba7b7446e_41
+      rect:
+        serializedVersion: 2
+        x: 1137
+        y: 716
+        width: 75
+        height: 75
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FlatSkillsIcons_screenshot_01-1920x1080-c974fe4a74718ba5f2054d5ba7b7446e_42
+      rect:
+        serializedVersion: 2
+        x: 1240
+        y: 716
+        width: 75
+        height: 75
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FlatSkillsIcons_screenshot_01-1920x1080-c974fe4a74718ba5f2054d5ba7b7446e_43
+      rect:
+        serializedVersion: 2
+        x: 1343
+        y: 716
+        width: 75
+        height: 75
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FlatSkillsIcons_screenshot_01-1920x1080-c974fe4a74718ba5f2054d5ba7b7446e_44
+      rect:
+        serializedVersion: 2
+        x: 1446
+        y: 716
+        width: 75
+        height: 75
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FlatSkillsIcons_screenshot_01-1920x1080-c974fe4a74718ba5f2054d5ba7b7446e_45
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 614
+        width: 75
+        height: 75
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FlatSkillsIcons_screenshot_01-1920x1080-c974fe4a74718ba5f2054d5ba7b7446e_46
+      rect:
+        serializedVersion: 2
+        x: 107
+        y: 614
+        width: 75
+        height: 75
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FlatSkillsIcons_screenshot_01-1920x1080-c974fe4a74718ba5f2054d5ba7b7446e_47
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 614
+        width: 75
+        height: 75
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FlatSkillsIcons_screenshot_01-1920x1080-c974fe4a74718ba5f2054d5ba7b7446e_48
+      rect:
+        serializedVersion: 2
+        x: 313
+        y: 614
+        width: 75
+        height: 75
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FlatSkillsIcons_screenshot_01-1920x1080-c974fe4a74718ba5f2054d5ba7b7446e_49
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 614
+        width: 75
+        height: 75
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FlatSkillsIcons_screenshot_01-1920x1080-c974fe4a74718ba5f2054d5ba7b7446e_50
+      rect:
+        serializedVersion: 2
+        x: 519
+        y: 614
+        width: 75
+        height: 75
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FlatSkillsIcons_screenshot_01-1920x1080-c974fe4a74718ba5f2054d5ba7b7446e_51
+      rect:
+        serializedVersion: 2
+        x: 622
+        y: 614
+        width: 75
+        height: 75
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FlatSkillsIcons_screenshot_01-1920x1080-c974fe4a74718ba5f2054d5ba7b7446e_52
+      rect:
+        serializedVersion: 2
+        x: 725
+        y: 614
+        width: 75
+        height: 75
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FlatSkillsIcons_screenshot_01-1920x1080-c974fe4a74718ba5f2054d5ba7b7446e_53
+      rect:
+        serializedVersion: 2
+        x: 828
+        y: 614
+        width: 75
+        height: 75
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FlatSkillsIcons_screenshot_01-1920x1080-c974fe4a74718ba5f2054d5ba7b7446e_54
+      rect:
+        serializedVersion: 2
+        x: 931
+        y: 614
+        width: 75
+        height: 75
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FlatSkillsIcons_screenshot_01-1920x1080-c974fe4a74718ba5f2054d5ba7b7446e_55
+      rect:
+        serializedVersion: 2
+        x: 1034
+        y: 614
+        width: 75
+        height: 75
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FlatSkillsIcons_screenshot_01-1920x1080-c974fe4a74718ba5f2054d5ba7b7446e_56
+      rect:
+        serializedVersion: 2
+        x: 1137
+        y: 614
+        width: 75
+        height: 75
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FlatSkillsIcons_screenshot_01-1920x1080-c974fe4a74718ba5f2054d5ba7b7446e_57
+      rect:
+        serializedVersion: 2
+        x: 1240
+        y: 614
+        width: 75
+        height: 75
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FlatSkillsIcons_screenshot_01-1920x1080-c974fe4a74718ba5f2054d5ba7b7446e_58
+      rect:
+        serializedVersion: 2
+        x: 1343
+        y: 614
+        width: 75
+        height: 75
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FlatSkillsIcons_screenshot_01-1920x1080-c974fe4a74718ba5f2054d5ba7b7446e_59
+      rect:
+        serializedVersion: 2
+        x: 1446
+        y: 614
+        width: 75
+        height: 75
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FlatSkillsIcons_screenshot_01-1920x1080-c974fe4a74718ba5f2054d5ba7b7446e_60
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 512
+        width: 75
+        height: 75
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FlatSkillsIcons_screenshot_01-1920x1080-c974fe4a74718ba5f2054d5ba7b7446e_61
+      rect:
+        serializedVersion: 2
+        x: 107
+        y: 512
+        width: 75
+        height: 75
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FlatSkillsIcons_screenshot_01-1920x1080-c974fe4a74718ba5f2054d5ba7b7446e_62
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 512
+        width: 75
+        height: 75
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FlatSkillsIcons_screenshot_01-1920x1080-c974fe4a74718ba5f2054d5ba7b7446e_63
+      rect:
+        serializedVersion: 2
+        x: 313
+        y: 512
+        width: 75
+        height: 75
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FlatSkillsIcons_screenshot_01-1920x1080-c974fe4a74718ba5f2054d5ba7b7446e_64
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 512
+        width: 75
+        height: 75
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FlatSkillsIcons_screenshot_01-1920x1080-c974fe4a74718ba5f2054d5ba7b7446e_65
+      rect:
+        serializedVersion: 2
+        x: 519
+        y: 512
+        width: 75
+        height: 75
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FlatSkillsIcons_screenshot_01-1920x1080-c974fe4a74718ba5f2054d5ba7b7446e_66
+      rect:
+        serializedVersion: 2
+        x: 622
+        y: 512
+        width: 75
+        height: 75
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FlatSkillsIcons_screenshot_01-1920x1080-c974fe4a74718ba5f2054d5ba7b7446e_67
+      rect:
+        serializedVersion: 2
+        x: 725
+        y: 512
+        width: 75
+        height: 75
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FlatSkillsIcons_screenshot_01-1920x1080-c974fe4a74718ba5f2054d5ba7b7446e_68
+      rect:
+        serializedVersion: 2
+        x: 828
+        y: 512
+        width: 75
+        height: 75
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FlatSkillsIcons_screenshot_01-1920x1080-c974fe4a74718ba5f2054d5ba7b7446e_69
+      rect:
+        serializedVersion: 2
+        x: 931
+        y: 512
+        width: 75
+        height: 75
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FlatSkillsIcons_screenshot_01-1920x1080-c974fe4a74718ba5f2054d5ba7b7446e_70
+      rect:
+        serializedVersion: 2
+        x: 1034
+        y: 512
+        width: 75
+        height: 75
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FlatSkillsIcons_screenshot_01-1920x1080-c974fe4a74718ba5f2054d5ba7b7446e_71
+      rect:
+        serializedVersion: 2
+        x: 1137
+        y: 512
+        width: 75
+        height: 75
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FlatSkillsIcons_screenshot_01-1920x1080-c974fe4a74718ba5f2054d5ba7b7446e_72
+      rect:
+        serializedVersion: 2
+        x: 1240
+        y: 512
+        width: 75
+        height: 75
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FlatSkillsIcons_screenshot_01-1920x1080-c974fe4a74718ba5f2054d5ba7b7446e_73
+      rect:
+        serializedVersion: 2
+        x: 1343
+        y: 512
+        width: 75
+        height: 75
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FlatSkillsIcons_screenshot_01-1920x1080-c974fe4a74718ba5f2054d5ba7b7446e_74
+      rect:
+        serializedVersion: 2
+        x: 1446
+        y: 512
+        width: 75
+        height: 75
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FlatSkillsIcons_screenshot_01-1920x1080-c974fe4a74718ba5f2054d5ba7b7446e_75
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 410
+        width: 75
+        height: 75
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FlatSkillsIcons_screenshot_01-1920x1080-c974fe4a74718ba5f2054d5ba7b7446e_76
+      rect:
+        serializedVersion: 2
+        x: 107
+        y: 410
+        width: 75
+        height: 75
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FlatSkillsIcons_screenshot_01-1920x1080-c974fe4a74718ba5f2054d5ba7b7446e_77
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 410
+        width: 75
+        height: 75
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FlatSkillsIcons_screenshot_01-1920x1080-c974fe4a74718ba5f2054d5ba7b7446e_78
+      rect:
+        serializedVersion: 2
+        x: 313
+        y: 410
+        width: 75
+        height: 75
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FlatSkillsIcons_screenshot_01-1920x1080-c974fe4a74718ba5f2054d5ba7b7446e_79
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 410
+        width: 75
+        height: 75
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FlatSkillsIcons_screenshot_01-1920x1080-c974fe4a74718ba5f2054d5ba7b7446e_80
+      rect:
+        serializedVersion: 2
+        x: 519
+        y: 410
+        width: 75
+        height: 75
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FlatSkillsIcons_screenshot_01-1920x1080-c974fe4a74718ba5f2054d5ba7b7446e_81
+      rect:
+        serializedVersion: 2
+        x: 622
+        y: 410
+        width: 75
+        height: 75
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FlatSkillsIcons_screenshot_01-1920x1080-c974fe4a74718ba5f2054d5ba7b7446e_82
+      rect:
+        serializedVersion: 2
+        x: 725
+        y: 410
+        width: 75
+        height: 75
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FlatSkillsIcons_screenshot_01-1920x1080-c974fe4a74718ba5f2054d5ba7b7446e_83
+      rect:
+        serializedVersion: 2
+        x: 828
+        y: 410
+        width: 75
+        height: 75
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FlatSkillsIcons_screenshot_01-1920x1080-c974fe4a74718ba5f2054d5ba7b7446e_84
+      rect:
+        serializedVersion: 2
+        x: 931
+        y: 410
+        width: 75
+        height: 75
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FlatSkillsIcons_screenshot_01-1920x1080-c974fe4a74718ba5f2054d5ba7b7446e_85
+      rect:
+        serializedVersion: 2
+        x: 1034
+        y: 410
+        width: 75
+        height: 75
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FlatSkillsIcons_screenshot_01-1920x1080-c974fe4a74718ba5f2054d5ba7b7446e_86
+      rect:
+        serializedVersion: 2
+        x: 1137
+        y: 410
+        width: 75
+        height: 75
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FlatSkillsIcons_screenshot_01-1920x1080-c974fe4a74718ba5f2054d5ba7b7446e_87
+      rect:
+        serializedVersion: 2
+        x: 1240
+        y: 410
+        width: 75
+        height: 75
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FlatSkillsIcons_screenshot_01-1920x1080-c974fe4a74718ba5f2054d5ba7b7446e_88
+      rect:
+        serializedVersion: 2
+        x: 1343
+        y: 410
+        width: 75
+        height: 75
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FlatSkillsIcons_screenshot_01-1920x1080-c974fe4a74718ba5f2054d5ba7b7446e_89
+      rect:
+        serializedVersion: 2
+        x: 1446
+        y: 410
+        width: 75
+        height: 75
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FlatSkillsIcons_screenshot_01-1920x1080-c974fe4a74718ba5f2054d5ba7b7446e_90
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 308
+        width: 75
+        height: 75
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FlatSkillsIcons_screenshot_01-1920x1080-c974fe4a74718ba5f2054d5ba7b7446e_91
+      rect:
+        serializedVersion: 2
+        x: 107
+        y: 308
+        width: 75
+        height: 75
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FlatSkillsIcons_screenshot_01-1920x1080-c974fe4a74718ba5f2054d5ba7b7446e_92
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 308
+        width: 75
+        height: 75
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FlatSkillsIcons_screenshot_01-1920x1080-c974fe4a74718ba5f2054d5ba7b7446e_93
+      rect:
+        serializedVersion: 2
+        x: 313
+        y: 308
+        width: 75
+        height: 75
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FlatSkillsIcons_screenshot_01-1920x1080-c974fe4a74718ba5f2054d5ba7b7446e_94
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 308
+        width: 75
+        height: 75
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FlatSkillsIcons_screenshot_01-1920x1080-c974fe4a74718ba5f2054d5ba7b7446e_95
+      rect:
+        serializedVersion: 2
+        x: 519
+        y: 308
+        width: 75
+        height: 75
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FlatSkillsIcons_screenshot_01-1920x1080-c974fe4a74718ba5f2054d5ba7b7446e_96
+      rect:
+        serializedVersion: 2
+        x: 622
+        y: 308
+        width: 75
+        height: 75
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FlatSkillsIcons_screenshot_01-1920x1080-c974fe4a74718ba5f2054d5ba7b7446e_97
+      rect:
+        serializedVersion: 2
+        x: 725
+        y: 308
+        width: 75
+        height: 75
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FlatSkillsIcons_screenshot_01-1920x1080-c974fe4a74718ba5f2054d5ba7b7446e_98
+      rect:
+        serializedVersion: 2
+        x: 828
+        y: 308
+        width: 75
+        height: 75
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FlatSkillsIcons_screenshot_01-1920x1080-c974fe4a74718ba5f2054d5ba7b7446e_99
+      rect:
+        serializedVersion: 2
+        x: 931
+        y: 308
+        width: 75
+        height: 75
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FlatSkillsIcons_screenshot_01-1920x1080-c974fe4a74718ba5f2054d5ba7b7446e_100
+      rect:
+        serializedVersion: 2
+        x: 1034
+        y: 308
+        width: 75
+        height: 75
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FlatSkillsIcons_screenshot_01-1920x1080-c974fe4a74718ba5f2054d5ba7b7446e_101
+      rect:
+        serializedVersion: 2
+        x: 1137
+        y: 308
+        width: 75
+        height: 75
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FlatSkillsIcons_screenshot_01-1920x1080-c974fe4a74718ba5f2054d5ba7b7446e_102
+      rect:
+        serializedVersion: 2
+        x: 1240
+        y: 308
+        width: 75
+        height: 75
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FlatSkillsIcons_screenshot_01-1920x1080-c974fe4a74718ba5f2054d5ba7b7446e_103
+      rect:
+        serializedVersion: 2
+        x: 1343
+        y: 308
+        width: 75
+        height: 75
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FlatSkillsIcons_screenshot_01-1920x1080-c974fe4a74718ba5f2054d5ba7b7446e_104
+      rect:
+        serializedVersion: 2
+        x: 1446
+        y: 308
+        width: 75
+        height: 75
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FlatSkillsIcons_screenshot_01-1920x1080-c974fe4a74718ba5f2054d5ba7b7446e_105
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 206
+        width: 75
+        height: 75
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FlatSkillsIcons_screenshot_01-1920x1080-c974fe4a74718ba5f2054d5ba7b7446e_106
+      rect:
+        serializedVersion: 2
+        x: 107
+        y: 206
+        width: 75
+        height: 75
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FlatSkillsIcons_screenshot_01-1920x1080-c974fe4a74718ba5f2054d5ba7b7446e_107
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 206
+        width: 75
+        height: 75
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FlatSkillsIcons_screenshot_01-1920x1080-c974fe4a74718ba5f2054d5ba7b7446e_108
+      rect:
+        serializedVersion: 2
+        x: 313
+        y: 206
+        width: 75
+        height: 75
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FlatSkillsIcons_screenshot_01-1920x1080-c974fe4a74718ba5f2054d5ba7b7446e_109
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 206
+        width: 75
+        height: 75
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FlatSkillsIcons_screenshot_01-1920x1080-c974fe4a74718ba5f2054d5ba7b7446e_110
+      rect:
+        serializedVersion: 2
+        x: 519
+        y: 206
+        width: 75
+        height: 75
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FlatSkillsIcons_screenshot_01-1920x1080-c974fe4a74718ba5f2054d5ba7b7446e_111
+      rect:
+        serializedVersion: 2
+        x: 622
+        y: 206
+        width: 75
+        height: 75
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FlatSkillsIcons_screenshot_01-1920x1080-c974fe4a74718ba5f2054d5ba7b7446e_112
+      rect:
+        serializedVersion: 2
+        x: 725
+        y: 206
+        width: 75
+        height: 75
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FlatSkillsIcons_screenshot_01-1920x1080-c974fe4a74718ba5f2054d5ba7b7446e_113
+      rect:
+        serializedVersion: 2
+        x: 828
+        y: 206
+        width: 75
+        height: 75
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FlatSkillsIcons_screenshot_01-1920x1080-c974fe4a74718ba5f2054d5ba7b7446e_114
+      rect:
+        serializedVersion: 2
+        x: 931
+        y: 206
+        width: 75
+        height: 75
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FlatSkillsIcons_screenshot_01-1920x1080-c974fe4a74718ba5f2054d5ba7b7446e_115
+      rect:
+        serializedVersion: 2
+        x: 1034
+        y: 206
+        width: 75
+        height: 75
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FlatSkillsIcons_screenshot_01-1920x1080-c974fe4a74718ba5f2054d5ba7b7446e_116
+      rect:
+        serializedVersion: 2
+        x: 1137
+        y: 206
+        width: 75
+        height: 75
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FlatSkillsIcons_screenshot_01-1920x1080-c974fe4a74718ba5f2054d5ba7b7446e_117
+      rect:
+        serializedVersion: 2
+        x: 1240
+        y: 206
+        width: 75
+        height: 75
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FlatSkillsIcons_screenshot_01-1920x1080-c974fe4a74718ba5f2054d5ba7b7446e_118
+      rect:
+        serializedVersion: 2
+        x: 1343
+        y: 206
+        width: 75
+        height: 75
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FlatSkillsIcons_screenshot_01-1920x1080-c974fe4a74718ba5f2054d5ba7b7446e_119
+      rect:
+        serializedVersion: 2
+        x: 1446
+        y: 206
+        width: 75
+        height: 75
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FlatSkillsIcons_screenshot_01-1920x1080-c974fe4a74718ba5f2054d5ba7b7446e_120
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 104
+        width: 75
+        height: 75
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FlatSkillsIcons_screenshot_01-1920x1080-c974fe4a74718ba5f2054d5ba7b7446e_121
+      rect:
+        serializedVersion: 2
+        x: 107
+        y: 104
+        width: 75
+        height: 75
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FlatSkillsIcons_screenshot_01-1920x1080-c974fe4a74718ba5f2054d5ba7b7446e_122
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 104
+        width: 75
+        height: 75
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FlatSkillsIcons_screenshot_01-1920x1080-c974fe4a74718ba5f2054d5ba7b7446e_123
+      rect:
+        serializedVersion: 2
+        x: 313
+        y: 104
+        width: 75
+        height: 75
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FlatSkillsIcons_screenshot_01-1920x1080-c974fe4a74718ba5f2054d5ba7b7446e_124
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 104
+        width: 75
+        height: 75
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FlatSkillsIcons_screenshot_01-1920x1080-c974fe4a74718ba5f2054d5ba7b7446e_125
+      rect:
+        serializedVersion: 2
+        x: 519
+        y: 104
+        width: 75
+        height: 75
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FlatSkillsIcons_screenshot_01-1920x1080-c974fe4a74718ba5f2054d5ba7b7446e_126
+      rect:
+        serializedVersion: 2
+        x: 622
+        y: 104
+        width: 75
+        height: 75
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FlatSkillsIcons_screenshot_01-1920x1080-c974fe4a74718ba5f2054d5ba7b7446e_127
+      rect:
+        serializedVersion: 2
+        x: 725
+        y: 104
+        width: 75
+        height: 75
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FlatSkillsIcons_screenshot_01-1920x1080-c974fe4a74718ba5f2054d5ba7b7446e_128
+      rect:
+        serializedVersion: 2
+        x: 828
+        y: 104
+        width: 75
+        height: 75
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FlatSkillsIcons_screenshot_01-1920x1080-c974fe4a74718ba5f2054d5ba7b7446e_129
+      rect:
+        serializedVersion: 2
+        x: 931
+        y: 104
+        width: 75
+        height: 75
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FlatSkillsIcons_screenshot_01-1920x1080-c974fe4a74718ba5f2054d5ba7b7446e_130
+      rect:
+        serializedVersion: 2
+        x: 1034
+        y: 104
+        width: 75
+        height: 75
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FlatSkillsIcons_screenshot_01-1920x1080-c974fe4a74718ba5f2054d5ba7b7446e_131
+      rect:
+        serializedVersion: 2
+        x: 1137
+        y: 104
+        width: 75
+        height: 75
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FlatSkillsIcons_screenshot_01-1920x1080-c974fe4a74718ba5f2054d5ba7b7446e_132
+      rect:
+        serializedVersion: 2
+        x: 1240
+        y: 104
+        width: 75
+        height: 75
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FlatSkillsIcons_screenshot_01-1920x1080-c974fe4a74718ba5f2054d5ba7b7446e_133
+      rect:
+        serializedVersion: 2
+        x: 1343
+        y: 104
+        width: 75
+        height: 75
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FlatSkillsIcons_screenshot_01-1920x1080-c974fe4a74718ba5f2054d5ba7b7446e_134
+      rect:
+        serializedVersion: 2
+        x: 1446
+        y: 104
+        width: 75
+        height: 75
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FlatSkillsIcons_screenshot_01-1920x1080-c974fe4a74718ba5f2054d5ba7b7446e_135
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 2
+        width: 75
+        height: 75
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FlatSkillsIcons_screenshot_01-1920x1080-c974fe4a74718ba5f2054d5ba7b7446e_136
+      rect:
+        serializedVersion: 2
+        x: 107
+        y: 2
+        width: 75
+        height: 75
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FlatSkillsIcons_screenshot_01-1920x1080-c974fe4a74718ba5f2054d5ba7b7446e_137
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 2
+        width: 75
+        height: 75
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FlatSkillsIcons_screenshot_01-1920x1080-c974fe4a74718ba5f2054d5ba7b7446e_138
+      rect:
+        serializedVersion: 2
+        x: 313
+        y: 2
+        width: 75
+        height: 75
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FlatSkillsIcons_screenshot_01-1920x1080-c974fe4a74718ba5f2054d5ba7b7446e_139
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 2
+        width: 75
+        height: 75
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FlatSkillsIcons_screenshot_01-1920x1080-c974fe4a74718ba5f2054d5ba7b7446e_140
+      rect:
+        serializedVersion: 2
+        x: 519
+        y: 2
+        width: 75
+        height: 75
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FlatSkillsIcons_screenshot_01-1920x1080-c974fe4a74718ba5f2054d5ba7b7446e_141
+      rect:
+        serializedVersion: 2
+        x: 622
+        y: 2
+        width: 75
+        height: 75
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FlatSkillsIcons_screenshot_01-1920x1080-c974fe4a74718ba5f2054d5ba7b7446e_142
+      rect:
+        serializedVersion: 2
+        x: 725
+        y: 2
+        width: 75
+        height: 75
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FlatSkillsIcons_screenshot_01-1920x1080-c974fe4a74718ba5f2054d5ba7b7446e_143
+      rect:
+        serializedVersion: 2
+        x: 828
+        y: 2
+        width: 75
+        height: 75
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FlatSkillsIcons_screenshot_01-1920x1080-c974fe4a74718ba5f2054d5ba7b7446e_144
+      rect:
+        serializedVersion: 2
+        x: 931
+        y: 2
+        width: 75
+        height: 75
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FlatSkillsIcons_screenshot_01-1920x1080-c974fe4a74718ba5f2054d5ba7b7446e_145
+      rect:
+        serializedVersion: 2
+        x: 1034
+        y: 2
+        width: 75
+        height: 75
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FlatSkillsIcons_screenshot_01-1920x1080-c974fe4a74718ba5f2054d5ba7b7446e_146
+      rect:
+        serializedVersion: 2
+        x: 1137
+        y: 2
+        width: 75
+        height: 75
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FlatSkillsIcons_screenshot_01-1920x1080-c974fe4a74718ba5f2054d5ba7b7446e_147
+      rect:
+        serializedVersion: 2
+        x: 1240
+        y: 2
+        width: 75
+        height: 75
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FlatSkillsIcons_screenshot_01-1920x1080-c974fe4a74718ba5f2054d5ba7b7446e_148
+      rect:
+        serializedVersion: 2
+        x: 1343
+        y: 2
+        width: 75
+        height: 75
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FlatSkillsIcons_screenshot_01-1920x1080-c974fe4a74718ba5f2054d5ba7b7446e_149
+      rect:
+        serializedVersion: 2
+        x: 1446
+        y: 2
+        width: 75
+        height: 75
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    outline: []
+    physicsShape: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
