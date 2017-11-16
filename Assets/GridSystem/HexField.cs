@@ -38,12 +38,21 @@ public class HexField : MonoBehaviour {
         }
         set
         {
-            aimedCell = value;
-            if (aimedCell)
+            if (value)
             {
-                Debug.Log(value.coord);
-                Highlighter.HighlightCell(value.coord);
+                if (HexBattleStateMachine.Instance.battleState == HexBattleStateMachine.BattleState.SimpleSelect)
+                {
+                    Highlighter.HighlightCell(value.coord, 1);
+                }
             }
+            else
+            {
+                if (HexBattleStateMachine.Instance.battleState == HexBattleStateMachine.BattleState.SimpleSelect)
+                {
+                    Highlighter.HighlightCell(Vector2.one*Mathf.Infinity, 1);
+                }
+            }
+            aimedCell = value;
         }
     }
 
@@ -112,6 +121,8 @@ public class HexField : MonoBehaviour {
             cell.coord = c;
             cells.Add(cell);
         }
+
+        Highlighter.defaultColor = cells[0].GetComponentInChildren<Projector>().material.color;
     }
 
 

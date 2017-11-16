@@ -568,7 +568,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 0.72, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -1028,6 +1028,7 @@ MonoBehaviour:
   Mp: 10
   Initiative: 3
   ActionPoints: 7
+  WalkSpeed: 1
   Enemy: 1
   portrait: {fileID: 21300000, guid: dda38238f741d40c998ecafa664a7869, type: 3}
   cells: []
@@ -1169,6 +1170,7 @@ GameObject:
   - component: {fileID: 689805467}
   - component: {fileID: 689805466}
   - component: {fileID: 689805468}
+  - component: {fileID: 689805469}
   m_Layer: 0
   m_Name: HexField
   m_TagString: Untagged
@@ -1226,6 +1228,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab1efeefaac4f8447929f8d3e7e1b743, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  defaultColor: {r: 1, g: 1, b: 1, a: 0.8}
   avalibleColor: {r: 0, g: 1, b: 0, a: 1}
   wrongColor: {r: 1, g: 0, b: 0, a: 1}
   specialColor: {r: 1, g: 0, b: 1, a: 1}
@@ -1240,6 +1243,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e6ec1ef02ce4d47a88656ebf9af33e99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &689805469
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 689805463}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e25d2339c8a5da940a6452c332b3bb0c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  warrior: {fileID: 0}
 --- !u!1 &757153716
 GameObject:
   m_ObjectHideFlags: 0
@@ -1339,7 +1354,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 0.72, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -1639,7 +1654,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 0.72, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -1965,6 +1980,7 @@ MonoBehaviour:
   Mp: 10
   Initiative: 3
   ActionPoints: 7
+  WalkSpeed: 1
   Enemy: 0
   portrait: {fileID: 21300000, guid: 198513ad1b7c54bb19c10d5973add760, type: 3}
   cells: []
@@ -2079,7 +2095,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1262860717
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2341,6 +2357,10 @@ Prefab:
       propertyPath: m_Layer
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 100004, guid: 045ecc2f56350f643bcab80f13f7e30e, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 045ecc2f56350f643bcab80f13f7e30e, type: 3}
   m_IsPrefabParent: 0
@@ -2375,6 +2395,7 @@ MonoBehaviour:
   Mp: 10
   Initiative: 3
   ActionPoints: 7
+  WalkSpeed: 1
   Enemy: 0
   portrait: {fileID: 21300000, guid: 67dc62a66652142e384cd8e185f55786, type: 3}
   cells: []
@@ -3068,6 +3089,10 @@ Prefab:
       propertyPath: m_Layer
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 100004, guid: 045ecc2f56350f643bcab80f13f7e30e, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 045ecc2f56350f643bcab80f13f7e30e, type: 3}
   m_IsPrefabParent: 0
@@ -3348,6 +3373,10 @@ Prefab:
     - target: {fileID: 100004, guid: 045ecc2f56350f643bcab80f13f7e30e, type: 3}
       propertyPath: m_Layer
       value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 100004, guid: 045ecc2f56350f643bcab80f13f7e30e, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 045ecc2f56350f643bcab80f13f7e30e, type: 3}

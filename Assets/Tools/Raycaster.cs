@@ -8,12 +8,12 @@ public class Raycaster : Singleton<Raycaster> {
 
 	public LayerRaycaster[] raycasters;
 
-	public void AddListener(Action<Vector3, GameObject> action, Action missAction, int layerId)
+	public void AddListener(Action<Vector3, GameObject> action, Action missAction, int layerId, float rate = 0.1f)
 	{
 		LayerRaycaster lr = raycasters.ToList ().Find (r => r.layer.LayerIndex == layerId);
 		if (lr == null) {
 			LayerRaycaster newRaycaster = gameObject.AddComponent<LayerRaycaster> ();
-			newRaycaster.Init (0.2f, true, layerId); 
+			newRaycaster.Init (rate, true, layerId); 
 
 			Array.Resize (ref raycasters, raycasters.Count() + 1);
 

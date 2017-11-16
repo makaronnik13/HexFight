@@ -4,7 +4,7 @@ using UnityEngine;
 using System.Linq;
 using System;
 
-public class Cell : MonoBehaviour {
+public class Cell : MonoBehaviour, IHasNeighbours<Cell> {
 
 	public int index;
 
@@ -14,7 +14,18 @@ public class Cell : MonoBehaviour {
     public Vector2 coord;
     public bool enable = true;
 	private CellVisual visual;
-	private CellVisual Visual
+
+    private bool Passable;
+    public IEnumerable<Cell> AllNeighbours { get; set; }
+    public IEnumerable<Cell> Neighbours
+    {
+        get
+        {
+          return AllNeighbours.Where(o => o.Passable);
+        }
+    }
+
+    private CellVisual Visual
 	{
 		get
 		{
