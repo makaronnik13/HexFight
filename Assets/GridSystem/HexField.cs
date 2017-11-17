@@ -15,6 +15,13 @@ public class HexField : MonoBehaviour {
 
     public GameObject cellPrefab;
     private List<Cell> cells = new List<Cell>();
+	public List<Cell> Cells
+	{
+		get
+		{
+			return cells;
+		}
+	}
 
     private CellsHighlighter highlighter;
     private CellsHighlighter Highlighter
@@ -40,10 +47,8 @@ public class HexField : MonoBehaviour {
         {
             if (value)
             {
-                if (HexBattleStateMachine.Instance.battleState == HexBattleStateMachine.BattleState.SimpleSelect)
-                {
-                    Highlighter.HighlightCell(value.coord, 1);
-                }
+                 Highlighter.HighlightCell(value.coord, 1);
+               
             }
             else
             {
@@ -79,6 +84,9 @@ public class HexField : MonoBehaviour {
 	void Start()
 	{
 		lastScale = transform.localScale.x;
+
+		GenerateFakeCells ();
+
 		Raycaster.Instance.AddListener ((Vector3 point, GameObject rayHitObject)=>{
 			Raycast(point, rayHitObject);
 		}, ()=>{}, raycastLayer);
@@ -175,4 +183,32 @@ public class HexField : MonoBehaviour {
         return new Vector2(pos.x, pos.z);
     }
 
+	public List<Cell> AdjustedHexes(Cell center)
+	{
+		List<Cell> adjusted = new List<Cell> ();
+		foreach(Cell c in cells)
+		{
+			float dist = Mathf.Abs (c.coord.x - center.coord.x) + Mathf.Abs (c.coord.y - center.coord.y);
+			if(dist == 1 || (dist == 2 && c.coord.x == c.coord.y))
+			{
+				adjusted.Add (c);
+			}
+		}
+
+		return adjusted;
+	}
+
+	public bool IsPassable (Cell c)
+	{
+		//may be change battleWarriors to IFieldObject
+		foreach(BattleWarrior bw in FindObjectsOfType<BattleWarrior>())
+		{
+			if(IsPointInsideHex(new Vector2(bw.transform.position.x, bw.transform.position.z), c))
+			{
+				return false;
+			}
+		}
+
+		return true;
+	}
 }

@@ -7,9 +7,34 @@ public class WarriorSelector : MonoBehaviour
 {	
 	public Action<BattleWarrior> onPointerEnter, onPointerExit, onPointerClick;
 
-	public bool Selected = false;
+	private bool mouseOn = false;
 
-	void OnMouseEnter() {
+	private bool selected = false;
+	public bool Selected
+	{
+		get
+		{
+			return selected;
+		}
+		set
+		{
+			selected = value;
+			if (value) 
+			{
+				FindObjectOfType<FakeCellsTester> ().SelectWarrior (GetComponent<BattleWarrior> ());
+			} else 
+			{
+				if(!mouseOn)
+				{
+					DeHighlight ();
+				}
+			}
+		}
+	}
+
+	void OnMouseEnter() 
+	{
+		mouseOn = true;
 		if (GetComponent<BattleWarrior> ().Enemy) 
 		{
 			Highlight (Color.red);
@@ -25,6 +50,7 @@ public class WarriorSelector : MonoBehaviour
 	}
 
 	void OnMouseExit() {
+		mouseOn = false;
 		if(!Selected)
 		{
 			DeHighlight ();

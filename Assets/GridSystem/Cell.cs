@@ -15,8 +15,20 @@ public class Cell : MonoBehaviour, IHasNeighbours<Cell> {
     public bool enable = true;
 	private CellVisual visual;
 
-    private bool Passable;
-    public IEnumerable<Cell> AllNeighbours { get; set; }
+	private bool Passable
+	{
+		get
+		{
+			return GetComponentInParent<HexField> ().IsPassable (this);
+		}
+	}
+	public IEnumerable<Cell> AllNeighbours 
+	{ 
+		get
+		{ 
+			return GetComponentInParent<HexField> ().AdjustedHexes(this);
+		}
+	}
     public IEnumerable<Cell> Neighbours
     {
         get

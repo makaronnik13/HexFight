@@ -55,6 +55,7 @@
      <Compile Include="Assets\BattleButtonsController.cs" />
      <Compile Include="Assets\BattleWarrior.cs" />
      <Compile Include="Assets\EnterTrigger.cs" />
+     <Compile Include="Assets\FakeCellsTester.cs" />
      <Compile Include="Assets\FakeController.cs" />
      <Compile Include="Assets\GridSystem\Cell.cs" />
      <Compile Include="Assets\GridSystem\CellsHighlighter.cs" />
@@ -62,6 +63,9 @@
      <Compile Include="Assets\GridSystem\GridManager.cs" />
      <Compile Include="Assets\GridSystem\HexField.cs" />
      <Compile Include="Assets\GridSystem\HexPathFinder.cs" />
+     <Compile Include="Assets\GridSystem\INeighbours.cs" />
+     <Compile Include="Assets\GridSystem\Path.cs" />
+     <Compile Include="Assets\GridSystem\PriorityQueue.cs" />
      <Compile Include="Assets\HexBattleStateMachine.cs" />
      <Compile Include="Assets\Models\Other\RK.Team Assets\Modular Road Block\PostProcessing\Runtime\Attributes\GetSetAttribute.cs" />
      <Compile Include="Assets\Models\Other\RK.Team Assets\Modular Road Block\PostProcessing\Runtime\Attributes\MinAttribute.cs" />

@@ -1012,7 +1012,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3649b8026d4b949cf890dbe27d21e05a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Selected: 0
 --- !u!114 &488600666
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1254,7 +1253,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e25d2339c8a5da940a6452c332b3bb0c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  warrior: {fileID: 0}
 --- !u!1 &757153716
 GameObject:
   m_ObjectHideFlags: 0
@@ -1995,7 +1993,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3649b8026d4b949cf890dbe27d21e05a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Selected: 0
 --- !u!136 &1098208674
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -2342,7 +2339,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: 045ecc2f56350f643bcab80f13f7e30e, type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 100004, guid: 045ecc2f56350f643bcab80f13f7e30e, type: 3}
       propertyPath: m_Name
@@ -2359,7 +2356,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 100004, guid: 045ecc2f56350f643bcab80f13f7e30e, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 045ecc2f56350f643bcab80f13f7e30e, type: 3}
@@ -2379,7 +2376,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3649b8026d4b949cf890dbe27d21e05a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Selected: 0
 --- !u!114 &1538028630
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3070,7 +3066,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: 045ecc2f56350f643bcab80f13f7e30e, type: 3}
       propertyPath: m_RootOrder
-      value: 8
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 100004, guid: 045ecc2f56350f643bcab80f13f7e30e, type: 3}
       propertyPath: m_Name
@@ -3359,7 +3355,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: 045ecc2f56350f643bcab80f13f7e30e, type: 3}
       propertyPath: m_RootOrder
-      value: 7
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 100004, guid: 045ecc2f56350f643bcab80f13f7e30e, type: 3}
       propertyPath: m_Name

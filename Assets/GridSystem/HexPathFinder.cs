@@ -46,9 +46,19 @@ public class HexPathFinder : MonoBehaviour {
         return FindPath(start, aim).ToList();
     }
 
-    public List<Cell> GetAwaliableCells(Vector2 coord, int range)
+	public List<Cell> GetAwaliableCells(Cell center, int range)
     {
-        return null;
+		List<Cell> awaliableCells = new List<Cell> ();
+
+		foreach(Cell c in GetComponent<HexField>().Cells)
+		{
+			if(FindPath(center, c).Count()<=range)
+			{
+				awaliableCells.Add (c);
+			}
+		}
+
+		return awaliableCells;
     }
 
     private float calcEstimate(Cell cell)

@@ -54,14 +54,10 @@ public class CellsHighlighter : MonoBehaviour {
     {
         List<Cell> path = PathFinder.GetPath(start, aim);
 
-        for (int i = 0; i<path.Count; i++)
-        {
-            path[i] -= start;
-        }
 
         if (path!=null)
         {
-            HighlightArea(start, path, avalibleColor, layerId);
+			HighlightArea(start, path, avalibleColor, layerId);
         }
     }
 
@@ -158,6 +154,17 @@ public class CellsHighlighter : MonoBehaviour {
 
         HighlightArea(center, offsets, wrongColor, layerId);
     }
+
+
+	public void HighlightArea(Cell center, List<Cell> cells, Color c, int layerId, int rotation = 0)
+	{
+		List<Vector2> offsets = new List<Vector2> ();
+		foreach(Cell cell in cells)
+		{
+			offsets.Add (cell.coord - center.coord);
+		}
+		HighlightArea (center.coord, offsets, c, layerId, rotation);
+	}
 
     public void HighlightArea(Vector2 center, List<Vector2> offsets, Color c, int layerId, int rotation = 0)
     {
