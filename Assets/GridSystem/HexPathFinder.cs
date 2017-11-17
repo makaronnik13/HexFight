@@ -17,7 +17,10 @@ public class HexPathFinder : MonoBehaviour {
 
         while (!queue.IsEmpty)
         {
+            
             var path = queue.Dequeue();
+
+            
 
             if (closed.Contains(path.LastStep))
                 continue;
@@ -52,7 +55,8 @@ public class HexPathFinder : MonoBehaviour {
 
 		foreach(Cell c in GetComponent<HexField>().Cells)
 		{
-			if(FindPath(center, c).Count()<=range)
+            Path<Cell> path = FindPath(center, c);
+            if (path!=null && path.Count()<=range+1)
 			{
 				awaliableCells.Add (c);
 			}

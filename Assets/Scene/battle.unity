@@ -1063,18 +1063,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7289b6a0573d144079c77cc65c574636, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &488600669
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 488600664}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 828c361a3a90e47e09fa1311355f3524, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  raycastLayer: 9
 --- !u!136 &488600670
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -1188,8 +1176,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fbf067ae1602ff544bf0435c252cc4c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  height: 7
-  width: 7
+  height: 6
+  width: 6
   cellPrefab: {fileID: 1632068008091128, guid: 8e8950d42a6890249b7301c32f2bc031, type: 2}
   lastScale: 1
 --- !u!4 &689805465
@@ -1199,7 +1187,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 689805463}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 23.65, y: 8.58, z: 27.59}
+  m_LocalPosition: {x: 24.98, y: 8.58, z: 24.86}
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1977,7 +1965,7 @@ MonoBehaviour:
   Hp: 100
   Mp: 10
   Initiative: 3
-  ActionPoints: 7
+  ActionPoints: 2
   WalkSpeed: 1
   Enemy: 0
   portrait: {fileID: 21300000, guid: 198513ad1b7c54bb19c10d5973add760, type: 3}
@@ -3038,15 +3026,15 @@ Prefab:
     m_Modifications:
     - target: {fileID: 400004, guid: 045ecc2f56350f643bcab80f13f7e30e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 25.01
+      value: 26.45
       objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: 045ecc2f56350f643bcab80f13f7e30e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.11834431
+      value: 0.10501774
       objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: 045ecc2f56350f643bcab80f13f7e30e, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 30.18
+      value: 23.6
       objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: 045ecc2f56350f643bcab80f13f7e30e, type: 3}
       propertyPath: m_LocalRotation.x
@@ -3087,7 +3075,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 100004, guid: 045ecc2f56350f643bcab80f13f7e30e, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 045ecc2f56350f643bcab80f13f7e30e, type: 3}

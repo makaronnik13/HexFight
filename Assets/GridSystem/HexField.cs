@@ -68,9 +68,9 @@ public class HexField : MonoBehaviour {
     {
         List<Vector2> positions = new List<Vector2>();
 
-        for (int i = Mathf.CeilToInt(-(width) / 2); i < Mathf.FloorToInt((width) / 2); i++)
+        for (int i = -Mathf.FloorToInt((width) / 2); i < Mathf.CeilToInt((width) / 2); i++)
         {
-            for (int j = Mathf.CeilToInt(-(height) / 2); j < Mathf.FloorToInt((height) / 2); j++)
+            for (int j = -Mathf.FloorToInt((height) / 2); j < Mathf.CeilToInt((height) / 2); j++)
             {
                 if (UnityEngine.Random.Range(0,10)>=0)
                 {
@@ -122,6 +122,7 @@ public class HexField : MonoBehaviour {
         foreach (Vector2 c in cellsExistance)
         {
             Vector2 cell2DCoord = CellCoordToWorld(c);
+          
             Vector3 cellPosition = new Vector3(cell2DCoord.x, transform.position.y , cell2DCoord.y);
             GameObject cellGo = Instantiate(cellPrefab, cellPosition, Quaternion.identity, transform);
             Cell cell = cellGo.GetComponent<Cell>();
@@ -162,6 +163,19 @@ public class HexField : MonoBehaviour {
         return cells.Find(c=>c.coord == coord);
     }
 
+    public Cell GetCellByWorldCoord(Vector2 coord)
+    {
+        foreach (Cell c in cells)
+        {
+            if (IsPointInsideHex(coord, c))
+            {
+                return c;
+            }
+        }
+        return null;
+    }
+
+
     private bool IsPointInsideHex(Vector2 point, Cell c)
     {
         Vector2 cellCenter = CellCoordToWorld(c.coord);
@@ -179,7 +193,13 @@ public class HexField : MonoBehaviour {
 
     private Vector2 CellCoordToWorld(Vector2 cellCoord)
     {
-        Vector3 pos = transform.position + lastScale * cellSize * (cellCoord.x + Mathf.Abs((cellCoord.y % 2 + .0f) / 2)) * Vector3.left + lastScale * coef * cellSize * Vector3.forward * cellCoord.y;
+        //float x = lastScale * cellSize * Mathf.Sqrt(3) * (cellCoord.x - cellCoord.y / 2);
+       // float y = lastScale * cellSize * 1.5f * -cellCoord.y;
+
+        float x =  lastScale * cellSize *  (float)Math.Sqrt(3) * (cellCoord.x - cellCoord.y/2);
+        float y =  lastScale * cellSize * 3 / 2 * -cellCoord.y;
+
+        Vector3 pos = transform.position + new Vector3(x, 0, y) * 0.7f;//  lastScale * cellSize * (cellCoord.x + Mathf.Abs((cellCoord.y % 2 + .0f) / 2)) * Vector3.left - lastScale * coef * cellSize * Vector3.forward * cellCoord.y;
         return new Vector2(pos.x, pos.z);
     }
 

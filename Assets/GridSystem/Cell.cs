@@ -37,6 +37,12 @@ public class Cell : MonoBehaviour, IHasNeighbours<Cell> {
         }
     }
 
+    [ContextMenu("neighbours")]
+    public void NeighboursCount()
+    {
+        Debug.Log(Neighbours.Count()+"");
+    }
+
     private CellVisual Visual
 	{
 		get
