@@ -8,10 +8,10 @@ public class CellsHighlighter : MonoBehaviour {
 
     private class HighlightedLayer
     {
-        public List<Cell> cells = new List<Cell>();
+		public Dictionary<Cell, bool[]> cells = new Dictionary<Cell, bool[]>();
         public Color color;
 
-        public HighlightedLayer(List<Cell> cells, Color color)
+		public HighlightedLayer(Dictionary<Cell, bool[]> cells, Color color)
         {
             this.cells = cells;
             this.color = color;
@@ -65,16 +65,16 @@ public class CellsHighlighter : MonoBehaviour {
     {
         if (highlightedLayers.ContainsKey(layerId))
         {
-            foreach (Cell c in highlightedLayers[layerId].cells)
+			foreach (Cell c in highlightedLayers[layerId].cells.Keys)
             {
 
                 c.ShowCellBorders(new bool[] { true, true, true, true, true, true }, defaultColor);
 
                 foreach (HighlightedLayer layer in highlightedLayers.OrderBy(kp => kp.Key).Select(kp => kp.Value).ToList())
                 {
-                    if (layer.cells.Contains(c) && layer!= highlightedLayers[layerId])
+					if (layer.cells.Keys.Contains(c) && layer!= highlightedLayers[layerId])
                     {
-                        c.ShowCellBorders(new bool[] { true, true, true, true, true, true }, layer.color);
+						c.ShowCellBorders(layer.cells[c], layer.color);
                         break;
                     }
                 }
@@ -168,7 +168,7 @@ public class CellsHighlighter : MonoBehaviour {
 
     public void HighlightArea(Vector2 center, List<Vector2> offsets, Color c, int layerId, int rotation = 0)
     {
-        List<Cell> newHighlightedCells = new List<Cell>();
+		Dictionary<Cell, bool[]> newHighlightedCells = new Dictionary<Cell, bool[]>();
 
         DehighlightLayer(layerId);
 
@@ -177,11 +177,40 @@ public class CellsHighlighter : MonoBehaviour {
             Cell hc = HexManager.GetCellByCoord(center + offset);
             if(hc)
             {
-                newHighlightedCells.Add(hc);
-                hc.ShowCellBorders(new bool[] { true, true, true, true, true, true }, c);
+				newHighlightedCells.Add(hc, new bool[0]);
             }
         }
 
+		for(int j= 0;j<newHighlightedCells.Count;j++)
+		{
+			List<bool> b = new List<bool> ();
+			for(int i =0; i<6;i++)
+			{
+				Cell n = HexManager.Neighbour(newHighlightedCells.ElementAt(j).Key.coord, i, newHighlightedCells.Keys.ToList());
+				b.Add (n==null);
+			}
+
+			newHighlightedCells.ElementAt(j).Key.ShowCellBorders(b.ToArray(), c);
+
+
+
+			newHighlightedCells[newHighlightedCells.ElementAt(j).Key] = b.ToArray();
+			
+		}
+
+
+
         highlightedLayers.Add(layerId, new HighlightedLayer(newHighlightedCells, c));
     }
+
+	public void DehighLightAll ()
+	{
+		List<int> layersIds = highlightedLayers.Select (l => l.Key).ToList();
+		foreach(int i in layersIds)
+		{
+			DehighlightLayer (i);
+		}
+
+		highlightedLayers.Clear ();
+	}
 }

@@ -1,14 +1,9 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj" RefactoringSettings.EnableRefactorings="True">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/GridSystem/HexPathFinder.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/BattleTrigger.cs">
     <Files>
-      <File FileName="Assets/GridSystem/CellsHighlighter.cs" Line="53" Column="39" />
-      <File FileName="Assets/FakeCellsTester.cs" Line="26" Column="44" />
-      <File FileName="Assets/HexBattleStateMachine.cs" Line="36" Column="4" />
-      <File FileName="Assets/GridSystem/HexPathFinder.cs" Line="17" Column="3" />
-      <File FileName="Assets/GridSystem/HexField.cs" Line="45" Column="10" />
-      <File FileName="Assets/GridSystem/Cell.cs" Line="22" Column="63" />
-      <File FileName="Assets/WarriorSelector.cs" Line="29" Column="21" />
+      <File FileName="Assets/Scripts/BattleTrigger.cs" Line="89" Column="65" />
+      <File FileName="Assets/Scripts/Editor/BattleTriggerInspector.cs" Line="65" Column="28" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

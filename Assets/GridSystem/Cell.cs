@@ -15,7 +15,7 @@ public class Cell : MonoBehaviour, IHasNeighbours<Cell> {
     public bool enable = true;
 	private CellVisual visual;
 
-	private bool Passable
+	public bool Passable
 	{
 		get
 		{

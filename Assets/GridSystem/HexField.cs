@@ -2,13 +2,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.Linq;
 
 public class HexField : MonoBehaviour {
 
 	private int raycastLayer = 9;
 
-    public float height = 10;
-    public float width = 10;
+	public int size = 10;
+
+	public Action<Cell> OnHexClicked;
 
     private float cellSize = 0.7f;
     private float coef = 0.9f;
@@ -47,45 +49,55 @@ public class HexField : MonoBehaviour {
         {
             if (value)
             {
-                 Highlighter.HighlightCell(value.coord, 1);
+
+				if(aimedCell && CellWarrior(value))
+				{
+					GameController.Instance.HighlightedWarrior = CellWarrior (value);
+				}
+					
+
+				if (HexBattleStateMachine.Instance.battleState == HexBattleStateMachine.BattleState.AreaSelect) {
+					Highlighter.HighlightArea (value.coord, HexBattleStateMachine.Instance.SelectionArea, Highlighter.specialColor, 4);
+				} else {
+					Highlighter.HighlightCell (value.coord, 1);
+				}
+					
+			
                
             }
             else
             {
-                if (HexBattleStateMachine.Instance.battleState == HexBattleStateMachine.BattleState.SimpleSelect)
-                {
+                
                     Highlighter.HighlightCell(Vector2.one*Mathf.Infinity, 1);
-                }
             }
             aimedCell = value;
         }
     }
 
+	public BattleWarrior CellWarrior(Cell cell)
+	{
+		foreach(BattleWarrior bw in FindObjectsOfType<BattleWarrior>())
+		{
+			if(IsPointInsideHex(new Vector2(bw.transform.position.x, bw.transform.position.z), cell))
+			{
+				return bw;
+			}
+		}
+		return null;
+	}
+
+	public Cell WarriorCell(BattleWarrior warrior)
+	{
+		return GetCellByWorldCoord (warrior.transform.position);
+	}
+
 	public float lastScale = 1;
-
-    [ContextMenu("GenerateCells")]
-    public void GenerateFakeCells()
-    {
-        List<Vector2> positions = new List<Vector2>();
-
-        for (int i = -Mathf.FloorToInt((width) / 2); i < Mathf.CeilToInt((width) / 2); i++)
-        {
-            for (int j = -Mathf.FloorToInt((height) / 2); j < Mathf.CeilToInt((height) / 2); j++)
-            {
-                if (UnityEngine.Random.Range(0,10)>=0)
-                {
-                    positions.Add(new Vector2(i,j));
-                }
-            }
-        }
-        GenerateCells(positions);
-    }
 
 	void Start()
 	{
 		lastScale = transform.localScale.x;
 
-		GenerateFakeCells ();
+		//GenerateFakeCells ();
 
 		Raycaster.Instance.AddListener ((Vector3 point, GameObject rayHitObject)=>{
 			Raycast(point, rayHitObject);
@@ -111,7 +123,7 @@ public class HexField : MonoBehaviour {
         }
     }
 
-    public void GenerateCells(List<Vector2> cellsExistance)
+	public void GenerateCells(List<Vector2> cellsExistance, LayerMask obstacleLayer, LayerMask raycastingLayer, float minOffset, float maxOffset)
     {
         foreach (Cell cell in cells)
         {
@@ -121,17 +133,25 @@ public class HexField : MonoBehaviour {
 
         foreach (Vector2 c in cellsExistance)
         {
-            Vector2 cell2DCoord = CellCoordToWorld(c);
-          
-            Vector3 cellPosition = new Vector3(cell2DCoord.x, transform.position.y , cell2DCoord.y);
-            GameObject cellGo = Instantiate(cellPrefab, cellPosition, Quaternion.identity, transform);
-            Cell cell = cellGo.GetComponent<Cell>();
-			cell.GetComponentInChildren<Projector> ().orthographicSize = lastScale/2;
-            cell.coord = c;
-            cells.Add(cell);
-        }
 
-        Highlighter.defaultColor = cells[0].GetComponentInChildren<Projector>().material.color;
+
+            Vector2 cell2DCoord = CellCoordToWorld(c);
+            Vector3 cellPosition = new Vector3(cell2DCoord.x, transform.position.y , cell2DCoord.y);
+
+
+			if(Raycast(cellPosition, minOffset, maxOffset, obstacleLayer, raycastLayer))
+			{
+				GameObject cellGo = Instantiate(cellPrefab, cellPosition, Quaternion.identity, transform);
+				Cell cell = cellGo.GetComponent<Cell>();
+				cell.GetComponentInChildren<Projector> ().orthographicSize = lastScale/2;
+				cell.coord = c;
+				cells.Add(cell);
+			}
+        }
+		if(cells.Count()>0)
+		{
+			Highlighter.defaultColor = cells[0].GetComponentInChildren<Projector>().material.color;
+		}
     }
 
 
@@ -156,12 +176,30 @@ public class HexField : MonoBehaviour {
 				p.orthographicSize = lastScale/2;
 			}
 		}
+
+		if(Input.GetMouseButtonDown(0))
+		{
+			if (AimedCell && OnHexClicked!=null)
+			{
+				OnHexClicked (AimedCell);
+			}
+
+			if(AimedCell && CellWarrior(AimedCell))
+			{
+				GameController.Instance.Warrior = CellWarrior (AimedCell);
+			}
+		}
 	}
 
     public Cell GetCellByCoord(Vector2 coord)
     {
         return cells.Find(c=>c.coord == coord);
     }
+
+	public Cell GetCellByWorldCoord(Vector3 coord)
+	{
+		return GetCellByWorldCoord (new Vector2(coord.x, coord.z));
+	}
 
     public Cell GetCellByWorldCoord(Vector2 coord)
     {
@@ -191,15 +229,15 @@ public class HexField : MonoBehaviour {
     
     }
 
-    private Vector2 CellCoordToWorld(Vector2 cellCoord)
+	public Vector2 CellCoordToWorld(Vector2 cellCoord)
     {
         //float x = lastScale * cellSize * Mathf.Sqrt(3) * (cellCoord.x - cellCoord.y / 2);
        // float y = lastScale * cellSize * 1.5f * -cellCoord.y;
 
-        float x =  lastScale * cellSize *  (float)Math.Sqrt(3) * (cellCoord.x - cellCoord.y/2);
+		float x =  lastScale * cellSize *  (float)Math.Sqrt(3) * (cellCoord.x + cellCoord.y/2);
         float y =  lastScale * cellSize * 3 / 2 * -cellCoord.y;
 
-        Vector3 pos = transform.position + new Vector3(x, 0, y) * 0.7f;//  lastScale * cellSize * (cellCoord.x + Mathf.Abs((cellCoord.y % 2 + .0f) / 2)) * Vector3.left - lastScale * coef * cellSize * Vector3.forward * cellCoord.y;
+        Vector3 pos = transform.position + new Vector3(x, 0, y) * 0.6f;//  lastScale * cellSize * (cellCoord.x + Mathf.Abs((cellCoord.y % 2 + .0f) / 2)) * Vector3.left - lastScale * coef * cellSize * Vector3.forward * cellCoord.y;
         return new Vector2(pos.x, pos.z);
     }
 
@@ -208,27 +246,52 @@ public class HexField : MonoBehaviour {
 		List<Cell> adjusted = new List<Cell> ();
 		foreach(Cell c in cells)
 		{
-			float dist = Mathf.Abs (c.coord.x - center.coord.x) + Mathf.Abs (c.coord.y - center.coord.y);
-			if(dist == 1 || (dist == 2 && c.coord.x == c.coord.y))
+			for(int i = 0; i<6; i++)
 			{
-				adjusted.Add (c);
+				Cell n = Neighbour (center.coord, i);
+				if(n && c.coord == n.coord)
+				{
+					adjusted.Add (c);
+				}
+				
 			}
 		}
-
 		return adjusted;
 	}
 
+	List<Vector2> directions = new List<Vector2>{
+		new Vector2(-1,  1), new Vector2(-1, 0), new Vector2( 0, -1),
+		new Vector2(1,  -1), new Vector2(1, 0),new Vector2( 0, 1)
+	};
+		
+	public Cell Neighbour(Vector2 hex, int direction, List<Cell> fromCells = null)
+	{
+		if(fromCells==null)
+		{
+			fromCells = cells;
+		}
+		var dir = directions [direction];
+		return fromCells.Find(c=>c.coord == new Vector2 (hex.x + dir.x, hex.y + dir.y));
+	}
+			
 	public bool IsPassable (Cell c)
 	{
 		//may be change battleWarriors to IFieldObject
-		foreach(BattleWarrior bw in FindObjectsOfType<BattleWarrior>())
-		{
-			if(IsPointInsideHex(new Vector2(bw.transform.position.x, bw.transform.position.z), c))
-			{
-				return false;
-			}
-		}
+		return CellWarrior(c)==null;
+	}
+
+	private bool Raycast(Vector3 fromPosition, float minOffset, float maxOffset, LayerMask obstacleLayer, LayerMask raycastingLayer)
+	{
+		RaycastHit hit;
+		if (Physics.Raycast (fromPosition, Vector3.down, out hit, 1000, obstacleLayer.value | raycastingLayer.value)) {
+			return false;
+		} 
 
 		return true;
+	}
+
+	private bool Contains(LayerMask mask, int layer)
+	{
+		return mask == (mask | (1 << layer));
 	}
 }

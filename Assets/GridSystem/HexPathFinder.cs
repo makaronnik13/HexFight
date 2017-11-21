@@ -49,6 +49,7 @@ public class HexPathFinder : MonoBehaviour {
         return FindPath(start, aim).ToList();
     }
 
+	/*
 	public List<Cell> GetAwaliableCells(Cell center, int range)
     {
 		List<Cell> awaliableCells = new List<Cell> ();
@@ -64,6 +65,37 @@ public class HexPathFinder : MonoBehaviour {
 
 		return awaliableCells;
     }
+	*/
+	public List<Cell> GetAwaliableCells(Cell start, int movement){
+		
+		HashSet<Cell> visited = new HashSet<Cell>();
+		visited.Add(start);
+		List<Cell> fringes = new List<Cell>();
+		fringes.Add (start);
+
+		if(movement == 0)
+		{
+			return fringes;
+		}
+
+		for (int i = 1 ; i <= movement; i++)
+		{
+			
+			foreach(Cell c in visited)
+			{
+				for (int j = 0 ; j < 6; j++)
+				{
+					Cell n = GetComponent<HexField> ().Neighbour (c.coord, j);
+					if(n!=null && n.Passable)
+					{
+						fringes.Add (n);
+					}
+				}
+			}
+			visited.UnionWith (fringes);
+		}
+		return visited.ToList();
+	}
 
     private float calcEstimate(Cell cell)
     {
