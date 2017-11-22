@@ -732,7 +732,7 @@ Light:
   serializedVersion: 8
   m_Type: 1
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 0.81
+  m_Intensity: 0.39
   m_Range: 10
   m_SpotAngle: 30
   m_CookieSize: 10
@@ -3586,7 +3586,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e26f3c4ea122a4889a1a97313fd7053c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  value: 0
   speed: 2
 --- !u!114 &420754139
 MonoBehaviour:
@@ -5616,7 +5615,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e26f3c4ea122a4889a1a97313fd7053c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  value: 0
   speed: 0.8
 --- !u!114 &658088643
 MonoBehaviour:
@@ -7587,7 +7585,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e26f3c4ea122a4889a1a97313fd7053c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  value: 0
   speed: 1
 --- !u!114 &893667436
 MonoBehaviour:
@@ -11702,7 +11699,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e26f3c4ea122a4889a1a97313fd7053c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  value: 0
   speed: 1.5
 --- !u!114 &1425058312
 MonoBehaviour:
@@ -11873,7 +11869,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!154 &1453944257
 TerrainCollider:
   m_ObjectHideFlags: 0
