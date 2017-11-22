@@ -131,6 +131,7 @@
      <Compile Include="Assets\Tools\Singleton.cs" />
      <Compile Include="Assets\Tools\SingleUnityLayer.cs" />
      <Compile Include="Assets\Tools\SpriteCutter.cs" />
+     <Compile Include="Assets\TriggerWithActions.cs" />
      <None Include="Assets\Resources\Models\Other\RK.Team Assets\Modular Road Block\PostProcessing\Resources\Shaders\DepthOfField.shader" />
      <None Include="Assets\Resources\Models\Other\RK.Team Assets\Modular Road Block\PostProcessing\Resources\Shaders\MotionBlur.cginc" />
      <None Include="Assets\Resources\Models\Other\RK.Team Assets\Modular Road Block\PostProcessing\Editor Resources\Monitors\ParadeRender.shader" />

@@ -12,7 +12,6 @@ public class HexField : MonoBehaviour {
 
 	public Action<Cell> OnHexClicked;
 
-    private float cellSize = 0.7f;
     private float coef = 0.9f;
 
     public GameObject cellPrefab;
@@ -49,21 +48,16 @@ public class HexField : MonoBehaviour {
         {
             if (value)
             {
-
 				if(aimedCell && CellWarrior(value))
 				{
 					GameController.Instance.HighlightedWarrior = CellWarrior (value);
 				}
 					
-
 				if (HexBattleStateMachine.Instance.battleState == HexBattleStateMachine.BattleState.AreaSelect) {
 					Highlighter.HighlightArea (value.coord, HexBattleStateMachine.Instance.SelectionArea, Highlighter.specialColor, 4);
 				} else {
 					Highlighter.HighlightCell (value.coord, 1);
-				}
-					
-			
-               
+				}      
             }
             else
             {
@@ -91,14 +85,8 @@ public class HexField : MonoBehaviour {
 		return GetCellByWorldCoord (warrior.transform.position);
 	}
 
-	public float lastScale = 1;
-
 	void Start()
 	{
-		lastScale = transform.localScale.x;
-
-		//GenerateFakeCells ();
-
 		Raycaster.Instance.AddListener ((Vector3 point, GameObject rayHitObject)=>{
 			Raycast(point, rayHitObject);
 		}, ()=>{}, raycastLayer);
@@ -123,38 +111,32 @@ public class HexField : MonoBehaviour {
         }
     }
 
-	public void GenerateCells(List<Vector2> cellsExistance, LayerMask obstacleLayer, LayerMask raycastingLayer, float minOffset, float maxOffset)
+	public void GenerateCells(List<Vector3> cellsExistance)
     {
         foreach (Cell cell in cells)
         {
             Destroy(cell.gameObject);
         }
         cells.Clear();
-
-        foreach (Vector2 c in cellsExistance)
+        foreach (Vector3 c in cellsExistance)
         {
 
 
             Vector2 cell2DCoord = CellCoordToWorld(c);
             Vector3 cellPosition = new Vector3(cell2DCoord.x, transform.position.y , cell2DCoord.y);
 
-
-			if(Raycast(cellPosition, minOffset, maxOffset, obstacleLayer, raycastLayer))
-			{
 				GameObject cellGo = Instantiate(cellPrefab, cellPosition, Quaternion.identity, transform);
 				Cell cell = cellGo.GetComponent<Cell>();
-				cell.GetComponentInChildren<Projector> ().orthographicSize = lastScale/2;
+			cell.GetComponentInChildren<Projector> ().orthographicSize = transform.localScale.x/2;
 				cell.coord = c;
 				cells.Add(cell);
-			}
         }
 		if(cells.Count()>0)
 		{
 			Highlighter.defaultColor = cells[0].GetComponentInChildren<Projector>().material.color;
 		}
     }
-
-
+		
     public bool CellEnable(Vector2 position)
     {
         Cell cell = cells.Find(c => c.coord == position);
@@ -167,13 +149,11 @@ public class HexField : MonoBehaviour {
 
 	private void Update()
 	{
-		if(transform.localScale.x!=lastScale || transform.localScale.y!=lastScale)
+		if(transform.hasChanged)
 		{
-			transform.localScale = Vector3.one * transform.localScale.x;
-			lastScale = transform.localScale.x;
 			foreach(Projector p in GetComponentsInChildren<Projector>())
 			{
-				p.orthographicSize = lastScale/2;
+				p.orthographicSize = transform.localScale.x/2;
 			}
 		}
 
@@ -217,8 +197,8 @@ public class HexField : MonoBehaviour {
     private bool IsPointInsideHex(Vector2 point, Cell c)
     {
         Vector2 cellCenter = CellCoordToWorld(c.coord);
-        float _vert = lastScale * coef * cellSize/2;
-        float _hori = lastScale * cellSize/2;
+		float _vert = transform.localScale.x * coef/2;
+		float _hori = transform.localScale.x/2;
 
 
         
@@ -231,12 +211,8 @@ public class HexField : MonoBehaviour {
 
 	public Vector2 CellCoordToWorld(Vector2 cellCoord)
     {
-        //float x = lastScale * cellSize * Mathf.Sqrt(3) * (cellCoord.x - cellCoord.y / 2);
-       // float y = lastScale * cellSize * 1.5f * -cellCoord.y;
-
-		float x =  lastScale * cellSize *  (float)Math.Sqrt(3) * (cellCoord.x + cellCoord.y/2);
-        float y =  lastScale * cellSize * 3 / 2 * -cellCoord.y;
-
+		float x =  transform.localScale.x *  (float)Math.Sqrt(3) * (cellCoord.x + cellCoord.y/2);
+		float y =  transform.localScale.x * 3 / 2 * -cellCoord.y;
         Vector3 pos = transform.position + new Vector3(x, 0, y) * 0.6f;//  lastScale * cellSize * (cellCoord.x + Mathf.Abs((cellCoord.y % 2 + .0f) / 2)) * Vector3.left - lastScale * coef * cellSize * Vector3.forward * cellCoord.y;
         return new Vector2(pos.x, pos.z);
     }
@@ -252,8 +228,7 @@ public class HexField : MonoBehaviour {
 				if(n && c.coord == n.coord)
 				{
 					adjusted.Add (c);
-				}
-				
+				}		
 			}
 		}
 		return adjusted;
@@ -276,7 +251,6 @@ public class HexField : MonoBehaviour {
 			
 	public bool IsPassable (Cell c)
 	{
-		//may be change battleWarriors to IFieldObject
 		return CellWarrior(c)==null;
 	}
 

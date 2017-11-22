@@ -33,15 +33,10 @@ public class BattleTriggerInspector : Editor
 
 
 
+
 		EditorGUILayout.BeginHorizontal ();
-		EditorGUILayout.BeginHorizontal ();
-		EditorGUILayout.LabelField ("Cell size", GUILayout.Width(60));
-		float cellSize = EditorGUILayout.FloatField (trigger.CellSize);
-		EditorGUILayout.EndHorizontal ();
-		EditorGUILayout.BeginHorizontal ();
-		EditorGUILayout.LabelField ("Activate on enter", GUILayout.Width(95));
-		bool activateOnEnter = EditorGUILayout.Toggle (trigger.InvokeOnTriggerEnter);
-		EditorGUILayout.EndHorizontal ();
+		EditorGUILayout.LabelField ("Activation enabled", GUILayout.Width(95));
+		bool activateOnEnter = EditorGUILayout.Toggle (trigger.activationEnabled);
 		EditorGUILayout.EndHorizontal ();
 
 		EditorGUILayout.BeginHorizontal ();
@@ -57,9 +52,8 @@ public class BattleTriggerInspector : Editor
 		if(EditorGUI.EndChangeCheck())
 		{
 			Undo.RecordObject (trigger, "edit");
-			trigger.InvokeOnTriggerEnter = activateOnEnter;
+			trigger.activationEnabled = activateOnEnter;
 			trigger.fieldType = type;
-			trigger.CellSize = cellSize;
 			trigger.xSize = width;
 			trigger.ySize = height;
 			SceneView.RepaintAll ();
@@ -76,12 +70,12 @@ public class BattleTriggerInspector : Editor
 			{
 				Vector3 cc = new Vector3 (c.x, trigger.Height, c.z);
 				Vector3[] hexPoints = new Vector3[]{
-					RotatePointAroundPivot(Corner(cc,trigger.CellSize*2,0), cc, Vector3.up * trigger.transform.rotation.eulerAngles.y),
-					RotatePointAroundPivot(Corner(cc,trigger.CellSize*2,1), cc, Vector3.up * trigger.transform.rotation.eulerAngles.y),
-					RotatePointAroundPivot(Corner(cc,trigger.CellSize*2,2), cc, Vector3.up * trigger.transform.rotation.eulerAngles.y),
-					RotatePointAroundPivot(Corner(cc,trigger.CellSize*2,3), cc, Vector3.up * trigger.transform.rotation.eulerAngles.y),
-					RotatePointAroundPivot(Corner(cc,trigger.CellSize*2,4), cc, Vector3.up * trigger.transform.rotation.eulerAngles.y),
-					RotatePointAroundPivot(Corner(cc,trigger.CellSize*2,5), cc, Vector3.up * trigger.transform.rotation.eulerAngles.y)
+					RotatePointAroundPivot(Corner(cc,trigger.CellSize/1.8f,0), cc, Vector3.up * trigger.transform.rotation.eulerAngles.y),
+					RotatePointAroundPivot(Corner(cc,trigger.CellSize/1.8f,1), cc, Vector3.up * trigger.transform.rotation.eulerAngles.y),
+					RotatePointAroundPivot(Corner(cc,trigger.CellSize/1.8f,2), cc, Vector3.up * trigger.transform.rotation.eulerAngles.y),
+					RotatePointAroundPivot(Corner(cc,trigger.CellSize/1.8f,3), cc, Vector3.up * trigger.transform.rotation.eulerAngles.y),
+					RotatePointAroundPivot(Corner(cc,trigger.CellSize/1.8f,4), cc, Vector3.up * trigger.transform.rotation.eulerAngles.y),
+					RotatePointAroundPivot(Corner(cc,trigger.CellSize/1.8f,5), cc, Vector3.up * trigger.transform.rotation.eulerAngles.y)
 				};
 
 				Handles.color = new Color (180, 180 , 50, 0.3f);
