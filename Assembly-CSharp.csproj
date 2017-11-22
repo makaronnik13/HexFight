@@ -65,6 +65,7 @@
      <Compile Include="Assets\GridSystem\INeighbours.cs" />
      <Compile Include="Assets\GridSystem\Path.cs" />
      <Compile Include="Assets\GridSystem\PriorityQueue.cs" />
+     <Compile Include="Assets\InitiativeToken.cs" />
      <Compile Include="Assets\Resources\Models\Other\RK.Team Assets\Modular Road Block\PostProcessing\Runtime\Attributes\GetSetAttribute.cs" />
      <Compile Include="Assets\Resources\Models\Other\RK.Team Assets\Modular Road Block\PostProcessing\Runtime\Attributes\MinAttribute.cs" />
      <Compile Include="Assets\Resources\Models\Other\RK.Team Assets\Modular Road Block\PostProcessing\Runtime\Attributes\TrackballAttribute.cs" />
