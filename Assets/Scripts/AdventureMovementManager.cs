@@ -49,11 +49,22 @@ public class AdventureMovementManager : MonoBehaviour {
 	private void OnEnable()
 	{
 		GameController.Instance.warriorSelected += SelectWarrior;
+		GameController.Instance.onModeChanged += ModeChanged;
 	}
 
 	private void OnDisable()
 	{
 		GameController.Instance.warriorSelected -= SelectWarrior;
+		GameController.Instance.onModeChanged -= ModeChanged;
+	}
+
+	private void ModeChanged(GameController.GameMode mode)
+	{
+		GameController.Instance.warriorSelected -= SelectWarrior;
+		if (mode == GameController.GameMode.Adventure) {
+			
+			GameController.Instance.warriorSelected += SelectWarrior;
+		}
 	}
 
 	private void AddRaycasters()

@@ -65,7 +65,9 @@
      <Compile Include="Assets\GridSystem\INeighbours.cs" />
      <Compile Include="Assets\GridSystem\Path.cs" />
      <Compile Include="Assets\GridSystem\PriorityQueue.cs" />
-     <Compile Include="Assets\InitiativeToken.cs" />
+     <Compile Include="Assets\InitiativeSystem\InitiativeToken.cs" />
+     <Compile Include="Assets\InitiativeTimeline.cs" />
+     <Compile Include="Assets\PointerTrigger.cs" />
      <Compile Include="Assets\Resources\Models\Other\RK.Team Assets\Modular Road Block\PostProcessing\Runtime\Attributes\GetSetAttribute.cs" />
      <Compile Include="Assets\Resources\Models\Other\RK.Team Assets\Modular Road Block\PostProcessing\Runtime\Attributes\MinAttribute.cs" />
      <Compile Include="Assets\Resources\Models\Other\RK.Team Assets\Modular Road Block\PostProcessing\Runtime\Attributes\TrackballAttribute.cs" />
@@ -125,14 +127,13 @@
      <Compile Include="Assets\Scripts\RangeFloat.cs" />
      <Compile Include="Assets\Scripts\SelectedWarriorPanel.cs" />
      <Compile Include="Assets\Scripts\ThirdPersonCamera.cs" />
+     <Compile Include="Assets\Scripts\TriggerWithActions.cs" />
      <Compile Include="Assets\Scripts\WarriorSelector.cs" />
-     <Compile Include="Assets\TestRaycaster.cs" />
      <Compile Include="Assets\Tools\LayerRaycaster.cs" />
      <Compile Include="Assets\Tools\Raycaster.cs" />
      <Compile Include="Assets\Tools\Singleton.cs" />
      <Compile Include="Assets\Tools\SingleUnityLayer.cs" />
      <Compile Include="Assets\Tools\SpriteCutter.cs" />
-     <Compile Include="Assets\TriggerWithActions.cs" />
      <None Include="Assets\Resources\Models\Other\RK.Team Assets\Modular Road Block\PostProcessing\Resources\Shaders\DepthOfField.shader" />
      <None Include="Assets\Resources\Models\Other\RK.Team Assets\Modular Road Block\PostProcessing\Resources\Shaders\MotionBlur.cginc" />
      <None Include="Assets\Resources\Models\Other\RK.Team Assets\Modular Road Block\PostProcessing\Editor Resources\Monitors\ParadeRender.shader" />
@@ -162,9 +163,9 @@
      <None Include="Assets\Resources\Models\Other\RK.Team Assets\Modular Road Block\PostProcessing\Resources\Shaders\EyeHistogram.compute" />
      <None Include="Assets\FastFakeSkin\Shaders\NotSoFastNotSoFakeSkin.shader" />
      <None Include="Assets\Resources\Models\Other\RK.Team Assets\Modular Road Block\PostProcessing\Resources\Shaders\TAA.cginc" />
-     <None Include="Assets\Standard Assets\Effects\Projectors\Shaders\ProjectorLight.shader" />
      <None Include="Assets\Resources\Models\Other\RK.Team Assets\Modular Road Block\PostProcessing\Resources\Shaders\EyeAdaptation.cginc" />
      <None Include="Assets\Resources\Models\Other\RK.Team Assets\Modular Road Block\PostProcessing\Resources\Shaders\GrainGen.shader" />
+     <None Include="Assets\Standard Assets\Effects\Projectors\Shaders\ProjectorLight.shader" />
      <None Include="Assets\Resources\Models\Other\RK.Team Assets\Modular Road Block\PostProcessing\Resources\Shaders\FXAA.shader" />
      <None Include="Assets\Resources\Models\Other\RK.Team Assets\Modular Road Block\PostProcessing\Resources\Shaders\DiskKernels.cginc" />
      <None Include="Assets\Resources\Models\Other\RK.Team Assets\Modular Road Block\PostProcessing\Resources\Shaders\DepthOfField.cginc" />

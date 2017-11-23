@@ -116,9 +116,9 @@
      <None Include="Assets\Resources\Models\Other\RK.Team Assets\Modular Road Block\PostProcessing\Resources\Shaders\EyeHistogram.compute" />
      <None Include="Assets\FastFakeSkin\Shaders\NotSoFastNotSoFakeSkin.shader" />
      <None Include="Assets\Resources\Models\Other\RK.Team Assets\Modular Road Block\PostProcessing\Resources\Shaders\TAA.cginc" />
-     <None Include="Assets\Standard Assets\Effects\Projectors\Shaders\ProjectorLight.shader" />
      <None Include="Assets\Resources\Models\Other\RK.Team Assets\Modular Road Block\PostProcessing\Resources\Shaders\EyeAdaptation.cginc" />
      <None Include="Assets\Resources\Models\Other\RK.Team Assets\Modular Road Block\PostProcessing\Resources\Shaders\GrainGen.shader" />
+     <None Include="Assets\Standard Assets\Effects\Projectors\Shaders\ProjectorLight.shader" />
      <None Include="Assets\Resources\Models\Other\RK.Team Assets\Modular Road Block\PostProcessing\Resources\Shaders\FXAA.shader" />
      <None Include="Assets\Resources\Models\Other\RK.Team Assets\Modular Road Block\PostProcessing\Resources\Shaders\DiskKernels.cginc" />
      <None Include="Assets\Resources\Models\Other\RK.Team Assets\Modular Road Block\PostProcessing\Resources\Shaders\DepthOfField.cginc" />

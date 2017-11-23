@@ -12,7 +12,10 @@ public class HexField : MonoBehaviour {
 
 	public Action<Cell> OnHexClicked;
 
-    private float coef = 0.9f;
+
+	private List<Vector3> cellsPositions = new List<Vector3>();
+
+	public List<BattleWarrior> Warriors = new List<BattleWarrior>();
 
     public GameObject cellPrefab;
     private List<Cell> cells = new List<Cell>();
@@ -61,8 +64,7 @@ public class HexField : MonoBehaviour {
             }
             else
             {
-                
-                    Highlighter.HighlightCell(Vector2.one*Mathf.Infinity, 1);
+                Highlighter.HighlightCell(Vector2.one*Mathf.Infinity, 1);
             }
             aimedCell = value;
         }
@@ -96,6 +98,7 @@ public class HexField : MonoBehaviour {
     {
         Cell newAimedCell = null;
 
+
         foreach (Cell cell in cells)
         {
             if (IsPointInsideHex(new Vector3(point.x, point.z), cell))
@@ -111,30 +114,36 @@ public class HexField : MonoBehaviour {
         }
     }
 
-	public void GenerateCells(List<Vector3> cellsExistance)
+	public void GenerateCells(List<Vector3> cellsPositions, List<Vector2> cellsCoordinates)
     {
         foreach (Cell cell in cells)
         {
             Destroy(cell.gameObject);
         }
         cells.Clear();
-        foreach (Vector3 c in cellsExistance)
+
+	
+
+		Debug.Log (cellsPositions.Count()+"/"+cellsCoordinates.Count());
+
+		for (int i = 0; i<cellsPositions.Count()-1;i++)
         {
+			GameObject cellGo = Instantiate(cellPrefab, new Vector3(cellsPositions[i].x, transform.position.y,cellsPositions[i].z), Quaternion.identity, transform);
+			Cell cell = cellGo.GetComponent<Cell>();
+			cell.GetComponentInChildren<Projector> ().orthographicSize = transform.localScale.x/1.4f;
 
+			Debug.Log (cellsCoordinates.Count()+"/"+i);
 
-            Vector2 cell2DCoord = CellCoordToWorld(c);
-            Vector3 cellPosition = new Vector3(cell2DCoord.x, transform.position.y , cell2DCoord.y);
-
-				GameObject cellGo = Instantiate(cellPrefab, cellPosition, Quaternion.identity, transform);
-				Cell cell = cellGo.GetComponent<Cell>();
-			cell.GetComponentInChildren<Projector> ().orthographicSize = transform.localScale.x/2;
-				cell.coord = c;
-				cells.Add(cell);
+			cell.coord = cellsCoordinates[i];
+			cells.Add(cell);
         }
+
 		if(cells.Count()>0)
 		{
 			Highlighter.defaultColor = cells[0].GetComponentInChildren<Projector>().material.color;
 		}
+
+		this.cellsPositions = cellsPositions;
     }
 		
     public bool CellEnable(Vector2 position)
@@ -153,7 +162,7 @@ public class HexField : MonoBehaviour {
 		{
 			foreach(Projector p in GetComponentsInChildren<Projector>())
 			{
-				p.orthographicSize = transform.localScale.x/2;
+				p.orthographicSize = transform.localScale.x/1.4f;
 			}
 		}
 
@@ -196,25 +205,29 @@ public class HexField : MonoBehaviour {
 
     private bool IsPointInsideHex(Vector2 point, Cell c)
     {
-        Vector2 cellCenter = CellCoordToWorld(c.coord);
+		Vector3 cc = CellCoordToWorld(c);
+		Vector2 cellCenter = new Vector2 (cc.x, cc.z);
+
+		/*
 		float _vert = transform.localScale.x * coef/2;
 		float _hori = transform.localScale.x/2;
-
-
         
         float q2x = Math.Abs(point.x - cellCenter.x);         // transform the test point locally and to quadrant 2
         float q2y = Math.Abs(point.y - cellCenter.y);         // transform the test point locally and to quadrant 2
         if (q2x > _hori || q2y > _vert * 2) return false;           // bounding test (since q2 is in quadrant 2 only 2 tests are needed)
         return 2 * _vert * _hori - _vert * q2x - _hori * q2y >= 0;   // finally the dot product can be reduced to this due to the hexagon symmetry*
-    
+    	*/
+		return Vector2.Distance (point, cellCenter)<=transform.localScale.x;
     }
 
-	public Vector2 CellCoordToWorld(Vector2 cellCoord)
+	public Vector3 CellCoordToWorld(Cell c)
     {
+		/*
 		float x =  transform.localScale.x *  (float)Math.Sqrt(3) * (cellCoord.x + cellCoord.y/2);
 		float y =  transform.localScale.x * 3 / 2 * -cellCoord.y;
         Vector3 pos = transform.position + new Vector3(x, 0, y) * 0.6f;//  lastScale * cellSize * (cellCoord.x + Mathf.Abs((cellCoord.y % 2 + .0f) / 2)) * Vector3.left - lastScale * coef * cellSize * Vector3.forward * cellCoord.y;
-        return new Vector2(pos.x, pos.z);
+		*/
+		return cellsPositions[cells.IndexOf(c)];
     }
 
 	public List<Cell> AdjustedHexes(Cell center)
@@ -267,5 +280,16 @@ public class HexField : MonoBehaviour {
 	private bool Contains(LayerMask mask, int layer)
 	{
 		return mask == (mask | (1 << layer));
+	}
+
+	public Cell GetClosestCell(Vector3 v, bool onlyEmpty = false)
+	{
+		List<Cell> selectCells = cells.Where (c=>c.enable).ToList();
+	
+		if(onlyEmpty)
+		{
+			selectCells = selectCells.Where (c=>c.Passable).ToList();
+		}
+		return selectCells.Aggregate((curMin, c) => curMin == null || Vector3.Distance(v, CellCoordToWorld(c)) < Vector3.Distance(v, CellCoordToWorld(curMin)) ? c : curMin);
 	}
 }

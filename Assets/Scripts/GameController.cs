@@ -11,7 +11,22 @@ public class GameController : Singleton<GameController> {
 		Battle
 	}
 
+	public Action<GameMode> onModeChanged;
+
 	public Action<BattleWarrior> warriorPointed, warriorDepointed, warriorSelected;
+
+	private HexField currentField;
+	public HexField CurrentField
+	{
+		get
+		{
+			return currentField;
+		}
+		set
+		{
+			currentField = value;
+		}
+	}
 
 	private BattleWarrior warrior;
 	public BattleWarrior Warrior
@@ -61,6 +76,7 @@ public class GameController : Singleton<GameController> {
 		}
 	}
 
+	[SerializeField]
 	private GameMode mode = GameMode.Adventure;
 	public GameMode Mode
 	{
@@ -71,6 +87,10 @@ public class GameController : Singleton<GameController> {
 		set
 		{
 			mode = value;
+			if(onModeChanged!=null)
+			{
+				onModeChanged.Invoke (mode);
+			}
 		}
 	}
 
@@ -92,11 +112,19 @@ public class GameController : Singleton<GameController> {
 	private void OnEnable()
 	{
 		Raycaster.Instance.AddListener ((Vector3 v, GameObject go)=>{
+			if(GameController.Instance.Mode == GameMode.Adventure){
 			HighlightedWarrior = go.GetComponent<BattleWarrior>();
-		}, ()=>{HighlightedWarrior = null;}, 10, 0.1f, LayerRaycaster.InputType.none, 0);
+			}
+		}, ()=>{
+			if(GameController.Instance.Mode == GameMode.Adventure){
+			HighlightedWarrior = null;
+			}
+		}, 10, 0.1f, LayerRaycaster.InputType.none, 0);
 		Raycaster.Instance.AddListener ((Vector3 v, GameObject go)=>{
+			if(GameController.Instance.Mode == GameMode.Adventure){
 			Warrior = go.GetComponent<BattleWarrior>();
-		}, ()=>{Warrior = null;}, 10, 0.1f, LayerRaycaster.InputType.mouseDown, 0);
+			}
+		}, ()=>{if(GameController.Instance.Mode == GameMode.Adventure){Warrior = null;}}, 10, 0.1f, LayerRaycaster.InputType.mouseDown, 0);
 	}
 
 	private void OnDisable()

@@ -144,6 +144,7 @@ public class BattleWarrior :MonoBehaviour
 	public bool Enemy = false;
 
 	public Sprite portrait;
+	public Sprite smallPortrait;
 
 	private List<Vector2> cellsSize = new List<Vector2>(){new Vector2(0,0)};
 	public List<Cell> cells = new List<Cell>();

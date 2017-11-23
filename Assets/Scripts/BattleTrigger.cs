@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
+using UnityEngine.AI;
 
 public class BattleTrigger : MonoBehaviour
 {
@@ -19,6 +20,8 @@ public class BattleTrigger : MonoBehaviour
 			return (GameObject)Resources.Load<GameObject> ("HexBattleSystem/HexField");
 		}
 	}
+	private List<Vector2> cellsCoordinates = new List<Vector2> ();
+	private HexField field;
 	public RangeFloat Offset = new RangeFloat (-10, 10);
 
 	public float CellSize
@@ -34,58 +37,80 @@ public class BattleTrigger : MonoBehaviour
 
 	public void StartBattle ()
 	{
-		Debug.Log (activationEnabled);
-		if (activationEnabled) {
-			foreach (FakeController fc in FindObjectsOfType<FakeController>()) {
-				fc.Controller.SetSpeed (0);
-				fc.Controller.NavAgent.isStopped = true;
-			}
+		if (activationEnabled) 
+		{
 			GameController.Instance.Warrior = null;
-			GameController.Instance.Mode = GameController.GameMode.Battle;
-			Instantiate (GridBattleField, transform.position, Quaternion.identity).GetComponent<HexField> ().GenerateCells (RecalculateHexes ());
+			field = Instantiate (GridBattleField, transform.position, Quaternion.identity, transform).GetComponent<HexField> ();
+			GameController.Instance.CurrentField = field;
+			List<Vector3> positions = RecalculateHexes ();
+
+
+
+			field.GenerateCells (positions, cellsCoordinates);
 		}
+
+		field.Warriors.Clear ();
+		//not so good
+		foreach(BattleWarrior bw in FindObjectsOfType<BattleWarrior>())
+		{
+			Cell c = field.GetClosestCell (bw.transform.position, true);
+			c.cellWarrior = bw;
+			NavMeshHit hit;
+			NavMesh.SamplePosition (field.CellCoordToWorld (c),out hit, 1, NavMesh.AllAreas);
+			bw.GetComponent<FakeController> ().GoTo (hit.position, false);
+			field.Warriors.Add (bw);
+		}
+
+		GameController.Instance.Mode = GameController.GameMode.Battle;
 	}
+
+
 
 	public List<Vector3> RecalculateHexes ()
 	{
 		List<Vector3> result = new List<Vector3> ();
-		List<Vector2> positions = new List<Vector2> ();
+		cellsCoordinates.Clear ();
 		switch (fieldType) {
 		case BattleFieldType.Hex:
 			for (int i = -xSize * 3; i < xSize * 3; i++) {
 				for (int j = -xSize * 3; j < xSize * 3; j++) {
 					if (UnityEngine.Random.Range (0, 10) >= 0 && Mathf.Abs (i + j) < xSize && Mathf.Abs (j) < xSize && Mathf.Abs (i) < xSize) {
-						positions.Add (new Vector2 (i, j));
+						cellsCoordinates.Add (new Vector2 (i, j));
 					}
 				}
 			}
 			break;
 		case BattleFieldType.Rectangle:
-
 			for (int i = Mathf.CeilToInt (-(float)xSize / 2); i < Mathf.CeilToInt ((float)xSize / 2); i++) {
 				
 				for (int j = Mathf.CeilToInt (-(float)ySize / 2); j < Mathf.CeilToInt ((float)ySize / 2); j++) {
 					if (j > 0 && j % 2 == 1) {
-						positions.Add (new Vector2 (-1 + i - Mathf.CeilToInt (j / 2), j));
+						cellsCoordinates.Add (new Vector2 (-1 + i - Mathf.CeilToInt (j / 2), j));
 					} else {
-						positions.Add (new Vector2 (i - Mathf.CeilToInt (j / 2), j));
+						cellsCoordinates.Add (new Vector2 (i - Mathf.CeilToInt (j / 2), j));
 					}
 				}
 			}
 			break;
 		}
 
-		foreach (Vector2 c in positions) {
+		List<Vector2> actualRoordinates = new List<Vector2> ();
+
+		foreach (Vector2 c in cellsCoordinates) {
 			Vector2 cell2DCoord = CellCoordToWorld (c);
 			Vector3 cellPosition = RotatePointAroundPivot (new Vector3 (cell2DCoord.x, transform.position.y, cell2DCoord.y), transform.position, transform.rotation.eulerAngles);
 
+			Vector3 r = Raycast (cellPosition, Offset.Min, Offset.Max, obstaclesLayers, recievingRaycastLayer);
 
-			if (Raycast (cellPosition, Offset.Min, Offset.Max, obstaclesLayers, recievingRaycastLayer)) {
-				result.Add (cellPosition);
+			if (r.x!=Mathf.Infinity) {
+				result.Add (r);
+				actualRoordinates.Add (c);
 			}
 
 
 		}
+
+		cellsCoordinates = actualRoordinates;
 
 		return result;
 	}
@@ -106,7 +131,7 @@ public class BattleTrigger : MonoBehaviour
 		return point; // return it
 	}
 
-	private bool Raycast (Vector3 fromPosition, float minOffset, float maxOffset, LayerMask obstacleLayer, LayerMask raycastingLayer)
+	private Vector3 Raycast (Vector3 fromPosition, float minOffset, float maxOffset, LayerMask obstacleLayer, LayerMask raycastingLayer)
 	{
 		RaycastHit hit;
 		if (Physics.Raycast (fromPosition, Vector3.down, out hit, 1000, raycastingLayer.value)) { //obstacleLayer.value | raycastingLayer.value 
@@ -117,12 +142,12 @@ public class BattleTrigger : MonoBehaviour
 
 				if ((ofset >= 0 && ofset < maxOffset) || (ofset < 0 && -ofset < minOffset)) {
 					Height = hit.collider.gameObject.transform.position.y;	
-					return true;
+					return hit.point;
 				}
 			}
-			return false;
+			return Vector3.one*Mathf.Infinity;
 		} 
-		return false;
+		return Vector3.one*Mathf.Infinity;
 	}
 
 	private bool Contains (LayerMask mask, int layer)

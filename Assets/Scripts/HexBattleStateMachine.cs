@@ -78,7 +78,7 @@ public class HexBattleStateMachine : Singleton<HexBattleStateMachine> {
 
 			foreach(Cell c in FindObjectOfType<HexPathFinder>().GetPath(FindObjectOfType<HexField>().WarriorCell(warrior), cell))
 			{
-				Vector2 wc2d = FindObjectOfType<HexField> ().CellCoordToWorld (c.coord);
+				Vector2 wc2d = FindObjectOfType<HexField> ().CellCoordToWorld (c);
 				Vector3 wc = new Vector3 (wc2d.x, 50, wc2d.y);
 				RaycastHit hit;
 				Ray ray = new Ray (wc, Vector3.down);

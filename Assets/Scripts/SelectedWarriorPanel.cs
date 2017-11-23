@@ -6,53 +6,83 @@ using UnityEngine.UI;
 public class SelectedWarriorPanel : MonoBehaviour {
 	public int WarriorsLayer = 10;
 
-	private BattleWarrior selectedWarrior = null;
 	private BattleWarrior lastWarrior = null;
 	private BattleButtonsController buttonsController;
 
 	public Image WarriorPortrait;
-	public ParamSlider HpSlider, MpSlider, ApSlider;
+	public ParamSlider ApSlider;
+
+	void OnEnable(){
+		if (GameController.Instance) {
+			GameController.Instance.warriorPointed += PointWarrior;
+			GameController.Instance.warriorDepointed += DepointWarrior;
+			GameController.Instance.warriorSelected += SelectWarrior;
+		}
+
+	}
+
+	void OnDisable(){
+		if(GameController.Instance){
+		GameController.Instance.warriorPointed -= PointWarrior;
+		GameController.Instance.warriorDepointed -= DepointWarrior;
+		GameController.Instance.warriorSelected -= SelectWarrior;
+		}
+	}
 
 	void Start()
 	{
 		buttonsController = GetComponentInChildren<BattleButtonsController> ();
-		Hide ();
-		lastWarrior = selectedWarrior;
-
+		Hide();
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		if(selectedWarrior!=lastWarrior)
-		{
-			lastWarrior = selectedWarrior;
+		if (lastWarrior != GameController.Instance.HighlightedWarrior && GameController.Instance.Mode == GameController.GameMode.Battle) {
+			ShowWarrior (GameController.Instance.HighlightedWarrior);
+		} else {
+			Hide ();
 		}
 	}
 
 	private void ShowWarrior(BattleWarrior warrior)
 	{
-		buttonsController.Hide ();
-		foreach(Transform t in transform){
-			t.gameObject.SetActive (true);
+		
+		Hide ();
+		if (warrior && GameController.Instance.Mode == GameController.GameMode.Battle) {
+			foreach (Transform t in transform) {
+				t.gameObject.SetActive (true);
+			}
+			WarriorPortrait.sprite = warrior.portrait;
+			ApSlider.Init (warrior);
 		}
-		WarriorPortrait.sprite = warrior.portrait;
-		HpSlider.Init (warrior);
-		MpSlider.Init (warrior);
-		ApSlider.Init (warrior);
 	}
 
-	private void SelectWarrior(BattleWarrior warrior)
+
+
+	private void PointWarrior(BattleWarrior warrior)
 	{
-		selectedWarrior = warrior;
 		ShowWarrior (warrior);
 	}
 
-	private void DeShowWarrior(BattleWarrior warrior)
+
+	private void DepointWarrior(BattleWarrior warrior)
 	{
-		if (selectedWarrior) {
-			ShowWarrior (selectedWarrior);
-		} else {
-			Hide ();
+		ShowWarrior (lastWarrior);
+	}
+
+
+	private void SelectWarrior(BattleWarrior warrior)
+	{
+		lastWarrior = warrior;
+		ShowWarrior (lastWarrior);
+	}
+
+
+	private void ShowButtons()
+	{
+		if(!lastWarrior.Enemy)
+		{
+			buttonsController.Show ();
 		}
 	}
 
@@ -62,13 +92,6 @@ public class SelectedWarriorPanel : MonoBehaviour {
 		foreach(Transform t in transform){
 			t.gameObject.SetActive (false);
 		}
-	}
 
-	public void ShowButtons()
-	{
-		if(!selectedWarrior.Enemy)
-		{
-			buttonsController.Show ();
-		}
 	}
 }

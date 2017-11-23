@@ -15,11 +15,14 @@ public class Cell : MonoBehaviour, IHasNeighbours<Cell> {
     public bool enable = true;
 	private CellVisual visual;
 
+	public BattleWarrior cellWarrior;
+
 	public bool Passable
 	{
 		get
 		{
-			return GetComponentInParent<HexField> ().IsPassable (this);
+			return cellWarrior == null;
+			//return GetComponentInParent<HexField> ().IsPassable (this);
 		}
 	}
 	public IEnumerable<Cell> AllNeighbours 
