@@ -103,11 +103,6 @@ public class InitiativeToken : MonoBehaviour
 
 	void Update () 
 	{
-		if(Input.GetKeyDown(KeyCode.Space))
-		{
-			speedCoef = 1;
-		}
-
 
 		if (warrior.Enemy) {
 			rectTransform.localPosition = new Vector2 (Mathf.Lerp (rectTransform.localPosition.x, rectTransform.rect.width*0.8f, Time.deltaTime), rectTransform.localPosition.y);	
@@ -139,7 +134,8 @@ public class InitiativeToken : MonoBehaviour
 			speedCoef = 0;
 			value = startValue;
 			randomInitiativeModificator = Random.Range (-0.5f, 0.5f);
-			GameController.Instance.Warrior = warrior;
+			
+            GameController.Instance.CurrentField.SelectWarrior(warrior);
 		}
 	}
 

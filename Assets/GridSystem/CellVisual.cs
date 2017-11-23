@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
+using System;
 
 public class CellVisual : MonoBehaviour {
 
@@ -105,7 +106,16 @@ public class CellVisual : MonoBehaviour {
         {63, new BordersAndRotation(0, 13)}
     };
 
-	private Texture2D[] borderTextures;
+    public void ShowCenter(bool center, Color centerColor)
+    {
+        if (!center)
+        {
+            centerColor.a = 0;
+        }
+        ProjectionMaterial.SetColor("_CenterColor", centerColor);
+    }
+
+    private Texture2D[] borderTextures;
 	private Material projectionMaterial;
 	private Material ProjectionMaterial
 	{

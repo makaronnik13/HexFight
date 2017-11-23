@@ -53,14 +53,15 @@ public class InitiativeTimeline : MonoBehaviour {
 
 	public void AddWarrior(BattleWarrior bw)
 	{
-		Instantiate (token, transform.GetChild(1).position, Quaternion.identity ,transform.GetChild(1)).GetComponent<InitiativeToken>().Init(bw);
+        //Lean.Pool.LeanPool.Spawn(token, transform.GetChild(1).position, Quaternion.identity, transform.GetChild(1)).GetComponent<InitiativeToken>().Init(bw);
+        Instantiate (token, transform.GetChild(1).position, Quaternion.identity ,transform.GetChild(1)).GetComponent<InitiativeToken>().Init(bw);
 	}
 
 	private void Clear()
 	{
 		foreach(Transform t in transform.GetChild(1))
 		{
-			Destroy(t.gameObject);
+            Destroy(t.gameObject);
 		}
 	}
 

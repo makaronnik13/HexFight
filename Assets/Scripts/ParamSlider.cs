@@ -7,8 +7,6 @@ public class ParamSlider : MonoBehaviour
 {
 	public enum SliderType
 	{
-		Hp,
-		Mp,
 		Ap
 	}
 
@@ -54,12 +52,6 @@ public class ParamSlider : MonoBehaviour
 			case SliderType.Ap:
 				currentWarrior.OnApChanged -= ValueChanged;
 				break;
-			case SliderType.Hp:
-				currentWarrior.OnHpChanged -= ValueChanged;
-				break;
-			case SliderType.Mp:
-				currentWarrior.OnMpChanged -= ValueChanged;
-				break;
 			}
 		}
 		currentWarrior = warrior;
@@ -68,14 +60,6 @@ public class ParamSlider : MonoBehaviour
 		case SliderType.Ap:
 			currentWarrior.OnApChanged += ValueChanged;
 			SetValues (currentWarrior.Ap, currentWarrior.MaxAp);
-			break;
-		case SliderType.Hp:
-			currentWarrior.OnHpChanged += ValueChanged;
-			SetValues (currentWarrior.Hp, currentWarrior.MaxHp);
-			break;
-		case SliderType.Mp:
-			currentWarrior.OnMpChanged += ValueChanged;
-			SetValues (currentWarrior.Mp, currentWarrior.MaxMp);
 			break;
 		}
 	}

@@ -59,9 +59,10 @@ public class Cell : MonoBehaviour, IHasNeighbours<Cell> {
 		}
 	}
 
-	public void ShowCellBorders(bool[] binaryS, Color c)
+	public void ShowCellBorders(bool[] binaryS, Color c, bool center, Color centerColor)
 	{
 		Visual.ShowBorder (binaryS, c);
+        Visual.ShowCenter (center, centerColor);
 	}
 		
 }

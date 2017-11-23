@@ -59,7 +59,7 @@ public class HexBattleStateMachine : Singleton<HexBattleStateMachine> {
 
 		AvaliableMoveCell = GetComponent<HexPathFinder>().GetAwaliableCells(warriorCell, warrior.CurrentWalkRange);
 
-		FindObjectOfType<CellsHighlighter> ().HighlightArea (warriorCell, AvaliableMoveCell, FindObjectOfType<CellsHighlighter> ().avalibleColor, 4);
+		FindObjectOfType<CellsHighlighter> ().HighlightArea (warriorCell, AvaliableMoveCell, CellsHighlighter.HighlightLayer.Movement, 4);
 		//FindObjectOfType<CellsHighlighter> ().HilightPath (warriorCell);
     }
 

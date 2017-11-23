@@ -22,10 +22,11 @@ public class SelectedWarriorPanel : MonoBehaviour {
 	}
 
 	void OnDisable(){
-		if(GameController.Instance){
-		GameController.Instance.warriorPointed -= PointWarrior;
-		GameController.Instance.warriorDepointed -= DepointWarrior;
-		GameController.Instance.warriorSelected -= SelectWarrior;
+		if(GameController.Instance)
+        {
+		    GameController.Instance.warriorPointed -= PointWarrior;
+		    GameController.Instance.warriorDepointed -= DepointWarrior;
+		    GameController.Instance.warriorSelected -= SelectWarrior;
 		}
 	}
 
@@ -48,13 +49,18 @@ public class SelectedWarriorPanel : MonoBehaviour {
 	{
 		
 		Hide ();
-		if (warrior && GameController.Instance.Mode == GameController.GameMode.Battle) {
-			foreach (Transform t in transform) {
-				t.gameObject.SetActive (true);
-			}
-			WarriorPortrait.sprite = warrior.portrait;
-			ApSlider.Init (warrior);
-		}
+        if (GameController.Instance.Mode == GameController.GameMode.Battle)
+        {
+            if (warrior)
+            {
+                foreach (Transform t in transform)
+                {
+                    t.gameObject.SetActive(true);
+                }
+                WarriorPortrait.sprite = warrior.portrait;
+                ApSlider.Init(warrior);
+            }
+        }
 	}
 
 
@@ -93,5 +99,14 @@ public class SelectedWarriorPanel : MonoBehaviour {
 			t.gameObject.SetActive (false);
 		}
 
-	}
+        if (lastWarrior)
+        {
+            foreach (Transform t in transform)
+            {
+                t.gameObject.SetActive(true);
+            }
+            WarriorPortrait.sprite = lastWarrior.portrait;
+            ApSlider.Init(lastWarrior);
+        }
+    }
 }

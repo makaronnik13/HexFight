@@ -6,6 +6,22 @@ using UnityEngine;
 
 public class CellsHighlighter : MonoBehaviour {
 
+    public enum HighlightType
+    {
+        Borders,
+        Center,
+        Both
+    }
+
+    public enum HighlightLayer
+    {
+        None = 0,
+        Selection = 1,
+        MovementArea = 2,
+        Movement = 3,
+        SkillArea = 4
+    }
+
     private class HighlightedLayer
     {
 		public Dictionary<Cell, bool[]> cells = new Dictionary<Cell, bool[]>();
@@ -18,10 +34,21 @@ public class CellsHighlighter : MonoBehaviour {
         }
     }
 
-    public Color defaultColor = new Color(1,1,1,0.39f),
-                 avalibleColor = Color.green,
-                 wrongColor = Color.red,
-                 specialColor = Color.magenta;
+    private static Color[] layersColors = new Color[]{
+    new Color(1,1,1,0.39f),
+    Color.green,
+    Color.green,
+    Color.green,
+    Color.magenta
+    };
+
+    private static HighlightType[] layersHighlightTypes = new HighlightType[]{
+    HighlightType.Borders,
+    HighlightType.Borders,
+    HighlightType.Borders,
+    HighlightType.Center,
+    HighlightType.Borders
+    };
 
     private HexPathFinder pathFinder;
     private HexPathFinder PathFinder
@@ -50,32 +77,32 @@ public class CellsHighlighter : MonoBehaviour {
 
     private Dictionary<int, HighlightedLayer> highlightedLayers = new Dictionary<int, HighlightedLayer>();
 
-    public void HilightPath(Cell start, Cell aim, int layerId)
+
+    public void DehighlightLayer(HighlightLayer hlayer)
     {
-        List<Cell> path = PathFinder.GetPath(start, aim);
+        int layerId = (int)hlayer;
 
-
-        if (path!=null)
-        {
-			HighlightArea(start, path, avalibleColor, layerId);
-        }
-    }
-
-    public void DehighlightLayer(int layerId)
-    {
         if (highlightedLayers.ContainsKey(layerId))
         {
 			foreach (Cell c in highlightedLayers[layerId].cells.Keys)
             {
 
-                c.ShowCellBorders(new bool[] { true, true, true, true, true, true }, defaultColor);
+                c.ShowCellBorders(new bool[] { false, false, false, false, false, false }, Color.black, false, Color.black);
 
                 foreach (HighlightedLayer layer in highlightedLayers.OrderBy(kp => kp.Key).Select(kp => kp.Value).ToList())
                 {
 					if (layer.cells.Keys.Contains(c) && layer!= highlightedLayers[layerId])
                     {
-						c.ShowCellBorders(layer.cells[c], layer.color);
+                        /*
+                        bool showBorder = true;
+                        if (LayerType(highlightedLayers.ElementAt())== HighlightType.Borders)
+                        {
+                            showBorder = false;
+                        }
+
+						c.ShowCellBorders(layer.cells[c], layer.color, );
                         break;
+                        */
                     }
                 }
             }
@@ -84,17 +111,28 @@ public class CellsHighlighter : MonoBehaviour {
         }
     }
 
+    public void HighlightPath(Cell from, Cell to, int ap)
+    {
+        List<Cell> path = GetComponent<HexPathFinder>().GetPath(from, to);
+
+        if (path!=null)
+        {
+            HighlightArea(from, path, HighlightLayer.MovementArea);
+        }
+        
+    }
+
     public void HighlightCircle(Vector2 center, int rad)
     {
 
     }
 
-    public void HighlightCell(Vector2 coord, int layer)
+    public void HighlightCell(Vector2 coord)
     {
-        HighlightArea(coord, new List<Vector2>() {Vector2.zero}, avalibleColor, layer);
+        HighlightArea(coord, new List<Vector2>() {Vector2.zero}, HighlightLayer.Selection);
     }
 
-    public void HighlightLine(Vector2 center, Vector2 aim, int layerId)
+    public void HighlightLine(Vector2 center, Vector2 aim, HighlightLayer layer)
     {
         List<Vector2> offsets = new List<Vector2>();
 
@@ -152,25 +190,26 @@ public class CellsHighlighter : MonoBehaviour {
             }
         }
 
-        HighlightArea(center, offsets, wrongColor, layerId);
+        HighlightArea(center, offsets, layer);
     }
 
 
-	public void HighlightArea(Cell center, List<Cell> cells, Color c, int layerId, int rotation = 0)
+	public void HighlightArea(Cell center, List<Cell> cells,  HighlightLayer layer, int rotation = 0)
 	{
+
 		List<Vector2> offsets = new List<Vector2> ();
 		foreach(Cell cell in cells)
 		{
 			offsets.Add (cell.coord - center.coord);
 		}
-		HighlightArea (center.coord, offsets, c, layerId, rotation);
+		HighlightArea (center.coord, offsets, layer, rotation);
 	}
 
-    public void HighlightArea(Vector2 center, List<Vector2> offsets, Color c, int layerId, int rotation = 0)
+    public void HighlightArea(Vector2 center, List<Vector2> offsets, HighlightLayer layer, int rotation = 0)
     {
 		Dictionary<Cell, bool[]> newHighlightedCells = new Dictionary<Cell, bool[]>();
 
-        DehighlightLayer(layerId);
+        DehighlightLayer(layer);
 
         foreach (Vector2 offset in offsets)
         {
@@ -187,28 +226,35 @@ public class CellsHighlighter : MonoBehaviour {
 			for(int i =0; i<6;i++)
 			{
 				Cell n = HexManager.Neighbour(newHighlightedCells.ElementAt(j).Key.coord, i, newHighlightedCells.Keys.ToList());
-				b.Add (n==null);
+                bool border = (n == null) && LayerType(layer)!= HighlightType.Center;
+				b.Add(border);
 			}
 
-			newHighlightedCells.ElementAt(j).Key.ShowCellBorders(b.ToArray(), c);
+            bool  showCenter = !(LayerType(layer) == HighlightType.Center);
 
-
-
-			newHighlightedCells[newHighlightedCells.ElementAt(j).Key] = b.ToArray();
-			
+			newHighlightedCells.ElementAt(j).Key.ShowCellBorders(b.ToArray(), LayerColor(layer), showCenter, LayerColor(layer));
+			newHighlightedCells[newHighlightedCells.ElementAt(j).Key] = b.ToArray();	
 		}
 
-
-
-        highlightedLayers.Add(layerId, new HighlightedLayer(newHighlightedCells, c));
+        highlightedLayers.Add((int)layer, new HighlightedLayer(newHighlightedCells, LayerColor(layer)));
     }
 
-	public void DehighLightAll ()
+    private Color LayerColor(HighlightLayer layer)
+    {
+        return layersColors[(int)layer];
+    }
+
+    private HighlightType LayerType(HighlightLayer layer)
+    {
+        return layersHighlightTypes[(int)layer];
+    }
+
+    public void DehighLightAll ()
 	{
 		List<int> layersIds = highlightedLayers.Select (l => l.Key).ToList();
 		foreach(int i in layersIds)
 		{
-			DehighlightLayer (i);
+			DehighlightLayer ((HighlightLayer)i);
 		}
 
 		highlightedLayers.Clear ();

@@ -81,11 +81,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\FastFakeSkin\Demo\Code\Breathe.cs" />
-    <Compile Include="Assets\FastFakeSkin\Demo\Code\LightMover.cs" />
-    <Compile Include="Assets\FastFakeSkin\Demo\Code\LookAt.cs" />
-    <Compile Include="Assets\FastFakeSkin\Demo\Code\MapChanger.cs" />
-    <Compile Include="Assets\FastFakeSkin\Demo\Code\Probe.cs" />
     <Compile Include="Assets\GridSystem\Cell.cs" />
     <Compile Include="Assets\GridSystem\CellsHighlighter.cs" />
     <Compile Include="Assets\GridSystem\CellVisual.cs" />
@@ -96,6 +91,17 @@
     <Compile Include="Assets\GridSystem\Path.cs" />
     <Compile Include="Assets\GridSystem\PriorityQueue.cs" />
     <Compile Include="Assets\InitiativeSystem\InitiativeToken.cs" />
+    <Compile Include="Assets\InitiativeTimeline.cs" />
+    <Compile Include="Assets\LeanPool\Examples\Scripts\LeanDelayedPooling.cs" />
+    <Compile Include="Assets\LeanPool\Examples\Scripts\LeanPoolBenchmark.cs" />
+    <Compile Include="Assets\LeanPool\Examples\Scripts\LeanPooledRigidbody.cs" />
+    <Compile Include="Assets\LeanPool\Examples\Scripts\LeanPooledRigidbody2D.cs" />
+    <Compile Include="Assets\LeanPool\Examples\Scripts\LeanPoolTest.cs" />
+    <Compile Include="Assets\LeanPool\Scripts\LeanClassPool.cs" />
+    <Compile Include="Assets\LeanPool\Scripts\LeanGameObjectPool.cs" />
+    <Compile Include="Assets\LeanPool\Scripts\LeanPool.cs" />
+    <Compile Include="Assets\LeanPool\Scripts\LeanPoolable.cs" />
+    <Compile Include="Assets\PointerTrigger.cs" />
     <Compile Include="Assets\Resources\Models\Other\RK.Team Assets\Modular Road Block\PostProcessing\Runtime\Attributes\GetSetAttribute.cs" />
     <Compile Include="Assets\Resources\Models\Other\RK.Team Assets\Modular Road Block\PostProcessing\Runtime\Attributes\MinAttribute.cs" />
     <Compile Include="Assets\Resources\Models\Other\RK.Team Assets\Modular Road Block\PostProcessing\Runtime\Attributes\TrackballAttribute.cs" />
@@ -164,11 +170,9 @@
     <Compile Include="Assets\Tools\SpriteCutter.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Assets\FastFakeSkin\ReadMe.txt" />
-    <None Include="Assets\FastFakeSkin\Shaders\FastFakeSkin.shader" />
-    <None Include="Assets\FastFakeSkin\Shaders\NotSoFastFakeSkin.shader" />
-    <None Include="Assets\FastFakeSkin\Shaders\NotSoFastNotSoFakeSkin.shader" />
     <None Include="Assets\GridSystem\projector.shader" />
+    <None Include="Assets\LeanPool\Examples\Fonts\OFL.txt" />
+    <None Include="Assets\LeanPool\Examples\Shaders\Skybox.shader" />
     <None Include="Assets\Resources\Models\Other\Foliage Free\Readme.txt" />
     <None Include="Assets\Resources\Models\Other\RK.Team Assets\Modular Road Block\PostProcessing\Editor Resources\Monitors\HistogramCompute.compute" />
     <None Include="Assets\Resources\Models\Other\RK.Team Assets\Modular Road Block\PostProcessing\Editor Resources\Monitors\HistogramRender.shader" />

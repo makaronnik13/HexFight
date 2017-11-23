@@ -6,7 +6,7 @@ using System;
 
 public class BattleWarrior :MonoBehaviour
 {
-	public Action<int, int> OnHpChanged, OnMpChanged, OnApChanged;
+	public Action<int, int> OnApChanged;
 	private AnimatorController controller;
 	private AnimatorController Controller
 	{
@@ -33,75 +33,6 @@ public class BattleWarrior :MonoBehaviour
 		}
 	}
 
-	[SerializeField]
-	private int maxHp = 7;
-	public int MaxHp
-	{
-		get
-		{
-			return maxHp;
-		}
-		set
-		{
-			maxHp = value;
-			if (OnHpChanged!=null) 
-			{
-				OnHpChanged.Invoke(Hp, MaxHp);
-			}
-		}
-	}
-		
-	private int hp = 100;
-	public int Hp
-	{
-		get
-		{
-			return hp;
-		}
-		set
-		{
-			hp = value;
-			if (OnHpChanged!=null) 
-			{
-				OnHpChanged.Invoke(Hp, MaxHp);
-			}
-		}
-	}
-
-	[SerializeField]
-	private int maxMp = 7;
-	public int MaxMp
-	{
-		get
-		{
-			return maxMp;
-		}
-		set
-		{
-			maxMp = value;
-			if (OnMpChanged!=null) 
-			{
-				OnMpChanged.Invoke(Mp, MaxMp);
-			}
-		}
-	}
-
-	private int mp = 10;
-	public int Mp
-	{
-		get
-		{
-			return mp;
-		}
-		set
-		{
-			mp = value;
-			if (OnMpChanged!=null) 
-			{
-				OnMpChanged.Invoke(Mp, MaxMp);
-			}
-		}
-	}
 	public float Initiative = 3;
 
 	[SerializeField]
@@ -139,8 +70,6 @@ public class BattleWarrior :MonoBehaviour
 		}
 	}
 
-    public float WalkSpeed = 1;
-
 	public bool Enemy = false;
 
 	public Sprite portrait;
@@ -156,7 +85,7 @@ public class BattleWarrior :MonoBehaviour
     {
         get
         {
-			return Mathf.FloorToInt(Ap*WalkSpeed);
+			return Mathf.FloorToInt(Ap);
         }
     }
 
@@ -191,7 +120,7 @@ public class BattleWarrior :MonoBehaviour
 	private void GoToNextPoint()
 	{
 		if (pathQueue.Count > 0) {
-			Ap-=Mathf.CeilToInt(1/WalkSpeed);
+			Ap-=1;
 			Vector3 aim = pathQueue.Pop ();
 			NavAgent.SetDestination (aim);
 			NavMeshPath path = new NavMeshPath ();
@@ -205,9 +134,7 @@ public class BattleWarrior :MonoBehaviour
 
 	private void Start()
 	{
-		Hp = MaxHp;
 		Ap = MaxAp;
-		Mp = MaxMp;
 	}
 }
 

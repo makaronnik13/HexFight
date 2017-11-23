@@ -46,6 +46,12 @@ public class HexPathFinder : MonoBehaviour {
         //We assume that the distance between any two adjacent tiles is 1
         //If you want to have some mountains, rivers, dirt roads or something else which might slow down the player you should replace the function with something that suits better your needs
 
+        Path <Cell> path = FindPath(start, aim);
+
+        if (path == null)
+        {
+            return new Path<Cell>(start).ToList();
+        }
         return FindPath(start, aim).ToList();
     }
 

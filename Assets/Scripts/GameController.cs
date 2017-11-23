@@ -11,9 +11,18 @@ public class GameController : Singleton<GameController> {
 		Battle
 	}
 
+    public enum BattleAction
+    {
+        None,
+        Default
+    }
+
+    public BattleAction actionType = BattleAction.Default;
+
 	public Action<GameMode> onModeChanged;
 
 	public Action<BattleWarrior> warriorPointed, warriorDepointed, warriorSelected;
+
 
 	private HexField currentField;
 	public HexField CurrentField
@@ -37,18 +46,26 @@ public class GameController : Singleton<GameController> {
 		}
 		set
 		{
-			if(warriorDepointed!=null)
-			{
-				warriorDepointed.Invoke (warrior);
-			}
-			warrior = value;
+            if (warrior != value)
+            {
+                if (warriorDepointed != null)
+                {
+                    warriorDepointed.Invoke(warrior);
+                }
+                warrior = value;
 
-			warriorSelected.Invoke (warrior);
+                warriorSelected.Invoke(warrior);
 
-			if(warriorPointed!=null)
-			{
-				warriorPointed.Invoke (warrior);
-			}
+                if (warriorPointed != null)
+                {
+                    warriorPointed.Invoke(warrior);
+                }
+
+                if (Mode == GameMode.Battle)
+                {
+                    CurrentField.SelectWarrior(warrior);
+                }
+            }
 		}
 	}
 
@@ -94,21 +111,7 @@ public class GameController : Singleton<GameController> {
 		}
 	}
 
-	private void PointWarrior(BattleWarrior warrior)
-	{
-		HighlightedWarrior = warrior;
-	}
-
-	private void SelectWarrior(BattleWarrior warrior)
-	{
-		Warrior = warrior;
-	}
-
-	private void DePointWarrior(BattleWarrior warrior)
-	{
-		HighlightedWarrior = null;
-	}
-
+	
 	private void OnEnable()
 	{
 		Raycaster.Instance.AddListener ((Vector3 v, GameObject go)=>{

@@ -8,8 +8,6 @@ public class HexField : MonoBehaviour {
 
 	private int raycastLayer = 9;
 
-	public int size = 10;
-
 	public Action<Cell> OnHexClicked;
 
 
@@ -51,40 +49,62 @@ public class HexField : MonoBehaviour {
         {
             if (value)
             {
-				if(aimedCell && CellWarrior(value))
+				if(value && value.cellWarrior)
 				{
-					GameController.Instance.HighlightedWarrior = CellWarrior (value);
+					GameController.Instance.HighlightedWarrior = value.cellWarrior;
 				}
+                else
+                {
+                    GameController.Instance.HighlightedWarrior = GameController.Instance.Warrior;
+                }
 					
 				if (HexBattleStateMachine.Instance.battleState == HexBattleStateMachine.BattleState.AreaSelect) {
-					Highlighter.HighlightArea (value.coord, HexBattleStateMachine.Instance.SelectionArea, Highlighter.specialColor, 4);
+					Highlighter.HighlightArea (value.coord, HexBattleStateMachine.Instance.SelectionArea, CellsHighlighter.HighlightLayer.SkillArea);
 				} else {
-					Highlighter.HighlightCell (value.coord, 1);
-				}      
+					//Highlighter.HighlightCell (value.coord, 1);
+				}
+
+                if (GameController.Instance.Warrior)
+                {
+                    if(GameController.Instance.actionType == GameController.BattleAction.Default)
+                    {
+                        Highlighter.HighlightPath(WarriorCell(GameController.Instance.Warrior), value, GameController.Instance.Warrior.Ap);
+                    }
+                    if (GameController.Instance.actionType == GameController.BattleAction.None)
+                    {
+                        Highlighter.HighlightCell(WarriorCell(GameController.Instance.Warrior).coord);
+                    }
+                }        
             }
             else
             {
-                Highlighter.HighlightCell(Vector2.one*Mathf.Infinity, 1);
+                Highlighter.HighlightCell(Vector2.one*Mathf.Infinity);
+                GameController.Instance.HighlightedWarrior = null;
             }
             aimedCell = value;
         }
     }
 
-	public BattleWarrior CellWarrior(Cell cell)
-	{
-		foreach(BattleWarrior bw in FindObjectsOfType<BattleWarrior>())
-		{
-			if(IsPointInsideHex(new Vector2(bw.transform.position.x, bw.transform.position.z), cell))
-			{
-				return bw;
-			}
-		}
-		return null;
-	}
+    public float Radius {
+        get
+        {
+            switch (GetComponentInParent<BattleTrigger>().fieldType)
+            {
+                case BattleTrigger.BattleFieldType.Hex:
+                    return transform.localScale.x * GetComponentInParent<BattleTrigger>().xSize*2;
+                case BattleTrigger.BattleFieldType.Rectangle:
+                    return transform.localScale.x * Mathf.Max(GetComponentInParent<BattleTrigger>().xSize, GetComponentInParent<BattleTrigger>().ySize)*2;
+                default:
+                    return 0;
+            }
+        }
+    }
+
+   
 
 	public Cell WarriorCell(BattleWarrior warrior)
 	{
-		return GetCellByWorldCoord (warrior.transform.position);
+        return cells.Where(c=>c.cellWarrior == warrior).ToList()[0];
 	}
 
 	void Start()
@@ -128,20 +148,13 @@ public class HexField : MonoBehaviour {
 
 		for (int i = 0; i<cellsPositions.Count()-1;i++)
         {
+           // GameObject cellGo = Lean.Pool.LeanPool.Spawn(cellPrefab, transform.position + new Vector3(cellsPositions[i].x, transform.position.y, cellsPositions[i].z), Quaternion.identity, transform);
 			GameObject cellGo = Instantiate(cellPrefab, new Vector3(cellsPositions[i].x, transform.position.y,cellsPositions[i].z), Quaternion.identity, transform);
 			Cell cell = cellGo.GetComponent<Cell>();
 			cell.GetComponentInChildren<Projector> ().orthographicSize = transform.localScale.x/1.4f;
-
-			Debug.Log (cellsCoordinates.Count()+"/"+i);
-
 			cell.coord = cellsCoordinates[i];
 			cells.Add(cell);
         }
-
-		if(cells.Count()>0)
-		{
-			Highlighter.defaultColor = cells[0].GetComponentInChildren<Projector>().material.color;
-		}
 
 		this.cellsPositions = cellsPositions;
     }
@@ -156,7 +169,14 @@ public class HexField : MonoBehaviour {
         return false;
     }
 
-	private void Update()
+    public void SelectWarrior(BattleWarrior warrior)
+    {
+        GameController.Instance.Warrior = warrior;
+        Vector2 p =  WarriorCell(warrior).coord;
+        Highlighter.HighlightArea(WarriorCell(warrior), GetComponent<HexPathFinder>().GetAwaliableCells(WarriorCell(warrior), warrior.Ap), CellsHighlighter.HighlightLayer.Selection, 0);
+    }
+
+    private void Update()
 	{
 		if(transform.hasChanged)
 		{
@@ -171,11 +191,6 @@ public class HexField : MonoBehaviour {
 			if (AimedCell && OnHexClicked!=null)
 			{
 				OnHexClicked (AimedCell);
-			}
-
-			if(AimedCell && CellWarrior(AimedCell))
-			{
-				GameController.Instance.Warrior = CellWarrior (AimedCell);
 			}
 		}
 	}
@@ -208,16 +223,16 @@ public class HexField : MonoBehaviour {
 		Vector3 cc = CellCoordToWorld(c);
 		Vector2 cellCenter = new Vector2 (cc.x, cc.z);
 
-		/*
-		float _vert = transform.localScale.x * coef/2;
+		
+		float _vert = transform.localScale.x/2;
 		float _hori = transform.localScale.x/2;
         
         float q2x = Math.Abs(point.x - cellCenter.x);         // transform the test point locally and to quadrant 2
         float q2y = Math.Abs(point.y - cellCenter.y);         // transform the test point locally and to quadrant 2
         if (q2x > _hori || q2y > _vert * 2) return false;           // bounding test (since q2 is in quadrant 2 only 2 tests are needed)
         return 2 * _vert * _hori - _vert * q2x - _hori * q2y >= 0;   // finally the dot product can be reduced to this due to the hexagon symmetry*
-    	*/
-		return Vector2.Distance (point, cellCenter)<=transform.localScale.x;
+    	
+		//return Vector2.Distance (point, cellCenter)<=transform.localScale.x;
     }
 
 	public Vector3 CellCoordToWorld(Cell c)
@@ -264,7 +279,7 @@ public class HexField : MonoBehaviour {
 			
 	public bool IsPassable (Cell c)
 	{
-		return CellWarrior(c)==null;
+		return c.cellWarrior;
 	}
 
 	private bool Raycast(Vector3 fromPosition, float minOffset, float maxOffset, LayerMask obstacleLayer, LayerMask raycastingLayer)

@@ -135,6 +135,7 @@
   <ItemGroup>
     <Compile Include="Assets\Editor\SingleUnityLayerProperyDrawer.cs" />
     <Compile Include="Assets\GridSystem\Scripts\Editor\RangeFloatDrawer.cs" />
+    <Compile Include="Assets\LeanPool\Editor\LeanGameObjectPool_Editor.cs" />
     <Compile Include="Assets\Resources\Models\Other\RK.Team Assets\Modular Road Block\PostProcessing\Editor\Attributes\PostProcessingModelEditorAttribute.cs" />
     <Compile Include="Assets\Resources\Models\Other\RK.Team Assets\Modular Road Block\PostProcessing\Editor\Models\AmbientOcclusionModelEditor.cs" />
     <Compile Include="Assets\Resources\Models\Other\RK.Team Assets\Modular Road Block\PostProcessing\Editor\Models\AntialiasingModelEditor.cs" />
@@ -171,11 +172,9 @@
     <Compile Include="Assets\Scripts\Editor\BattleTriggerInspector.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Assets\FastFakeSkin\ReadMe.txt" />
-    <None Include="Assets\FastFakeSkin\Shaders\FastFakeSkin.shader" />
-    <None Include="Assets\FastFakeSkin\Shaders\NotSoFastFakeSkin.shader" />
-    <None Include="Assets\FastFakeSkin\Shaders\NotSoFastNotSoFakeSkin.shader" />
     <None Include="Assets\GridSystem\projector.shader" />
+    <None Include="Assets\LeanPool\Examples\Fonts\OFL.txt" />
+    <None Include="Assets\LeanPool\Examples\Shaders\Skybox.shader" />
     <None Include="Assets\Resources\Models\Other\Foliage Free\Readme.txt" />
     <None Include="Assets\Resources\Models\Other\RK.Team Assets\Modular Road Block\PostProcessing\Editor Resources\Monitors\HistogramCompute.compute" />
     <None Include="Assets\Resources\Models\Other\RK.Team Assets\Modular Road Block\PostProcessing\Editor Resources\Monitors\HistogramRender.shader" />
