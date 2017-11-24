@@ -7,14 +7,12 @@ public class Highlighter : MonoBehaviour {
 	private void OnEnable()
 	{
 		GameController.Instance.warriorDepointed += Depointed;
-		GameController.Instance.warriorSelected += Selected;
 		GameController.Instance.warriorPointed += Pointed;
 	}
 
 	private void OnDisable()
 	{
 		GameController.Instance.warriorDepointed -= Depointed;
-		GameController.Instance.warriorSelected -= Selected;
 		GameController.Instance.warriorPointed -= Pointed;
 	}
 
@@ -22,19 +20,7 @@ public class Highlighter : MonoBehaviour {
 	{
 		if (warrior) 
 		{
-				warrior.GetComponent<WarriorSelector> ().DeHighlight ();
-		}
-	}
-
-	private void Selected(BattleWarrior warrior)
-	{
-		if (warrior) {
-			Color color = Color.green;
-			if (warrior.Enemy) {
-				color = Color.red;
-			}
-		
-			warrior.GetComponent<WarriorSelector> ().Highlight (color);
+		    warrior.GetComponent<WarriorSelector> ().DeHighlight ();
 		}
 	}
 
@@ -42,11 +28,21 @@ public class Highlighter : MonoBehaviour {
 	{
 		if (warrior) 
 		{
-			Color color = Color.green;
-			if (warrior.Enemy) {
-				color = Color.red;
-			}
-			warrior.GetComponent<WarriorSelector> ().Highlight (color);
+            Color color = Color.white;
+            switch (warrior.type)
+            {
+                case BattleWarrior.WarriorType.Default:
+                    color = Color.white;
+                    break;
+                case BattleWarrior.WarriorType.Player:
+                    color = Color.green;
+                    break;
+                case BattleWarrior.WarriorType.Enemy:
+                    color = Color.red;
+                    break;
+            }
+
+            warrior.GetComponent<WarriorSelector> ().Highlight (color);
 		}
 	}
 }

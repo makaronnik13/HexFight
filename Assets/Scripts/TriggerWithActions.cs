@@ -9,7 +9,7 @@ public class TriggerWithActions : MonoBehaviour {
 
 	void OnTriggerEnter(Collider c)
 	{
-		if(onEnter!=null && c.GetComponent<BattleWarrior>() && !c.GetComponent<BattleWarrior>().Enemy)
+		if(onEnter!=null && c.GetComponent<BattleWarrior>() && c.GetComponent<BattleWarrior>().type == BattleWarrior.WarriorType.Player)
 		{
 			onEnter.Invoke();
 		}

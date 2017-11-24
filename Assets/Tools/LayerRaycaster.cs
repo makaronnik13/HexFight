@@ -56,6 +56,8 @@ public class LayerRaycaster :MonoBehaviour
 	public Action<Vector3, GameObject> OnRaycastHit;
 	public Action OnRaycastMiss;
 
+    public GameObject listener;
+
 	public float raycastRate = 0.5f;
 	public bool enableRaycast = true;
 
@@ -69,7 +71,7 @@ public class LayerRaycaster :MonoBehaviour
 	[NonSerialized]
 	public bool lastEnable;
 
-	public void Init(float rate, bool enable, int layer, InputType inputType = InputType.none, int buttonId = 0)
+	public void Init(float rate, bool enable, int layer, InputType inputType = InputType.none, int buttonId = 0, GameObject listener = null)
 	{
 		this.mouseButtonId = buttonId;
 		this.inputType = inputType;
@@ -77,17 +79,18 @@ public class LayerRaycaster :MonoBehaviour
 		{
 			InputTriggered = true;
 		}
-		Init (rate, enable, layer);
+		Init (rate, enable, layer, listener);
 	}
 
 
-	public void Init(float rate, bool enable, int layer)
+	public void Init(float rate, bool enable, int layer, GameObject listener = null)
 	{
 		raycastRate = rate;
 		lastRate = rate;
 		this.enableRaycast = enable;
 		lastEnable = enable;
 		this.layer = new SingleUnityLayer();
+        this.listener = listener;
 		this.layer.Set(layer);
 	}
 
@@ -118,7 +121,6 @@ public class LayerRaycaster :MonoBehaviour
 		{
 			RaycastHit hit;
 			Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-
 
 
 			if (InputTriggered || inputType == InputType.none) {

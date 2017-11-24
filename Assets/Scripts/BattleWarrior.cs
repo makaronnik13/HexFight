@@ -3,18 +3,26 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 using System;
+using GridSystem;
 
 public class BattleWarrior :MonoBehaviour
 {
+    public enum WarriorType
+    {
+        Default,
+        Player,
+        Enemy
+    }
+
 	public Action<int, int> OnApChanged;
-	private AnimatorController controller;
-	private AnimatorController Controller
+	private CharacterAnimatorController controller;
+	private CharacterAnimatorController Controller
 	{
 		get
 		{
 			if(!controller)
 			{
-				controller = GetComponent<AnimatorController> ();
+				controller = GetComponent<CharacterAnimatorController> ();
 			}
 			return controller;
 		}
@@ -70,7 +78,7 @@ public class BattleWarrior :MonoBehaviour
 		}
 	}
 
-	public bool Enemy = false;
+	public WarriorType type = WarriorType.Default;
 
 	public Sprite portrait;
 	public Sprite smallPortrait;

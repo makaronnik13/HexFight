@@ -36,7 +36,7 @@ public class AdventureMovementManager : MonoBehaviour {
 			foreach(BattleWarrior bw in FindObjectsOfType<BattleWarrior>())
 			{
 				
-				if(bw!=this.warrior.GetComponent<BattleWarrior>() && !bw.Enemy)
+				if(bw!=this.warrior.GetComponent<BattleWarrior>() && bw.type == BattleWarrior.WarriorType.Player)
 				{
 					bw.gameObject.AddComponent<PlayerFollower> ().Init(i, FindObjectsOfType<BattleWarrior>().Length, formationType, formationScale);
 					i++;
@@ -69,20 +69,23 @@ public class AdventureMovementManager : MonoBehaviour {
 
 	private void AddRaycasters()
 	{
-		Raycaster.Instance.AddListener ((Vector3 point, GameObject rayHitObject) => {
-			warrior.GoTo (point, true);
-		}, () => {
-		}, raycastLayer, 0.1f, LayerRaycaster.InputType.mouseHold, 1);
-
-		Raycaster.Instance.AddListener ((Vector3 point, GameObject rayHitObject) => {
-			warrior.GoTo (point, false);
-		}, () => {
-		}, raycastLayer, 0.1f, LayerRaycaster.InputType.mouseDown, 1);
+		Raycaster.Instance.AddListener (RunAction, () => {}, raycastLayer, 0.1f, LayerRaycaster.InputType.mouseHold, 1, gameObject);
+		Raycaster.Instance.AddListener (GoAction, () => {}, raycastLayer, 0.1f, LayerRaycaster.InputType.mouseDown, 1, gameObject);
 	}
 
 	private void RemoveRaycasters()
 	{
-		Raycaster.Instance.RemoveRaycaster (raycastLayer, LayerRaycaster.InputType.mouseHold, 1);
-		Raycaster.Instance.RemoveRaycaster (raycastLayer, LayerRaycaster.InputType.mouseDown, 1);
+		Raycaster.Instance.RemoveRaycaster (raycastLayer, LayerRaycaster.InputType.mouseHold, 1, gameObject);
+		Raycaster.Instance.RemoveRaycaster (raycastLayer, LayerRaycaster.InputType.mouseDown, 1, gameObject);
 	}
+
+    private void RunAction(Vector3 point, GameObject go)
+    {
+        warrior.GoTo(point, true);
+    }
+
+    private void GoAction(Vector3 point, GameObject go)
+    {
+        warrior.GoTo(point, false);
+    }
 }

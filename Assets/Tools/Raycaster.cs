@@ -9,22 +9,22 @@ public class Raycaster : Singleton<Raycaster>
 
 	public LayerRaycaster[] raycasters;
 
-	public void RemoveRaycaster(int layerId,  LayerRaycaster.InputType inputType, int buttonId)
+	public void RemoveRaycaster(int layerId,  LayerRaycaster.InputType inputType, int buttonId, GameObject listener = null)
 	{
-		LayerRaycaster lr = raycasters.ToList ().Find (r => r.layer.LayerIndex == layerId && r.inputType == inputType && r.mouseButtonId == buttonId);
+		LayerRaycaster lr = raycasters.ToList ().Find (r => r.layer.LayerIndex == layerId && r.inputType == inputType && r.mouseButtonId == buttonId && r.listener == listener);
 		if(lr!=null)
-		{
-			raycasters = raycasters.Where(val => val != lr).ToArray();
-			Destroy (lr);
+		{       
+                raycasters = raycasters.Where(val => val != lr).ToArray();
+                Destroy(lr);
 		}
 	}
 
-	public void AddListener (Action<Vector3, GameObject> action, Action missAction, int layerId, float rate = 0.1f, LayerRaycaster.InputType inputType = LayerRaycaster.InputType.none, int buttonId = 0)
+	public void AddListener (Action<Vector3, GameObject> action, Action missAction, int layerId, float rate = 0.1f, LayerRaycaster.InputType inputType = LayerRaycaster.InputType.none, int buttonId = 0, GameObject listener = null)
 	{
 		LayerRaycaster lr = raycasters.ToList ().Find (r => r.layer.LayerIndex == layerId && r.inputType == inputType && r.mouseButtonId == buttonId);
 		if (lr == null) {
 			LayerRaycaster newRaycaster = gameObject.AddComponent<LayerRaycaster> ();
-			newRaycaster.Init (rate, true, layerId, inputType, buttonId); 
+			newRaycaster.Init (rate, true, layerId, inputType, buttonId, listener); 
 
 			Array.Resize (ref raycasters, raycasters.Count () + 1);
 

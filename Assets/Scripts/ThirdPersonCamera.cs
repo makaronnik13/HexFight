@@ -1,10 +1,13 @@
-﻿using System.Collections;
+﻿using Cinemachine;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class ThirdPersonCamera : MonoBehaviour {
 
-	public GameObject aim;
+    public GameObject aim;
+    public GameObject dialogablePerson;
+
 	public float height;
 	[Range(0, 90)]
 	public float angle = 45;
@@ -13,6 +16,19 @@ public class ThirdPersonCamera : MonoBehaviour {
     public float Speed = 5;
 
     private float aimFow = 0;
+    private CinemachineVirtualCamera cinemachine;
+    private CinemachineVirtualCamera Cinemachine
+    {
+        get
+        {
+            if (!cinemachine)
+            {
+                cinemachine = GetComponent<CinemachineVirtualCamera>();
+            }
+            return cinemachine;
+        }
+    }
+
 
 	// Use this for initialization
 	void Start () {
@@ -24,7 +40,8 @@ public class ThirdPersonCamera : MonoBehaviour {
         switch (GameController.Instance.Mode)
 		{
 		case GameController.GameMode.Adventure:
-			if(!aim)
+            Cinemachine.enabled = false;
+            if (!aim)
 			{
 				return;
 			}
@@ -33,6 +50,7 @@ public class ThirdPersonCamera : MonoBehaviour {
 			transform.rotation = Quaternion.Lerp (transform.rotation, Quaternion.Euler(new Vector3(angle, transform.rotation.eulerAngles.y, transform.rotation.eulerAngles.z)), Time.deltaTime);
 			break;
 		case GameController.GameMode.Battle:
+                cinemachine.enabled = false;
                 aimFow -= Input.mouseScrollDelta.y * Speed * Time.deltaTime * 25;
                 aimFow = Mathf.Clamp(aimFow, 3, 45);
                 GetComponent<Camera>().fieldOfView = Mathf.Lerp(GetComponent<Camera>().fieldOfView, aimFow, Time.deltaTime * 2);
@@ -76,6 +94,11 @@ public class ThirdPersonCamera : MonoBehaviour {
                 {
                     transform.position = beforePosition;
                 }
+                break;
+            case GameController.GameMode.Dialog:
+                Cinemachine.enabled = true;
+                Cinemachine.Follow = dialogablePerson.transform;
+                Cinemachine.LookAt = dialogablePerson.transform;
                 break;
 		}
 	}

@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 using System.Linq;
+using GridSystem;
 
 public class HexBattleStateMachine : Singleton<HexBattleStateMachine> {
 

@@ -23,14 +23,14 @@ public class FakeController : MonoBehaviour {
 		}
 	}
 		
-	private AnimatorController controller;
-	public AnimatorController Controller
+	private CharacterAnimatorController controller;
+	public CharacterAnimatorController Controller
 	{
 		get
 		{
 			if(!controller)
 			{
-				controller = GetComponent<AnimatorController> ();
+				controller = GetComponent<CharacterAnimatorController> ();
 			}
 			return controller;
 		}

@@ -27,7 +27,7 @@
     <IntermediateOutputPath>Temp\UnityVS_obj\Debug\</IntermediateOutputPath>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <DefineConstants>DEBUG;TRACE;UNITY_5_3_OR_NEWER;UNITY_5_4_OR_NEWER;UNITY_5_5_OR_NEWER;UNITY_5_6_OR_NEWER;UNITY_2017_1_OR_NEWER;UNITY_2017_1_1;UNITY_2017_1;UNITY_2017;UNITY_ANALYTICS;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_DUCK_TYPING;ENABLE_GENERICS;ENABLE_PVR_GI;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_PHYSICS;ENABLE_RUNTIME_NAVMESH_BUILDING;ENABLE_SPRITERENDERER_FLIPPING;ENABLE_SPRITES;ENABLE_TERRAIN;ENABLE_RAKNET;ENABLE_DIRECTOR;ENABLE_UNET;ENABLE_LZMA;ENABLE_UNITYEVENTS;ENABLE_WEBCAM;ENABLE_WWW;ENABLE_CLOUD_SERVICES_COLLAB;ENABLE_CLOUD_SERVICES_COLLAB_SOFTLOCKS;ENABLE_CLOUD_SERVICES_ADS;ENABLE_CLOUD_HUB;ENABLE_CLOUD_PROJECT_ID;ENABLE_CLOUD_SERVICES_USE_WEBREQUEST;ENABLE_CLOUD_SERVICES_UNET;ENABLE_CLOUD_SERVICES_BUILD;ENABLE_CLOUD_LICENSE;ENABLE_WEBSOCKET_CLIENT;ENABLE_DIRECTOR_AUDIO;ENABLE_TIMELINE;ENABLE_EDITOR_METRICS;ENABLE_EDITOR_METRICS_CACHING;ENABLE_NATIVE_ARRAY;ENABLE_SPRITE_MASKING;INCLUDE_DYNAMIC_GI;INCLUDE_GI;ENABLE_MONO_BDWGC;PLATFORM_SUPPORTS_MONO;RENDER_SOFTWARE_CURSOR;INCLUDE_PUBNUB;ENABLE_PLAYMODE_TESTS_RUNNER;ENABLE_VIDEO;ENABLE_RMGUI;ENABLE_CUSTOM_RENDER_TEXTURE;ENABLE_STYLE_SHEETS;UNITY_STANDALONE_WIN;UNITY_STANDALONE;ENABLE_SUBSTANCE;ENABLE_RUNTIME_GI;ENABLE_MOVIES;ENABLE_NETWORK;ENABLE_CRUNCH_TEXTURE_COMPRESSION;ENABLE_UNITYWEBREQUEST;ENABLE_CLOUD_SERVICES;ENABLE_CLOUD_SERVICES_ANALYTICS;ENABLE_CLOUD_SERVICES_PURCHASING;ENABLE_CLOUD_SERVICES_CRASH_REPORTING;ENABLE_EVENT_QUEUE;ENABLE_CLUSTERINPUT;ENABLE_VR;ENABLE_WEBSOCKET_HOST;ENABLE_MONO;NET_2_0_SUBSET;ENABLE_PROFILER;DEBUG;TRACE;UNITY_ASSERTIONS;UNITY_EDITOR;UNITY_EDITOR_64;UNITY_EDITOR_WIN;ENABLE_NATIVE_ARRAY_CHECKS;UNITY_TEAM_LICENSE;ENABLE_VSTU</DefineConstants>
+    <DefineConstants>DEBUG;TRACE;UNITY_5_3_OR_NEWER;UNITY_5_4_OR_NEWER;UNITY_5_5_OR_NEWER;UNITY_5_6_OR_NEWER;UNITY_2017_1_OR_NEWER;UNITY_2017_1_1;UNITY_2017_1;UNITY_2017;UNITY_ANALYTICS;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_DUCK_TYPING;ENABLE_GENERICS;ENABLE_PVR_GI;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_PHYSICS;ENABLE_RUNTIME_NAVMESH_BUILDING;ENABLE_SPRITERENDERER_FLIPPING;ENABLE_SPRITES;ENABLE_TERRAIN;ENABLE_RAKNET;ENABLE_DIRECTOR;ENABLE_UNET;ENABLE_LZMA;ENABLE_UNITYEVENTS;ENABLE_WEBCAM;ENABLE_WWW;ENABLE_CLOUD_SERVICES_COLLAB;ENABLE_CLOUD_SERVICES_COLLAB_SOFTLOCKS;ENABLE_CLOUD_SERVICES_ADS;ENABLE_CLOUD_HUB;ENABLE_CLOUD_PROJECT_ID;ENABLE_CLOUD_SERVICES_USE_WEBREQUEST;ENABLE_CLOUD_SERVICES_UNET;ENABLE_CLOUD_SERVICES_BUILD;ENABLE_CLOUD_LICENSE;ENABLE_WEBSOCKET_CLIENT;ENABLE_DIRECTOR_AUDIO;ENABLE_TIMELINE;ENABLE_EDITOR_METRICS;ENABLE_EDITOR_METRICS_CACHING;ENABLE_NATIVE_ARRAY;ENABLE_SPRITE_MASKING;INCLUDE_DYNAMIC_GI;INCLUDE_GI;ENABLE_MONO_BDWGC;PLATFORM_SUPPORTS_MONO;RENDER_SOFTWARE_CURSOR;INCLUDE_PUBNUB;ENABLE_PLAYMODE_TESTS_RUNNER;ENABLE_VIDEO;ENABLE_RMGUI;ENABLE_CUSTOM_RENDER_TEXTURE;ENABLE_STYLE_SHEETS;UNITY_STANDALONE_WIN;UNITY_STANDALONE;ENABLE_SUBSTANCE;ENABLE_RUNTIME_GI;ENABLE_MOVIES;ENABLE_NETWORK;ENABLE_CRUNCH_TEXTURE_COMPRESSION;ENABLE_UNITYWEBREQUEST;ENABLE_CLOUD_SERVICES;ENABLE_CLOUD_SERVICES_ANALYTICS;ENABLE_CLOUD_SERVICES_PURCHASING;ENABLE_CLOUD_SERVICES_CRASH_REPORTING;ENABLE_EVENT_QUEUE;ENABLE_CLUSTERINPUT;ENABLE_VR;ENABLE_WEBSOCKET_HOST;ENABLE_MONO;NET_2_0_SUBSET;ENABLE_PROFILER;DEBUG;TRACE;UNITY_ASSERTIONS;UNITY_EDITOR;UNITY_EDITOR_64;UNITY_EDITOR_WIN;ENABLE_NATIVE_ARRAY_CHECKS;UNITY_TEAM_LICENSE;ENABLE_VSTU;UNITY_POST_PROCESSING_STACK_V1</DefineConstants>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
@@ -37,7 +37,7 @@
     <IntermediateOutputPath>Temp\UnityVS_obj\Release\</IntermediateOutputPath>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <DefineConstants>TRACE;UNITY_5_3_OR_NEWER;UNITY_5_4_OR_NEWER;UNITY_5_5_OR_NEWER;UNITY_5_6_OR_NEWER;UNITY_2017_1_OR_NEWER;UNITY_2017_1_1;UNITY_2017_1;UNITY_2017;UNITY_ANALYTICS;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_DUCK_TYPING;ENABLE_GENERICS;ENABLE_PVR_GI;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_PHYSICS;ENABLE_RUNTIME_NAVMESH_BUILDING;ENABLE_SPRITERENDERER_FLIPPING;ENABLE_SPRITES;ENABLE_TERRAIN;ENABLE_RAKNET;ENABLE_DIRECTOR;ENABLE_UNET;ENABLE_LZMA;ENABLE_UNITYEVENTS;ENABLE_WEBCAM;ENABLE_WWW;ENABLE_CLOUD_SERVICES_COLLAB;ENABLE_CLOUD_SERVICES_COLLAB_SOFTLOCKS;ENABLE_CLOUD_SERVICES_ADS;ENABLE_CLOUD_HUB;ENABLE_CLOUD_PROJECT_ID;ENABLE_CLOUD_SERVICES_USE_WEBREQUEST;ENABLE_CLOUD_SERVICES_UNET;ENABLE_CLOUD_SERVICES_BUILD;ENABLE_CLOUD_LICENSE;ENABLE_WEBSOCKET_CLIENT;ENABLE_DIRECTOR_AUDIO;ENABLE_TIMELINE;ENABLE_EDITOR_METRICS;ENABLE_EDITOR_METRICS_CACHING;ENABLE_NATIVE_ARRAY;ENABLE_SPRITE_MASKING;INCLUDE_DYNAMIC_GI;INCLUDE_GI;ENABLE_MONO_BDWGC;PLATFORM_SUPPORTS_MONO;RENDER_SOFTWARE_CURSOR;INCLUDE_PUBNUB;ENABLE_PLAYMODE_TESTS_RUNNER;ENABLE_VIDEO;ENABLE_RMGUI;ENABLE_CUSTOM_RENDER_TEXTURE;ENABLE_STYLE_SHEETS;UNITY_STANDALONE_WIN;UNITY_STANDALONE;ENABLE_SUBSTANCE;ENABLE_RUNTIME_GI;ENABLE_MOVIES;ENABLE_NETWORK;ENABLE_CRUNCH_TEXTURE_COMPRESSION;ENABLE_UNITYWEBREQUEST;ENABLE_CLOUD_SERVICES;ENABLE_CLOUD_SERVICES_ANALYTICS;ENABLE_CLOUD_SERVICES_PURCHASING;ENABLE_CLOUD_SERVICES_CRASH_REPORTING;ENABLE_EVENT_QUEUE;ENABLE_CLUSTERINPUT;ENABLE_VR;ENABLE_WEBSOCKET_HOST;ENABLE_MONO;NET_2_0_SUBSET;ENABLE_PROFILER;DEBUG;TRACE;UNITY_ASSERTIONS;UNITY_EDITOR;UNITY_EDITOR_64;UNITY_EDITOR_WIN;ENABLE_NATIVE_ARRAY_CHECKS;UNITY_TEAM_LICENSE;ENABLE_VSTU</DefineConstants>
+    <DefineConstants>TRACE;UNITY_5_3_OR_NEWER;UNITY_5_4_OR_NEWER;UNITY_5_5_OR_NEWER;UNITY_5_6_OR_NEWER;UNITY_2017_1_OR_NEWER;UNITY_2017_1_1;UNITY_2017_1;UNITY_2017;UNITY_ANALYTICS;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_DUCK_TYPING;ENABLE_GENERICS;ENABLE_PVR_GI;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_PHYSICS;ENABLE_RUNTIME_NAVMESH_BUILDING;ENABLE_SPRITERENDERER_FLIPPING;ENABLE_SPRITES;ENABLE_TERRAIN;ENABLE_RAKNET;ENABLE_DIRECTOR;ENABLE_UNET;ENABLE_LZMA;ENABLE_UNITYEVENTS;ENABLE_WEBCAM;ENABLE_WWW;ENABLE_CLOUD_SERVICES_COLLAB;ENABLE_CLOUD_SERVICES_COLLAB_SOFTLOCKS;ENABLE_CLOUD_SERVICES_ADS;ENABLE_CLOUD_HUB;ENABLE_CLOUD_PROJECT_ID;ENABLE_CLOUD_SERVICES_USE_WEBREQUEST;ENABLE_CLOUD_SERVICES_UNET;ENABLE_CLOUD_SERVICES_BUILD;ENABLE_CLOUD_LICENSE;ENABLE_WEBSOCKET_CLIENT;ENABLE_DIRECTOR_AUDIO;ENABLE_TIMELINE;ENABLE_EDITOR_METRICS;ENABLE_EDITOR_METRICS_CACHING;ENABLE_NATIVE_ARRAY;ENABLE_SPRITE_MASKING;INCLUDE_DYNAMIC_GI;INCLUDE_GI;ENABLE_MONO_BDWGC;PLATFORM_SUPPORTS_MONO;RENDER_SOFTWARE_CURSOR;INCLUDE_PUBNUB;ENABLE_PLAYMODE_TESTS_RUNNER;ENABLE_VIDEO;ENABLE_RMGUI;ENABLE_CUSTOM_RENDER_TEXTURE;ENABLE_STYLE_SHEETS;UNITY_STANDALONE_WIN;UNITY_STANDALONE;ENABLE_SUBSTANCE;ENABLE_RUNTIME_GI;ENABLE_MOVIES;ENABLE_NETWORK;ENABLE_CRUNCH_TEXTURE_COMPRESSION;ENABLE_UNITYWEBREQUEST;ENABLE_CLOUD_SERVICES;ENABLE_CLOUD_SERVICES_ANALYTICS;ENABLE_CLOUD_SERVICES_PURCHASING;ENABLE_CLOUD_SERVICES_CRASH_REPORTING;ENABLE_EVENT_QUEUE;ENABLE_CLUSTERINPUT;ENABLE_VR;ENABLE_WEBSOCKET_HOST;ENABLE_MONO;NET_2_0_SUBSET;ENABLE_PROFILER;DEBUG;TRACE;UNITY_ASSERTIONS;UNITY_EDITOR;UNITY_EDITOR_64;UNITY_EDITOR_WIN;ENABLE_NATIVE_ARRAY_CHECKS;UNITY_TEAM_LICENSE;ENABLE_VSTU;UNITY_POST_PROCESSING_STACK_V1</DefineConstants>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
   </PropertyGroup>
   <ItemGroup>
@@ -81,6 +81,104 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Cinemachine\Base\Runtime\Behaviours\CinemachineBlendListCamera.cs" />
+    <Compile Include="Assets\Cinemachine\Base\Runtime\Behaviours\CinemachineBrain.cs" />
+    <Compile Include="Assets\Cinemachine\Base\Runtime\Behaviours\CinemachineClearShot.cs" />
+    <Compile Include="Assets\Cinemachine\Base\Runtime\Behaviours\CinemachineCollider.cs" />
+    <Compile Include="Assets\Cinemachine\Base\Runtime\Behaviours\CinemachineConfiner.cs" />
+    <Compile Include="Assets\Cinemachine\Base\Runtime\Behaviours\CinemachineDollyCart.cs" />
+    <Compile Include="Assets\Cinemachine\Base\Runtime\Behaviours\CinemachineExternalCamera.cs" />
+    <Compile Include="Assets\Cinemachine\Base\Runtime\Behaviours\CinemachineFollowZoom.cs" />
+    <Compile Include="Assets\Cinemachine\Base\Runtime\Behaviours\CinemachineFreeLook.cs" />
+    <Compile Include="Assets\Cinemachine\Base\Runtime\Behaviours\CinemachineMixingCamera.cs" />
+    <Compile Include="Assets\Cinemachine\Base\Runtime\Behaviours\CinemachinePath.cs" />
+    <Compile Include="Assets\Cinemachine\Base\Runtime\Behaviours\CinemachinePipeline.cs" />
+    <Compile Include="Assets\Cinemachine\Base\Runtime\Behaviours\CinemachineSmoother.cs" />
+    <Compile Include="Assets\Cinemachine\Base\Runtime\Behaviours\CinemachineSmoothPath.cs" />
+    <Compile Include="Assets\Cinemachine\Base\Runtime\Behaviours\CinemachineStateDrivenCamera.cs" />
+    <Compile Include="Assets\Cinemachine\Base\Runtime\Behaviours\CinemachineTargetGroup.cs" />
+    <Compile Include="Assets\Cinemachine\Base\Runtime\Behaviours\CinemachineVirtualCamera.cs" />
+    <Compile Include="Assets\Cinemachine\Base\Runtime\Components\CinemachineBasicMultiChannelPerlin.cs" />
+    <Compile Include="Assets\Cinemachine\Base\Runtime\Components\CinemachineComposer.cs" />
+    <Compile Include="Assets\Cinemachine\Base\Runtime\Components\CinemachineFramingTransposer.cs" />
+    <Compile Include="Assets\Cinemachine\Base\Runtime\Components\CinemachineGroupComposer.cs" />
+    <Compile Include="Assets\Cinemachine\Base\Runtime\Components\CinemachineHardLockToTarget.cs" />
+    <Compile Include="Assets\Cinemachine\Base\Runtime\Components\CinemachineHardLookAt.cs" />
+    <Compile Include="Assets\Cinemachine\Base\Runtime\Components\CinemachineOrbitalTransposer.cs" />
+    <Compile Include="Assets\Cinemachine\Base\Runtime\Components\CinemachinePOV.cs" />
+    <Compile Include="Assets\Cinemachine\Base\Runtime\Components\CinemachineTrackedDolly.cs" />
+    <Compile Include="Assets\Cinemachine\Base\Runtime\Components\CinemachineTransposer.cs" />
+    <Compile Include="Assets\Cinemachine\Base\Runtime\Core\AxisState.cs" />
+    <Compile Include="Assets\Cinemachine\Base\Runtime\Core\CameraState.cs" />
+    <Compile Include="Assets\Cinemachine\Base\Runtime\Core\CinemachineBlend.cs" />
+    <Compile Include="Assets\Cinemachine\Base\Runtime\Core\CinemachineBlenderSettings.cs" />
+    <Compile Include="Assets\Cinemachine\Base\Runtime\Core\CinemachineComponentBase.cs" />
+    <Compile Include="Assets\Cinemachine\Base\Runtime\Core\CinemachineCore.cs" />
+    <Compile Include="Assets\Cinemachine\Base\Runtime\Core\CinemachineDebugLogger.cs" />
+    <Compile Include="Assets\Cinemachine\Base\Runtime\Core\CinemachineExtension.cs" />
+    <Compile Include="Assets\Cinemachine\Base\Runtime\Core\CinemachinePathBase.cs" />
+    <Compile Include="Assets\Cinemachine\Base\Runtime\Core\CinemachinePropertyAttribute.cs" />
+    <Compile Include="Assets\Cinemachine\Base\Runtime\Core\CinemachineVirtualCameraBase.cs" />
+    <Compile Include="Assets\Cinemachine\Base\Runtime\Core\GaussianFilter.cs" />
+    <Compile Include="Assets\Cinemachine\Base\Runtime\Core\ICinemachineCamera.cs" />
+    <Compile Include="Assets\Cinemachine\Base\Runtime\Core\ICinemachineComponent.cs" />
+    <Compile Include="Assets\Cinemachine\Base\Runtime\Core\LensSettings.cs" />
+    <Compile Include="Assets\Cinemachine\Base\Runtime\Core\NoiseSettings.cs" />
+    <Compile Include="Assets\Cinemachine\Base\Runtime\Core\Predictor.cs" />
+    <Compile Include="Assets\Cinemachine\Base\Runtime\Core\ReflectionHelpers.cs" />
+    <Compile Include="Assets\Cinemachine\Base\Runtime\Core\SplineHelpers.cs" />
+    <Compile Include="Assets\Cinemachine\Base\Runtime\Core\UnityVectorExtensions.cs" />
+    <Compile Include="Assets\Cinemachine\Blackboard\Blackboard.cs" />
+    <Compile Include="Assets\Cinemachine\Blackboard\Reactor.cs" />
+    <Compile Include="Assets\Cinemachine\Examples\Scenes\Scripting\ScriptingExample.cs" />
+    <Compile Include="Assets\Cinemachine\Examples\Scenes\Trigger volumes\GenericTrigger.cs" />
+    <Compile Include="Assets\Cinemachine\Examples\Shared\Models\UnityCharacter\Scripts\CharacterMovement.cs" />
+    <Compile Include="Assets\Cinemachine\Examples\Shared\Models\UnityCharacter\Scripts\CharacterMovement2D.cs" />
+    <Compile Include="Assets\Cinemachine\Examples\Shared\Scripts\ActivateCamera.cs" />
+    <Compile Include="Assets\Cinemachine\Examples\Shared\Scripts\ActivateCameraWithDistance.cs" />
+    <Compile Include="Assets\Cinemachine\Examples\Shared\Scripts\ActivateCamOnPlay.cs" />
+    <Compile Include="Assets\Cinemachine\Examples\Shared\Scripts\ActivateObject.cs" />
+    <Compile Include="Assets\Cinemachine\Examples\Shared\Scripts\ActivateTimeline.cs" />
+    <Compile Include="Assets\Cinemachine\Examples\Shared\Scripts\ExampleHelpWindow.cs" />
+    <Compile Include="Assets\Cinemachine\Examples\Shared\Scripts\MixingCameraBlend.cs" />
+    <Compile Include="Assets\Cinemachine\PostFX\CinemachinePostFX.cs" />
+    <Compile Include="Assets\Cinemachine\PostFX\CinemachinePostProcessing.cs" />
+    <Compile Include="Assets\Cinemachine\Timeline\CinemachineMixer.cs" />
+    <Compile Include="Assets\Cinemachine\Timeline\CinemachineShot.cs" />
+    <Compile Include="Assets\Cinemachine\Timeline\CinemachineTrack.cs" />
+    <Compile Include="Assets\DialogEditor\Libs\dotMath-master\dotMath\Core\BaseClasses.cs" />
+    <Compile Include="Assets\DialogEditor\Libs\dotMath-master\dotMath\Core\Parser.cs" />
+    <Compile Include="Assets\DialogEditor\Libs\dotMath-master\dotMath\Core\Token.cs" />
+    <Compile Include="Assets\DialogEditor\Libs\dotMath-master\dotMath\EquationCompiler.cs" />
+    <Compile Include="Assets\DialogEditor\Libs\dotMath-master\dotMath\Exceptions\ArgumentCountException.cs" />
+    <Compile Include="Assets\DialogEditor\Libs\dotMath-master\dotMath\Exceptions\InvalidEquationException.cs" />
+    <Compile Include="Assets\DialogEditor\Libs\dotMath-master\dotMath\Exceptions\InvalidFunctionException.cs" />
+    <Compile Include="Assets\DialogEditor\Libs\dotMath-master\dotMath\Exceptions\UnmatchedParenthesesException.cs" />
+    <Compile Include="Assets\DialogEditor\Scripts\Model\Chain.cs" />
+    <Compile Include="Assets\DialogEditor\Scripts\Model\Condition.cs" />
+    <Compile Include="Assets\DialogEditor\Scripts\Model\ConditionChain.cs" />
+    <Compile Include="Assets\DialogEditor\Scripts\Model\ConditionChange.cs" />
+    <Compile Include="Assets\DialogEditor\Scripts\Model\Param.cs" />
+    <Compile Include="Assets\DialogEditor\Scripts\Model\ParamChanges.cs" />
+    <Compile Include="Assets\DialogEditor\Scripts\Model\Path.cs" />
+    <Compile Include="Assets\DialogEditor\Scripts\Model\PathGame.cs" />
+    <Compile Include="Assets\DialogEditor\Scripts\Model\PathUnityEvent.cs" />
+    <Compile Include="Assets\DialogEditor\Scripts\Model\State.cs" />
+    <Compile Include="Assets\DialogEditor\Scripts\Model\StateLink.cs" />
+    <Compile Include="Assets\DialogEditor\Scripts\Palyer\CameraFocuser.cs" />
+    <Compile Include="Assets\DialogEditor\Scripts\Palyer\DialogGui.cs" />
+    <Compile Include="Assets\DialogEditor\Scripts\Palyer\DialogRaycaster.cs" />
+    <Compile Include="Assets\DialogEditor\Scripts\Palyer\PersonDialog.cs" />
+    <Compile Include="Assets\DialogEditor\Scripts\Palyer\Spectrator.cs" />
+    <Compile Include="Assets\DialogEditor\Scripts\Palyer\TextContent.cs" />
+    <Compile Include="Assets\DialogEditor\Scripts\Palyer\VariantsGui.cs" />
+    <Compile Include="Assets\DialogEditor\Scripts\Tools\BoolExpression.cs" />
+    <Compile Include="Assets\DialogEditor\Scripts\Tools\DialogPlayer.cs" />
+    <Compile Include="Assets\DialogEditor\Scripts\Tools\ExpressionParser.cs" />
+    <Compile Include="Assets\DialogEditor\Scripts\Tools\ExpressionSolver.cs" />
+    <Compile Include="Assets\DialogEditor\Scripts\Tools\GuidManager.cs" />
+    <Compile Include="Assets\DialogEditor\Scripts\Tools\PathGameSaveBinder.cs" />
+    <Compile Include="Assets\DialogEditor\Scripts\Tools\PlayerResource.cs" />
     <Compile Include="Assets\GridSystem\Cell.cs" />
     <Compile Include="Assets\GridSystem\CellsHighlighter.cs" />
     <Compile Include="Assets\GridSystem\CellVisual.cs" />
@@ -90,18 +188,9 @@
     <Compile Include="Assets\GridSystem\INeighbours.cs" />
     <Compile Include="Assets\GridSystem\Path.cs" />
     <Compile Include="Assets\GridSystem\PriorityQueue.cs" />
-    <Compile Include="Assets\InitiativeSystem\InitiativeToken.cs" />
-    <Compile Include="Assets\InitiativeTimeline.cs" />
-    <Compile Include="Assets\LeanPool\Examples\Scripts\LeanDelayedPooling.cs" />
-    <Compile Include="Assets\LeanPool\Examples\Scripts\LeanPoolBenchmark.cs" />
-    <Compile Include="Assets\LeanPool\Examples\Scripts\LeanPooledRigidbody.cs" />
-    <Compile Include="Assets\LeanPool\Examples\Scripts\LeanPooledRigidbody2D.cs" />
-    <Compile Include="Assets\LeanPool\Examples\Scripts\LeanPoolTest.cs" />
-    <Compile Include="Assets\LeanPool\Scripts\LeanClassPool.cs" />
-    <Compile Include="Assets\LeanPool\Scripts\LeanGameObjectPool.cs" />
-    <Compile Include="Assets\LeanPool\Scripts\LeanPool.cs" />
-    <Compile Include="Assets\LeanPool\Scripts\LeanPoolable.cs" />
-    <Compile Include="Assets\PointerTrigger.cs" />
+    <Compile Include="Assets\InitiativeSystem\Scripts\InitiativeTimeline.cs" />
+    <Compile Include="Assets\InitiativeSystem\Scripts\InitiativeToken.cs" />
+    <Compile Include="Assets\Npc.cs" />
     <Compile Include="Assets\Resources\Models\Other\RK.Team Assets\Modular Road Block\PostProcessing\Runtime\Attributes\GetSetAttribute.cs" />
     <Compile Include="Assets\Resources\Models\Other\RK.Team Assets\Modular Road Block\PostProcessing\Runtime\Attributes\MinAttribute.cs" />
     <Compile Include="Assets\Resources\Models\Other\RK.Team Assets\Modular Road Block\PostProcessing\Runtime\Attributes\TrackballAttribute.cs" />
@@ -145,10 +234,10 @@
     <Compile Include="Assets\Resources\Models\Other\RK.Team Assets\Modular Road Block\Scripts\MouseOrbitImproved.cs" />
     <Compile Include="Assets\Resources\Models\Other\RK.Team Assets\Modular Road Block\Scripts\RoadBlockGenerator.cs" />
     <Compile Include="Assets\Scripts\AdventureMovementManager.cs" />
-    <Compile Include="Assets\Scripts\AnimatorController.cs" />
     <Compile Include="Assets\Scripts\BattleButtonsController.cs" />
     <Compile Include="Assets\Scripts\BattleTrigger.cs" />
     <Compile Include="Assets\Scripts\BattleWarrior.cs" />
+    <Compile Include="Assets\Scripts\CharacterAnimatorController.cs" />
     <Compile Include="Assets\Scripts\EnterTrigger.cs" />
     <Compile Include="Assets\Scripts\FakeCellsTester.cs" />
     <Compile Include="Assets\Scripts\FakeController.cs" />
@@ -163,6 +252,7 @@
     <Compile Include="Assets\Scripts\ThirdPersonCamera.cs" />
     <Compile Include="Assets\Scripts\TriggerWithActions.cs" />
     <Compile Include="Assets\Scripts\WarriorSelector.cs" />
+    <Compile Include="Assets\StateGui.cs" />
     <Compile Include="Assets\Tools\LayerRaycaster.cs" />
     <Compile Include="Assets\Tools\Raycaster.cs" />
     <Compile Include="Assets\Tools\Singleton.cs" />
@@ -170,9 +260,9 @@
     <Compile Include="Assets\Tools\SpriteCutter.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Assets\Cinemachine\ReleaseNotes.txt" />
+    <None Include="Assets\DialogEditor\Libs\dotMath-master\packages\NUnit.2.6.3\license.txt" />
     <None Include="Assets\GridSystem\projector.shader" />
-    <None Include="Assets\LeanPool\Examples\Fonts\OFL.txt" />
-    <None Include="Assets\LeanPool\Examples\Shaders\Skybox.shader" />
     <None Include="Assets\Resources\Models\Other\Foliage Free\Readme.txt" />
     <None Include="Assets\Resources\Models\Other\RK.Team Assets\Modular Road Block\PostProcessing\Editor Resources\Monitors\HistogramCompute.compute" />
     <None Include="Assets\Resources\Models\Other\RK.Team Assets\Modular Road Block\PostProcessing\Editor Resources\Monitors\HistogramRender.shader" />

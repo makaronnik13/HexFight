@@ -5,8 +5,8 @@ using System;
 using UnityEngine.AI;
 
 public class WarriorSelector : MonoBehaviour 
-{	
-	
+{
+
 	public void Highlight(Color c)
 	{
 		foreach(Renderer mr in GetComponentsInChildren<Renderer>())

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
 using UnityEngine.AI;
+using GridSystem;
 
 public class BattleTrigger : MonoBehaviour
 {

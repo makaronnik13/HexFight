@@ -67,26 +67,35 @@ public class SelectedWarriorPanel : MonoBehaviour {
 
 	private void PointWarrior(BattleWarrior warrior)
 	{
-		ShowWarrior (warrior);
+        if(GameController.Instance.Mode == GameController.GameMode.Battle)
+        {
+            ShowWarrior(warrior);
+        }
 	}
 
 
 	private void DepointWarrior(BattleWarrior warrior)
 	{
-		ShowWarrior (lastWarrior);
+        if (GameController.Instance.Mode == GameController.GameMode.Battle)
+        {
+            ShowWarrior(lastWarrior);
+        }
 	}
 
 
 	private void SelectWarrior(BattleWarrior warrior)
 	{
-		lastWarrior = warrior;
-		ShowWarrior (lastWarrior);
+        if (GameController.Instance.Mode == GameController.GameMode.Battle)
+        {
+            lastWarrior = warrior;
+            ShowWarrior(lastWarrior);
+        }
 	}
 
 
 	private void ShowButtons()
 	{
-		if(!lastWarrior.Enemy)
+		if(lastWarrior.type == BattleWarrior.WarriorType.Player)
 		{
 			buttonsController.Show ();
 		}

@@ -2,13 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 using System;
+using GridSystem;
 
 public class GameController : Singleton<GameController> {
 
 	public enum GameMode
 	{
 		Adventure,
-		Battle
+		Battle,
+        Dialog
 	}
 
     public enum BattleAction
@@ -52,7 +54,15 @@ public class GameController : Singleton<GameController> {
                 {
                     warriorDepointed.Invoke(warrior);
                 }
-                warrior = value;
+
+                if(value && value.type != BattleWarrior.WarriorType.Player)
+                {
+                    warrior = null;
+                }
+                else
+                {
+                    warrior = value;
+                }
 
                 warriorSelected.Invoke(warrior);
 
@@ -122,12 +132,12 @@ public class GameController : Singleton<GameController> {
 			if(GameController.Instance.Mode == GameMode.Adventure){
 			HighlightedWarrior = null;
 			}
-		}, 10, 0.1f, LayerRaycaster.InputType.none, 0);
+		}, 10, 0.1f, LayerRaycaster.InputType.none, 0, gameObject);
 		Raycaster.Instance.AddListener ((Vector3 v, GameObject go)=>{
 			if(GameController.Instance.Mode == GameMode.Adventure){
 			Warrior = go.GetComponent<BattleWarrior>();
 			}
-		}, ()=>{if(GameController.Instance.Mode == GameMode.Adventure){Warrior = null;}}, 10, 0.1f, LayerRaycaster.InputType.mouseDown, 0);
+		}, ()=>{if(GameController.Instance.Mode == GameMode.Adventure){Warrior = null;}}, 10, 0.1f, LayerRaycaster.InputType.mouseDown, 0, gameObject);
 	}
 
 	private void OnDisable()
